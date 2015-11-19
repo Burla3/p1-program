@@ -4,9 +4,9 @@ int main(void) {
   // call a function in another file
   myPrintHelloMake();
 
-  newPopulation(populationAmount, courses, array);
+  initialPopulation(inititalPopulationAmount, courses, array);
 
-  while() {
+  while(fitness < MAX_FITNESS) {
     calculateFitness();
     reproduction();
     mutation();
@@ -17,7 +17,7 @@ int main(void) {
   return 0;
 }
 
-void newPopulation(int populationAmount, struct courses[], struct population[][]) {
+void initialPopulation(int inititalPopulationAmount, struct courses[], struct population[][]) {
 
 
   random = intergers between 0 and amount of courses
