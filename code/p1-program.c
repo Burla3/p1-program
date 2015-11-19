@@ -20,14 +20,12 @@ int main(void) {
 
 void initialPopulation(int inititalPopulationAmount, struct courses[], struct population[][]) {
 
-
-  random = rand() % sizeof(courses);
-
-  for()
-  population[populationCount][totalCount] = courses[random]
-
-
-
+  for(populationCount = 0; populationCount < populationAmount; populationCount++) {
+    for(lectureCount = 0; lectureCount < totalLectures; lectureCount++) {
+      random = rand() % (sizeof(courses) / sizeof(courses[0]);
+      population[populationCount][lectureCount] = courses[random];
+    }
+  }
 }
 
 void calculateFitness() {
