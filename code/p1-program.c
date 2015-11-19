@@ -1,6 +1,7 @@
 #include "hellofunc.h"
 
 int main(void) {
+  srand(time(NULL));
   // call a function in another file
   myPrintHelloMake();
 
@@ -20,7 +21,7 @@ int main(void) {
 void initialPopulation(int inititalPopulationAmount, struct courses[], struct population[][]) {
 
 
-  random = intergers between 0 and amount of courses
+  random = rand() % sizeof(courses);
 
   for()
   population[populationCount][totalCount] = courses[random]
