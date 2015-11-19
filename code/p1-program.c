@@ -1,13 +1,13 @@
-#include "hellofunc.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main(void) {
   srand(time(NULL));
-  // call a function in another file
-  myPrintHelloMake();
 
   initialPopulation(inititalPopulationAmount, courses, array);
 
-  while(fitness < MAX_FITNESS) {
+  while(fitness < MAX_FITNESS && runtime != 0) {
     calculateFitness();
     reproduction();
     mutation();
