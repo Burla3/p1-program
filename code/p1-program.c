@@ -2,21 +2,19 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX_LECTURES 80
+#define MAX_POPULATION 10
 
 typedef struct course {
   char *course;
   int lectures;
 } course;
 
-void initialPopulation(int inititalPopulationAmount, course *courses,
-                       char* population[10][MAX_LECTURES], int arrayLength, int totalLectures);
 int getTotalLectures(course *courses, int arrayLength);
-void generateSchedule(course *courses, char* population[10][MAX_LECTURES], int arrayLength,
+void initialPopulation(course *courses, char *population[][MAX_POPULATION], int arrayLength, int totalLectures);
+void generateSchedule(course *courses, char *population[][MAX_POPULATION], int arrayLength,
                                                     int totalLectures, int populationCount);
 int getRandomCourse(course *courses, int arrayLength);
-void outputSchedule(char* population[10][MAX_LECTURES], int totalLectures, int inititalPopulationAmount);
-
+void outputSchedule(char *population[][MAX_POPULATION], int totalLectures);
 
 int main(void) {
   srand(time(NULL));
@@ -32,13 +30,13 @@ int main(void) {
   course temp4 = {"PRJ", 20};
   courses[3] = temp4;
 
-  int inititalPopulationAmount = 10, totalLectures, arrayLength = sizeof(courses) / sizeof(courses[0]);
+  int totalLectures, arrayLength = sizeof(courses) / sizeof(courses[0]);
 
   totalLectures = getTotalLectures(courses, arrayLength);
 
-  char* population[inititalPopulationAmount][totalLectures];
+  char *population[totalLectures][MAX_POPULATION];
 
-  initialPopulation(inititalPopulationAmount, courses, population, arrayLength, totalLectures);
+  initialPopulation(courses, population, arrayLength, totalLectures);
 
   /*while (fitness < MAX_FITNESS && runTime != 0) {
     calculateFitness();
@@ -47,19 +45,9 @@ int main(void) {
     newPopulation();
   }
 */
-
-  outputSchedule(population, totalLectures, inititalPopulationAmount);
+  outputSchedule(population, totalLectures);
 
   return 0;
-}
-
-void initialPopulation(int inititalPopulationAmount, course *courses,
-                       char* population[10][MAX_LECTURES], int arrayLength, int totalLectures) {
-  int populationCount;
-
-  for (populationCount = 0; populationCount < inititalPopulationAmount; populationCount++) {
-    generateSchedule(courses, population, arrayLength, totalLectures, populationCount);
-  }
 }
 
 int getTotalLectures(course *courses, int arrayLength) {
@@ -71,7 +59,15 @@ int getTotalLectures(course *courses, int arrayLength) {
   return totalLectures;
 }
 
-void generateSchedule(course *courses, char* population[10][MAX_LECTURES], int arrayLength,
+void initialPopulation(course *courses, char *population[][MAX_POPULATION], int arrayLength, int totalLectures) {
+  int populationCount;
+
+  for (populationCount = 0; populationCount < MAX_POPULATION; populationCount++) {
+    generateSchedule(courses, population, arrayLength, totalLectures, populationCount);
+  }
+}
+
+void generateSchedule(course *courses, char *population[][MAX_POPULATION], int arrayLength,
                                                     int totalLectures, int populationCount) {
   course tempCourses[arrayLength];
   int i, lectureCount, random;
@@ -82,7 +78,7 @@ void generateSchedule(course *courses, char* population[10][MAX_LECTURES], int a
 
   for (lectureCount = 0; lectureCount < totalLectures; lectureCount++) {
     random = getRandomCourse(tempCourses, arrayLength);
-    population[populationCount][lectureCount] = courses[random].course;
+    population[lectureCount][populationCount] = courses[random].course;
   }
 }
 
@@ -99,26 +95,14 @@ int getRandomCourse(course *courses, int arrayLength) {
   }
 }
 
-/*void calculateFitness() {
-}
-​
-void reproduction() {
-}
-​
-void mutation() {
-}
-
-void newPopulation() {
-}
-​*/
-
-void outputSchedule(char* population[10][MAX_LECTURES], int totalLectures, int inititalPopulationAmount) {
+void outputSchedule(char *population[][MAX_POPULATION], int totalLectures) {
   int i, j;
 
-  for (i = 0; i < inititalPopulationAmount; i++) {
+  for (i = 0; i < MAX_POPULATION; i++) {
     printf("\n\n\n");
     for (j = 0; j < totalLectures; j++) {
-      printf("%s ", population[i][j]);
+      printf("%s ", population[j][i]);
     }
   }
+  printf("\n");
 }
