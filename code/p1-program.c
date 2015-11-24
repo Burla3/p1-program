@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX_POPULATION 10
+#define MAX_POPULATION 5000
 
 typedef struct course {
   char *course;
@@ -21,13 +21,13 @@ int main(void) {
 
   course courses[4];
 
-  course temp1 = {"LIAL", 20};
+  course temp1 = {"LIAL", 21};
   courses[0] = temp1;
-  course temp2 = {"IMP", 20};
+  course temp2 = {"IMP", 14};
   courses[1] = temp2;
-  course temp3 = {"PV", 20};
+  course temp3 = {"PV", 12};
   courses[2] = temp3;
-  course temp4 = {"PRJ", 20};
+  course temp4 = {"PRJ", 50};
   courses[3] = temp4;
 
   int totalLectures, arrayLength = sizeof(courses) / sizeof(courses[0]);
@@ -45,7 +45,7 @@ int main(void) {
     newPopulation();
   }
 */
-  outputSchedule(population, totalLectures);
+  //outputSchedule(population, totalLectures);
 
   return 0;
 }
