@@ -1,15 +1,22 @@
 CC = gcc
+EXEC = prog
+MAIN = p1-program.c
+CFLAGS = -Wall
+INCLUDEFILES = jsonParser.c
 
-prog: progpart clean
+# Name: Jansson
+# Description: Library for encoding, decoding and manipulating JSON data
+# Version: 2.7
+PREFIX = /usr/local
+LIBDIR = ${PREFIX}/lib
+INCLUDEDIR = ${PREFIX}/include
+LIB = jansson
 
-progpart: cleanexe hellofunc.o
-	$(CC) -lm p1-program.c hellofunc.o -o prog
+run: comp
+	./$(EXEC).exe
 
-hellofunc.o: hellofunc.c hellofunc.c
-	$(CC) -c hellofunc.c
-
-clean: 
-	$(RM) hellofunc.o
+comp: cleanexe
+	$(CC) -o $(EXEC) $(MAIN) $(INCLUDEFILES) -L$(LIBDIR) -I$(INCLUDEDIR) -l$(LIB) $(CFLAGS)
 
 cleanexe:
-	$(RM) prog.exe
+	$(RM) $(EXEC).exe 
