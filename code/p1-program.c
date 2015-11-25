@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX_POPULATION 5000
+#define MAX_POPULATION 50
 
 typedef struct course {
   char *course;
@@ -15,11 +15,10 @@ typedef struct lecture {
 } lecture;
 
 int getTotalLectures(course *courses, int arrayLength);
-void initialPopulation(course *courses, char *population[][MAX_POPULATION], int arrayLength, int totalLectures);
-void generateSchedule(course *courses, char *population[][MAX_POPULATION], int arrayLength,
-                                                    int totalLectures, int populationCount);
+void initialPopulation(course *courses, char ***population, int arrayLength, int totalLectures);
+void generateSchedule(course *courses, char ***population, int arrayLength, int totalLectures, int populationCount);
 int getRandomCourse(course *courses, int arrayLength);
-void outputSchedule(char *population[][MAX_POPULATION], int totalLectures);
+void outputSchedule(char ***population, int totalLectures);
 void crossoverMix(const int totalLectures, const lecture parent1[],
                   const lecture parent2[],       lecture offspring[]);
 void crossoverSlice(const int totalLectures, const lecture parent1[], const lecture parent2[],
@@ -30,20 +29,25 @@ int main(void) {
 /*
   course courses[4];
 
-  course temp1 = {"LIAL", 21};
+  course temp1 = {"LIA", 21};
   courses[0] = temp1;
   course temp2 = {"IMP", 14};
   courses[1] = temp2;
-  course temp3 = {"PV", 12};
+  course temp3 = {"PVV", 12};
   courses[2] = temp3;
-  course temp4 = {"PRJ", 50};
+  course temp4 = {"PRJ", 100};
   courses[3] = temp4;
 
   int totalLectures, arrayLength = sizeof(courses) / sizeof(courses[0]);
 
   totalLectures = getTotalLectures(courses, arrayLength);
 
-  char *population[totalLectures][MAX_POPULATION];
+  int i;
+  char ***population = (char ***) malloc(totalLectures *  sizeof(char *));
+
+  for (i = 0; i < totalLectures; i++) {
+    population[i] = (char **) malloc(MAX_POPULATION * 4 * sizeof(char));
+  }
 
   initialPopulation(courses, population, arrayLength, totalLectures);
 
@@ -54,7 +58,15 @@ int main(void) {
     newPopulation();
   }*/
 
-  //outputSchedule(population, totalLectures);
+  outputSchedule(population, totalLectures);
+
+  free(population);
+
+  for (i = 0; i < totalLectures; i++) {
+    free(population[i]);
+  }
+
+  printf("Done free\n");
 
   lecture timetable1[] = {{"LIAL", "Aud. 6"}, {"PV", "Seminarrum 302"}, {"IMPR", "Aud. 7"}, {"CS:GO", "Kaffestuen"}};
   lecture timetable2[] = {{"LIAL2", "Aud. 6"}, {"PV2", "Seminarrum 302"}, {"IMPR2", "Aud. 7"}, {"CS:GO2", "Kaffestuen"}};
@@ -90,7 +102,7 @@ int getTotalLectures(course *courses, int arrayLength) {
   return totalLectures;
 }
 
-void initialPopulation(course *courses, char *population[][MAX_POPULATION], int arrayLength, int totalLectures) {
+void initialPopulation(course *courses, char ***population, int arrayLength, int totalLectures) {
   int populationCount;
 
   for (populationCount = 0; populationCount < MAX_POPULATION; populationCount++) {
@@ -98,8 +110,7 @@ void initialPopulation(course *courses, char *population[][MAX_POPULATION], int 
   }
 }
 
-void generateSchedule(course *courses, char *population[][MAX_POPULATION], int arrayLength,
-                                                    int totalLectures, int populationCount) {
+void generateSchedule(course *courses, char ***population, int arrayLength, int totalLectures, int populationCount) {
   course tempCourses[arrayLength];
   int i, lectureCount, random;
 
@@ -109,15 +120,19 @@ void generateSchedule(course *courses, char *population[][MAX_POPULATION], int a
 
   for (lectureCount = 0; lectureCount < totalLectures; lectureCount++) {
     random = getRandomCourse(tempCourses, arrayLength);
+  /*  if (lectureCount > totalLectures - 5 && (random == 0 || random == 1 || random == 2))
+      printf("%d nr er %s\n", lectureCount, courses[random].course); */
     population[lectureCount][populationCount] = courses[random].course;
   }
 }
 
 int getRandomCourse(course *courses, int arrayLength) {
-  int random = (rand() % arrayLength);
+  int random = (rand() % arrayLength + 1);
 
   while (1) {
-    if (courses[random].lectures > 0) {
+    if (random == arrayLength) {
+      random = arrayLength - 1;
+    } else if (courses[random].lectures > 0) {
       courses[random].lectures--;
       return random;
     } else {
@@ -126,14 +141,15 @@ int getRandomCourse(course *courses, int arrayLength) {
   }
 }
 
-void outputSchedule(char *population[][MAX_POPULATION], int totalLectures) {
+void outputSchedule(char ***population, int totalLectures) {
   int i, j;
 
   for (i = 0; i < MAX_POPULATION; i++) {
     printf("\n\n\n");
     for (j = 0; j < totalLectures; j++) {
-      printf("%s ", population[j][i]);
+      printf("%3s ", population[j][i]);
     }
+    printf("\n\n%d\n", i);
   }
   printf("\n");
 }
