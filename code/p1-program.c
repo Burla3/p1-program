@@ -5,16 +5,25 @@
 
 #define POPULATION_SIZE 10000
 
+enum studyName {
+  Dat, Mat
+};
+
 typedef struct lecture {
   char *type;
   char *room;
 } lecture;
 
 typedef struct timetable {
-  int fitnessScore;
+  enum studyName studyName;
   int numberOfLectures;
   lecture *lectures;
 } timetable;
+
+typedef struct popMember {
+  int fitnessScore;
+  timetable *studies;
+} popMember;
 
 typedef struct course {
   char *course;
@@ -28,7 +37,7 @@ json_t *rootConfig;
 
 void initialConfiguration();
 void jsonExample();
-int getTotalLectures(course *courses, int arrayLength);
+//int getTotalLectures(course *courses, int arrayLength);
 void initialPopulation(course *courses, char ***population, int arrayLength, int totalLectures);
 void generateSchedule(course *courses, char ***population, int arrayLength, int totalLectures, int populationCount);
 int getRandomCourse(course *courses, int arrayLength);
@@ -65,9 +74,9 @@ int main(void) {
 
   //jsonExample();
 
-  timetable population[POPULATION_SIZE];
+  popMember population[POPULATION_SIZE];
 
-  
+
 
   course courses[4];
 
@@ -213,8 +222,6 @@ void generateSchedule(course *courses, char ***population, int arrayLength, int 
 
   for (lectureCount = 0; lectureCount < totalLectures; lectureCount++) {
     random = getRandomCourse(tempCourses, arrayLength);
-  /*  if (lectureCount > totalLectures - 5 && (random == 0 || random == 1 || random == 2))
-      printf("%d nr er %s\n", lectureCount, courses[random].course); */
     population[lectureCount][populationCount] = courses[random].course;
   }
 }
@@ -278,7 +285,7 @@ void outputSchedule(char ***population, int totalLectures) {
  *    <td style="width: 25px; height: 25px; border: solid 1px black; background-color: white;"></td>
  *  </tr>
  * </table>
- * 
+ *
  * @param[in] totalLectures the total amount of lectures per timetable
  * @param[in] parent1 the first parent used for breeding
  * @param[in] parent2 the second parent used for breeding
