@@ -216,10 +216,10 @@ void outputSchedule(char ***population, int totalLectures) {
  *  </tr>
  * </table>
  * 
- * @param totalLectures the total amount of lectures per timetable
- * @param parent1 the first parent used for breeding
- * @param parent2 the second parent used for breeding
- * @param offspring the offspring that is generated through breeding
+ * @param[in] totalLectures the total amount of lectures per timetable
+ * @param[in] parent1 the first parent used for breeding
+ * @param[in] parent2 the second parent used for breeding
+ * @param[out] offspring the offspring that is generated through breeding
  */
 void crossoverMix(const int totalLectures, const lecture parent1[],
                   const lecture parent2[],       lecture offspring[]) {
@@ -277,11 +277,11 @@ void crossoverMix(const int totalLectures, const lecture parent1[],
  *  </tr>
  * </table>
  *
- * @param totalLectures the total amount of lectures per timetable
- * @param parent1 the first parent used for breeding
- * @param parent2 the second parent used for breeding
- * @param offspring1 the first offspring that is generated through breeding
- * @param offspring2 the second offspring that is generated through breeding
+ * @param[in] totalLectures the total amount of lectures per timetable
+ * @param[in] parent1 the first parent used for breeding
+ * @param[in] parent2 the second parent used for breeding
+ * @param[out] offspring1 the first offspring that is generated through breeding
+ * @param[out] offspring2 the second offspring that is generated through breeding
  */
 void crossoverSlice(const int totalLectures, const lecture parent1[], const lecture parent2[],
                                                    lecture offspring1[],    lecture offspring2[]) {
