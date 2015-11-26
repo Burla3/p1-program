@@ -31,6 +31,7 @@ void crossoverMix(const int totalLectures, const lecture parent1[],
                   const lecture parent2[],       lecture offspring[]);
 void crossoverSlice(const int totalLectures, const lecture parent1[], const lecture parent2[],
                                                    lecture offspring1[],    lecture offspring2[]);
+int mutate(const int mutationRate, const int totalLectures, const lecture parent[], lecture offspring[]);
 
 int main(void) {
   srand(time(NULL));
@@ -38,7 +39,7 @@ int main(void) {
   timetable population[POPULATION_SIZE];
 
   jsonExample();
-/*
+
   course courses[4];
 
   course temp1 = {"LIA", 21};
@@ -63,12 +64,12 @@ int main(void) {
 
   initialPopulation(courses, population, arrayLength, totalLectures);
 
-  /*while (fitness < MAX_FITNESS && runTime != 0) {
+  while (fitness < MAX_FITNESS && runTime != 0) {
     calculateFitness();
     reproduction();
     mutation();
     newPopulation();
-  }*/
+  }
 
   outputSchedule(population, totalLectures);
 
@@ -86,7 +87,7 @@ int main(void) {
   lecture offspring1[4];
   lecture offspring2[4];
 
-  /*crossoverMix(4, timetable1, timetable2, offspring1);
+  crossoverMix(4, timetable1, timetable2, offspring1);
 
   crossoverSlice(4, timetable1, timetable2, offspring1, offspring2);
 
@@ -100,7 +101,30 @@ int main(void) {
 
   for (i = 0; i < 4; i++) {
     printf("%i: %s\n", i, offspring2[i].type);
-  }*/
+  }
+
+  lecture mutationParent[] = {{"LIAL", "Aud. 6"}, {"PV", "Seminarrum 302"}, {"IMPR", "Aud. 7"}, {"CS:GO", "Kaffestuen"}};
+  lecture mutationOffspring[4];
+
+  int mutateReturn = mutate(50, 4, mutationParent, mutationOffspring);
+
+  if (mutateReturn == 1) {
+    printf("Mutation done.\n");
+  } else {
+    printf("No mutation.\n");
+  }
+
+  int i;
+
+  for (i = 0; i < 4; i++) {
+    printf("%s %s\n", mutationParent[i].type, mutationParent[i].room);
+  }
+
+  printf("_______________\n");
+
+  for (i = 0; i < 4; i++) {
+    printf("%s %s\n", mutationOffspring[i].type, mutationOffspring[i].room);
+  }
 
   return 0;
 }
@@ -237,7 +261,7 @@ void crossoverMix(const int totalLectures, const lecture parent1[],
 /**
  * Breeds two offsprings by picking a random crossover point for the parents and swapping the right sides with
  * eachother.
- * 
+ *
  * Example: The parents below with the marked crossover point results in ...
  * <div style="font-size: 24px; float: left; margin-left: 115px;">&darr;</div>
  * <div style="font-size: 24px; margin-left: 355px;">&darr;</div>
@@ -297,5 +321,33 @@ void crossoverSlice(const int totalLectures, const lecture parent1[], const lect
   for (i = crossoverPoint; i < totalLectures; i++) {
     offspring1[i] = parent2[i];
     offspring2[i] = parent1[i];
+  }
+}
+
+/**
+ * There is a chance that the type or room which is picked from lectures, and there is a chance that either one of
+ * variables will mutate.
+ *
+ * @param[in] mutationRate the chance for something to mutate
+ * @param[in] totalLectures the total amount of lectures per timetable
+ * @param[in] parent the first parent used for breeding
+ * @param[in] offspring the first offspring that is generated through breeding
+ */
+int mutate(const int mutationRate, const int totalLectures, const lecture parent[], lecture offspring[]) {
+  int i;
+  for (i = 0; i < totalLectures; i++) {
+    offspring[i] = parent[i];
+  }
+
+  if ((rand() % 100) + 1 <= mutationRate) {
+    int randLecture = rand() % totalLectures;
+    if (rand() % 2 == 0) {
+      offspring[randLecture].type = "Random Type";
+    } else {
+      offspring[randLecture].room = "Random Room";
+    }
+    return 1;
+  } else {
+    return 0;
   }
 }
