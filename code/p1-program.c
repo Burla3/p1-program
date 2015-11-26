@@ -377,7 +377,7 @@ void crossoverSlice(const int totalLectures, const lecture parent1[], const lect
  * @param[in] mutationRate the chance for something to mutate
  * @param[in] totalLectures the total amount of lectures per timetable
  * @param[in] parent the first parent used for breeding
- * @param[in] offspring the first offspring that is generated through breeding
+ * @param[out] offspring the first offspring that is generated through breeding
  */
 int mutate(const int mutationRate, const int totalLectures, const lecture parent[], lecture offspring[]) {
   int i;
