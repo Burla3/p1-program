@@ -3,7 +3,13 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MAX_POPULATION 50
+#define POPULATION_SIZE 10000
+
+typedef struct timetable {
+  int fitnessScore;
+  int numberOfLectures;
+  lecture *lectures;
+} timetable;
 
 typedef struct course {
   char *course;
@@ -28,6 +34,8 @@ void crossoverSlice(const int totalLectures, const lecture parent1[], const lect
 
 int main(void) {
   srand(time(NULL));
+
+  timetable population[POPULATION_SIZE];
 
   jsonExample();
 /*
