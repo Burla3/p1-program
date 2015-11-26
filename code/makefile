@@ -1,8 +1,16 @@
 CC = gcc
-EXEC = prog
+PROG = prog
 MAIN = p1-program.c
-CFLAGS = -Wall
+#CFLAGS = -Wall
+CFLAGS = 
 INCLUDEFILES = jsonParser.c
+TENSION = .exe
+
+UNAME := $(shell uname)
+
+ifeq ($(UNAME),Linux)
+    TENSION = 
+endif
 
 # Name: Jansson
 # Description: Library for encoding, decoding and manipulating JSON data
@@ -13,10 +21,10 @@ INCLUDEDIR = ${PREFIX}/include
 LIB = jansson
 
 run: comp
-	./$(EXEC).exe
+	./$(PROG)$(TENSION)
 
 comp: cleanexe
-	$(CC) -o $(EXEC) $(MAIN) $(INCLUDEFILES) -L$(LIBDIR) -I$(INCLUDEDIR) -l$(LIB) $(CFLAGS)
+	$(CC) -o $(PROG) $(MAIN) $(INCLUDEFILES) -L$(LIBDIR) -I$(INCLUDEDIR) -l$(LIB) $(CFLAGS)
 
 cleanexe:
-	$(RM) $(EXEC).exe 
+	$(RM) $(PROG)
