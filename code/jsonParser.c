@@ -3,15 +3,14 @@
 json_t * loadJSON(const char *fileName)
 {
   json_t *root;
-  json_error_t error;
-
+  
   /* Open JSON file */
   FILE *fp = openFile(fileName);
 
   long fsize = getFileCharLength(fp);
 
   /* Retrieve the JSON object from the file */
-  root = readJSON(fp, fsize + 1, &error);
+  root = readJSON(fp, fsize + 1);
 
   return root;
 }
@@ -36,8 +35,9 @@ long getFileCharLength(FILE *fp) {
   return fsize;
 }
 
-json_t * readJSON(FILE *fp, const long maxLength, json_error_t *error) {
+json_t * readJSON(FILE *fp, const long maxLength) {
   json_t *root = NULL;
+  json_error_t error;
 
   char *buffer = (char*) malloc(maxLength);
 
@@ -56,11 +56,11 @@ json_t * readJSON(FILE *fp, const long maxLength, json_error_t *error) {
   fclose(fp);
 
   /* Create JSON structure */
-  root = json_loads(buffer, 0, error);
+  root = json_loads(buffer, 0, &error);
   free(buffer);
 
   if(!root) {
-    fprintf(stderr, "error: on line %d: %s\n", error->line, error->text);
+    fprintf(stderr, "error: on line %d: %s\n", error.line, error.text);
   }
 
   return root;
