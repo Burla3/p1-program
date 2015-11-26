@@ -15,6 +15,10 @@ typedef struct lecture {
   char *room;
 } lecture;
 
+/* Global variables */
+json_t *rootConfig;
+
+void initialConfiguration();
 void jsonExample();
 int getTotalLectures(course *courses, int arrayLength);
 void initialPopulation(course *courses, char ***population, int arrayLength, int totalLectures);
@@ -27,9 +31,33 @@ void crossoverSlice(const int totalLectures, const lecture parent1[], const lect
                                                    lecture offspring1[],    lecture offspring2[]);
 
 int main(void) {
-  srand(time(NULL));
+  initialConfiguration();
+/*
+  json_t *value = json_object_get(rootConfig, "courses");
 
-  jsonExample();
+  int totalLectures = 0;
+
+  size_t index;
+  json_t *value2, *asdf;
+
+  json_array_foreach(value, index, value2) {
+
+    json_t *asdf = json_object_get(value2, "lectures");
+
+    totalLectures += json_array_size(asdf);
+  }
+
+  printf("%i\n", totalLectures);
+
+  //printf("%s\n", json_dumps(json_array_get(value, 0), JSON_INDENT(2)));
+
+  json_decref(asdf);
+  json_decref(value);
+  json_decref(value2);*/
+
+  
+
+  //jsonExample();
 /*
   course courses[4];
 
@@ -60,7 +88,7 @@ int main(void) {
     reproduction();
     mutation();
     newPopulation();
-  }*/
+  }
 
   outputSchedule(population, totalLectures);
 
@@ -76,7 +104,7 @@ int main(void) {
   lecture timetable2[] = {{"LIAL2", "Aud. 6"}, {"PV2", "Seminarrum 302"}, {"IMPR2", "Aud. 7"}, {"CS:GO2", "Kaffestuen"}};
 
   lecture offspring1[4];
-  lecture offspring2[4];
+  lecture offspring2[4];*/
 
   /*crossoverMix(4, timetable1, timetable2, offspring1);
 
@@ -95,6 +123,16 @@ int main(void) {
   }*/
 
   return 0;
+}
+
+void initialConfiguration() {
+  srand(time(NULL));
+
+  rootConfig = loadJSON("json/config.json");
+
+  if (rootConfig == NULL) {
+    perror("Error loading JSON ");
+  }
 }
 
 void jsonExample() {
