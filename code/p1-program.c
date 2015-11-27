@@ -119,51 +119,6 @@ int main(void) {
 
   printf("Done free\n");
 
-  lecture timetable1[] = {{"LIAL", "Aud. 6"}, {"PV", "Seminarrum 302"}, {"IMPR", "Aud. 7"}, {"CS:GO", "Kaffestuen"}};
-  lecture timetable2[] = {{"LIAL2", "Aud. 6"}, {"PV2", "Seminarrum 302"}, {"IMPR2", "Aud. 7"}, {"CS:GO2", "Kaffestuen"}};
-
-  lecture offspring1[4];
-  lecture offspring2[4];
-
-  crossoverMix(4, timetable1, timetable2, offspring1);
-
-  crossoverSlice(4, timetable1, timetable2, offspring1, offspring2);
-
-  int i;
-
-  for (i = 0; i < 4; i++) {
-    printf("%i: %s\n", i, offspring1[i].type);
-  }
-
-  printf("_________\n");
-
-  for (i = 0; i < 4; i++) {
-    printf("%i: %s\n", i, offspring2[i].type);
-  }
-
-  lecture mutationParent[] = {{"LIAL", "Aud. 6"}, {"PV", "Seminarrum 302"}, {"IMPR", "Aud. 7"}, {"CS:GO", "Kaffestuen"}};
-  lecture mutationOffspring[4];
-
-  int mutateReturn = mutate(50, 4, mutationParent, mutationOffspring);
-
-  if (mutateReturn == 1) {
-    printf("Mutation done.\n");
-  } else {
-    printf("No mutation.\n");
-  }
-
-  int i;
-
-  for (i = 0; i < 4; i++) {
-    printf("%s %s\n", mutationParent[i].type, mutationParent[i].room);
-  }
-
-  printf("_______________\n");
-
-  for (i = 0; i < 4; i++) {
-    printf("%s %s\n", mutationOffspring[i].type, mutationOffspring[i].room);
-  }*/
-
   return 0;
 }
 
