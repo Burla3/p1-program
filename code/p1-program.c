@@ -117,7 +117,7 @@ int main(void) {
     free(population[i]);
   }
 
-  printf("Done free\n");
+  printf("Done free\n");*/
 
   return 0;
 }
