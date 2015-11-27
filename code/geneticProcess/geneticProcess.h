@@ -1,0 +1,5 @@
+#include "initial.h"
+#include "fitness.h"
+#include "selection.h"
+#include "crossover.h"
+#include "mutation.h"

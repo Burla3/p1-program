@@ -3,7 +3,7 @@ PROG = prog
 MAIN = p1-program.c
 #CFLAGS = -Wall
 CFLAGS = 
-INCLUDEFILES = jsonParser.c
+INCLUDEFILES = jsonParser.c geneticProcess/initial.c geneticProcess/fitness.c geneticProcess/selection.c geneticProcess/crossover.c geneticProcess/mutation.c
 TENSION = .exe
 
 UNAME := $(shell uname)
