@@ -1,19 +1,13 @@
 {
   "courses": [
     {
+      "id": 0,
       "name": "LIAL_1",
       "lectures": [
         {
-          "id": "synthetic_id or something like LIAL_1_L1",
+          "id": 0,
           "lecturers": [
             "jb@aalkat-gym.dk"
-          ],
-          "students": [
-            "bbande15@student.aau.dk",
-            "jbjoh15@student.aau.dk"
-          ],
-          "groups": [
-            "dat1-2015"
           ],
           "rooms": [
             {
@@ -45,16 +39,9 @@
           }
         },
         {
-          "id": "synthetic_id or something like LIAL_1_L2",
+          "id": 1,
           "lecturers": [
             "jb@aalkat-gym.dk"
-          ],
-          "students": [
-            "bbande15@student.aau.dk",
-            "jbjoh15@student.aau.dk"
-          ],
-          "groups": [
-            "dat1-2015"
           ],
           "rooms": [
             {
@@ -88,19 +75,13 @@
       ]
     },
     {
+      "id": 1,
       "name": "PVTS_1",
       "lectures": [
         {
-          "id": "synthetic_id or something like PVTS_1_L1",
+          "id": 2,
           "lecturers": [
             "jb@aalkat-gym.dk"
-          ],
-          "students": [
-            "bbande15@student.aau.dk",
-            "jbjoh15@student.aau.dk"
-          ],
-          "groups": [
-            "dat1-2015"
           ],
           "rooms": [
             {
@@ -132,16 +113,9 @@
           }
         },
         {
-          "id": "synthetic_id or something like PVTS_1_L2",
+          "id": 3,
           "lecturers": [
             "jb@aalkat-gym.dk"
-          ],
-          "students": [
-            "bbande15@student.aau.dk",
-            "jbjoh15@student.aau.dk"
-          ],
-          "groups": [
-            "dat1-2015"
           ],
           "rooms": [
             {
@@ -175,19 +149,13 @@
       ]
     },
     {
+      "id": 2,
       "name": "IMPR_1",
       "lectures": [
         {
-          "id": "synthetic_id or something like IMPR_1_L1",
+          "id": 5,
           "lecturers": [
             "jb@aalkat-gym.dk"
-          ],
-          "students": [
-            "bbande15@student.aau.dk",
-            "jbjoh15@student.aau.dk"
-          ],
-          "groups": [
-            "dat1-2015"
           ],
           "rooms": [
             {
@@ -219,16 +187,9 @@
           }
         },
         {
-          "id": "synthetic_id or something like IMPR_1_L2",
+          "id": 5,
           "lecturers": [
             "jb@aalkat-gym.dk"
-          ],
-          "students": [
-            "bbande15@student.aau.dk",
-            "jbjoh15@student.aau.dk"
-          ],
-          "groups": [
-            "dat1-2015"
           ],
           "rooms": [
             {
@@ -262,19 +223,12 @@
       ]
     },
     {
-      "name": "PROJ_1",
+      "id": 3,
+      "name": "PROJEKT",
       "lectures": [
         {
-          "id": "synthetic_id or something like PROJ_1_L1",
+          "id": 6,
           "lecturers": [
-            "jb@aalkat-gym.dk"
-          ],
-          "students": [
-            "bbande15@student.aau.dk",
-            "jbjoh15@student.aau.dk"
-          ],
-          "groups": [
-            "dat1-2015"
           ],
           "rooms": [
             {
@@ -283,21 +237,27 @@
             }
           ],
           "constraints": {
-            "hard": {},
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
             "soft": []
           }
         },
         {
-          "id": "synthetic_id or something like PROJ_1_L2",
+          "id": 7,
           "lecturers": [
-            "jb@aalkat-gym.dk"
-          ],
-          "students": [
-            "bbande15@student.aau.dk",
-            "jbjoh15@student.aau.dk"
-          ],
-          "groups": [
-            "dat1-2015"
           ],
           "rooms": [
             {
@@ -306,21 +266,27 @@
             }
           ],
           "constraints": {
-            "hard": {},
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
             "soft": []
           }
         },
         {
-          "id": "synthetic_id or something like PROJ_1_L3",
+          "id": 8,
           "lecturers": [
-            "jb@aalkat-gym.dk"
-          ],
-          "students": [
-            "bbande15@student.aau.dk",
-            "jbjoh15@student.aau.dk"
-          ],
-          "groups": [
-            "dat1-2015"
           ],
           "rooms": [
             {
@@ -329,21 +295,27 @@
             }
           ],
           "constraints": {
-            "hard": {},
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
             "soft": []
           }
         },
         {
-          "id": "synthetic_id or something like PROJ_1_L4",
+          "id": 9,
           "lecturers": [
-            "jb@aalkat-gym.dk"
-          ],
-          "students": [
-            "bbande15@student.aau.dk",
-            "jbjoh15@student.aau.dk"
-          ],
-          "groups": [
-            "dat1-2015"
           ],
           "rooms": [
             {
@@ -352,7 +324,21 @@
             }
           ],
           "constraints": {
-            "hard": {},
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
             "soft": []
           }
         }
@@ -360,9 +346,18 @@
     }
   ],
   "groups": {
-    "dat1-2015": [
-      "A list containing all students of dat1-2015..."
-    ]
+    "dat1-2015": {
+      "students": [
+        "bbande@student.aau.dk",
+        "asdf@student.aau.dk"
+      ],
+      "course_id": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
   },
   "rooms": {
     "AUDITORIUM": [
