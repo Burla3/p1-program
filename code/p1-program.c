@@ -7,7 +7,7 @@ json_t *rootConfig;
 int main(void) {
   initialConfiguration();
 
-  popMember *population = (popMember*) malloc(POPULATION_SIZE * sizeof(popMember));
+  /*popMember *population = (popMember*) malloc(POPULATION_SIZE * sizeof(popMember));*/
 
   return 0;
 }

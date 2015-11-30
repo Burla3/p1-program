@@ -1,8 +1,7 @@
 CC = gcc
 PROG = prog
 MAIN = p1-program.c
-#CFLAGS = -Wall
-CFLAGS = 
+CFLAGS = -Wall
 INCLUDEFILES = jsonParser.c geneticProcess/initial.c geneticProcess/fitness.c geneticProcess/selection.c geneticProcess/crossover.c geneticProcess/mutation.c
 TENSION = .exe
 
