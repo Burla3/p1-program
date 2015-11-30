@@ -2,7 +2,8 @@ CC = gcc
 PROG = prog
 MAIN = p1-program.c
 CFLAGS = -Wall
-INCLUDEFILES = jsonParser.c geneticProcess/initial.c geneticProcess/fitness.c geneticProcess/selection.c geneticProcess/crossover.c geneticProcess/mutation.c
+GENDIR = geneticProcess
+INCLUDEFILES = jsonParser.c $(GENDIR)/initial.c $(GENDIR)/fitness.c $(GENDIR)/selection.c $(GENDIR)/crossover.c $(GENDIR)/mutation.c
 TENSION = .exe
 
 UNAME := $(shell uname)
