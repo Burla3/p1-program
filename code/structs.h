@@ -2,40 +2,52 @@
 
 #ifndef STUDYNAME
 #define STUDYNAME
-  enum studyName {
-    Dat, Mat
-  };
+  typedef enum StudyName {
+    DAT, MAT
+  } StudyName;
 #endif
 
 #ifndef LECTURE
 #define LECTURE
-  typedef struct lecture {
+  typedef struct Lecture {
     char *type;
     char *room;
-  } lecture;
+  } Lecture;
 #endif
 
 #ifndef TIMETABLE
 #define TIMETABLE
-  typedef struct timetable {
-    enum studyName studyName;
+  typedef struct Timetable {
+    StudyName studyName;
     int numberOfLectures;
-    lecture *lectures;
-  } timetable;
+    Lecture *lectures;
+  } Timetable;
 #endif
 
 #ifndef POPMEMBER
 #define POPMEMBER
-  typedef struct popMember {
+  typedef struct PopMember {
     int fitnessScore;
-    timetable *studies;
-  } popMember;
+    Timetable *studies;
+  } PopMember;
 #endif
 
 #ifndef COURSE
 #define COURSE
-  typedef struct course {
-    char *course;
-    int lectures;
-  } course;
+  typedef struct Course {
+    char course[5];
+    int numberOfLectures;
+    char **rooms;
+    int numberOfRooms;
+  } Course;
+#endif
+
+#ifndef STUDY
+#define STUDY
+  typedef struct Study {
+    char name[15];
+    Course *studyCourses;
+    int numberOfCourses;
+    int totalNumberOfLectures;
+  } Study;
 #endif
