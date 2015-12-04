@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include "jsonParser.h"
+#include "jsonReadToStructs.h"
 #include "geneticProcess/geneticProcess.h"
 
 /**

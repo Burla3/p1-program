@@ -1,13 +1,28 @@
+#include <string.h>
 #include "p1-program.h"
 #include "structs.h"
 
 /* Global variables */
 json_t *rootConfig;
 
-int main(void) {
+int main(int argc, const char *argv[]) {
   initialConfiguration();
 
-  /*popMember *population = (popMember*) malloc(POPULATION_SIZE * sizeof(popMember));*/
+  /*PopMember *population = (PopMember*) malloc(POPULATION_SIZE * sizeof(PopMember));*/
+
+  json_t *groups = json_object_get(rootConfig, "groups");
+  int numberOfStudies = json_array_size(groups);
+
+  Study *studyArray = (Study*) malloc(numberOfStudies * sizeof(Study));
+
+  populateStudyStructFromConfig(rootConfig, studyArray);
+
+  /*int i;
+
+  for (i = 0; i < numberOfStudies; i++)
+  {
+    printStudyStruct(studyArray[i]);
+  }*/
 
   return 0;
 }
