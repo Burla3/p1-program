@@ -2,7 +2,7 @@
   "courses": [
     {
       "id": 0,
-      "name": "LIAL_1",
+      "name": "LIAL",
       "lectures": [
         {
           "id": 0,
@@ -76,7 +76,7 @@
     },
     {
       "id": 1,
-      "name": "PVTS_1",
+      "name": "PVTS",
       "lectures": [
         {
           "id": 2,
@@ -150,7 +150,7 @@
     },
     {
       "id": 2,
-      "name": "IMPR_1",
+      "name": "IMPR",
       "lectures": [
         {
           "id": 5,
@@ -224,7 +224,7 @@
     },
     {
       "id": 3,
-      "name": "PROJEKT",
+      "name": "PROJ",
       "lectures": [
         {
           "id": 6,
@@ -345,10 +345,16 @@
       ]
     }
   ],
-  "groups": {
-    "dat1-2015": {
+  "groups": [
+    {
+      "name": "dat1-2015",
       "students": [
         "bbande@student.aau.dk",
+        "asdf@student.aau.dk",
+        "asdf@student.aau.dk",
+        "asdf@student.aau.dk",
+        "asdf@student.aau.dk",
+        "asdf@student.aau.dk",
         "asdf@student.aau.dk"
       ],
       "course_id": [
@@ -358,16 +364,26 @@
         3
       ]
     }
-  },
+  ],
   "rooms": {
     "AUDITORIUM": [
       {
         "name": "Aud. 6",
-        "capacity": 200
+        "capacity": 3
       },
       {
         "name": "Aud. 7",
-        "capacity": 240
+        "capacity": 10
+      }
+    ],
+    "SEMINAR_ROOM": [
+      {
+        "name": "A1653",
+        "capacity": 60
+      },
+      {
+        "name": "A51",
+        "capacity": 80
       }
     ],
     "GROUPROOM": [
