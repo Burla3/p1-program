@@ -1,36 +1,41 @@
 #include "initial.h"
 
-void initialPopulation(course courses[], popMember population[], int arrayLength, int totalLectures) {
-  int i, j, k, random;
+void initialPopulation(Course courses[], PopMember population[]) {
+  int i, j, k, randomCourse, coursesLength, roomsLength;
 
   for (i = 0; i < POPULATION_SIZE; i++) {
-    timetable *studies = (timetable*) malloc(2 * sizeof(timetable));
-    popMember member = {-1, studies};
+    Timetable *studies = (Timetable*) malloc(STUDIES * sizeof(Timetable));
+    PopMember member = {-1, studies};
     population[i] = member;
-    for (j = 0; j < 2; j++) {
-      lecture *lectures = (lecture*) malloc(totalLectures * sizeof(lecture));
-      timetable study = {j, totalLectures, lectures};
+    for (j = 0; j < STUDIES; j++) {
+      Lecture *lectures = (Lecture*) malloc(totalLectures * sizeof(Lecture));
+      Timetable study = {j, totalLectures, lectures};
       population[i].studies[j] = study;
       for (k = 0; k < totalLectures; k++) {
-        random = getRandomCourse(courses, arrayLength);
-        lecture singleLecture = {courses[random].course, "Random Room"};
+        randomCourse = getRandomCourse(array[j].courses, array[j].numberOfCourses);
+        randomRoom = getRandomRoom(array[j].courses, array[j].array[randomCourse].numberOfRooms);
+        Lecture singleLecture = {array[j].courses[randomCourse].course, array[j].courses[randomRoom].rooms};
         population[i].studies[j].lectures[k] = singleLecture;
       }
     }
   }
 }
 
-int getRandomCourse(course courses[], int arrayLength) {
-  int random = (rand() % arrayLength + 1);
+int getRandomCourse(course courses[], int coursesLength) {
+  int random = (rand() % coursesLength);
 
   while (1) {
-    if (random == arrayLength) {
-      random = arrayLength - 1;
-    } else if (courses[random].lectures > 0) {
-      courses[random].lectures--;
+    if (random == coursesLength) {
+      random = coursesLength - 1;
+    } else if (array[j].courses[random].lectures > 0) {
+      arrray[j].courses[random].lectures--;
       return random;
     } else {
-      random = (rand() % arrayLength);
+      random = (rand() % coursesLength);
     }
   }
+}
+
+int getRandomRoom(course courses[], int roomsLength) {
+  return (rand() % array[j].array[j].numberOfRooms);
 }

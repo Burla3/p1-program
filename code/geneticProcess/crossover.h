@@ -38,8 +38,8 @@
  * @param[in] parent2 the second parent used for breeding
  * @param[out] offspring the offspring that is generated through breeding
  */
-void crossoverMix(const int totalLectures, const lecture parent1[],
-                  const lecture parent2[],       lecture offspring[]);
+void crossoverMix(const int totalLectures, const Lecture parent1[],
+                  const Lecture parent2[],       Lecture offspring[]);
 
 /**
  * Breeds two offsprings by picking a random crossover point for the parents and swapping the right sides with
@@ -90,5 +90,5 @@ void crossoverMix(const int totalLectures, const lecture parent1[],
  * @param[out] offspring1 the first offspring that is generated through breeding
  * @param[out] offspring2 the second offspring that is generated through breeding
  */
-void crossoverSlice(const int totalLectures, const lecture parent1[], const lecture parent2[],
-                                                   lecture offspring1[],    lecture offspring2[]);
+void crossoverSlice(const int totalLectures, const Lecture parent1[], const Lecture parent2[],
+                                                   Lecture offspring1[],    Lecture offspring2[]);
