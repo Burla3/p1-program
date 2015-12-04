@@ -1,7 +1,7 @@
 #include "crossover.h"
 
-void crossoverMix(const int totalLectures, const lecture parent1[],
-                  const lecture parent2[],       lecture offspring[]) {
+void crossoverMix(const int totalLectures, const Lecture parent1[],
+                  const Lecture parent2[],       Lecture offspring[]) {
   int i;
 
   for (i = 0; i < totalLectures; i++) {
@@ -14,8 +14,8 @@ void crossoverMix(const int totalLectures, const lecture parent1[],
 }
 
 
-void crossoverSlice(const int totalLectures, const lecture parent1[], const lecture parent2[],
-                                                   lecture offspring1[],    lecture offspring2[]) {
+void crossoverSlice(const int totalLectures, const Lecture parent1[], const Lecture parent2[],
+                                                   Lecture offspring1[],    Lecture offspring2[]) {
   int crossoverPoint = (rand() % (totalLectures - 1)) + 1;
 
   int i;

@@ -9,4 +9,4 @@
  * @param[in] parent the first parent used for breeding
  * @param[out] offspring the first offspring that is generated through breeding
  */
-int mutate(const int mutationRate, const int totalLectures, const lecture parent[], lecture offspring[]);
+int mutate(const int mutationRate, const int totalLectures, const Lecture parent[], Lecture offspring[]);

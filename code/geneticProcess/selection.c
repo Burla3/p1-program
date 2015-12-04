@@ -16,7 +16,7 @@ int sortPopulation(const void *ep1, const void *ep2) {
   return result;
 }*/
 
-void selection(const timetable population[], timetable newPopulation[]) {
+void selection(const Timetable population[], Timetable newPopulation[]) {
   int i;
 
   for (i = 0; i < POPULATION_SIZE / 2; i++) {

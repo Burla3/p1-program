@@ -37,5 +37,6 @@
   typedef struct course {
     char *course;
     int lectures;
+    char **room;
   } course;
 #endif

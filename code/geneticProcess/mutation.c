@@ -1,6 +1,6 @@
 #include "mutation.h"
 
-int mutate(const int mutationRate, const int totalLectures, const lecture parent[], lecture offspring[]) {
+int mutate(const int mutationRate, const int totalLectures, const Lecture parent[], Lecture offspring[]) {
   int i;
   for (i = 0; i < totalLectures; i++) {
     offspring[i] = parent[i];

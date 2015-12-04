@@ -2,4 +2,4 @@
 
 int sortPopulation(const void *ep1, const void *ep2);
 
-void selection(const timetable population[], timetable newPopulation[]);
+void selection(const Timetable population[], Timetable newPopulation[]);
