@@ -1,7 +1,6 @@
 #include "fitness.h"
 
 int main(void) {
-
   CalenderData calender[DAYS_IN_SEMESTER];
   TimetableWithDates timetable[DAYS_IN_SEMESTER];
 
@@ -9,11 +8,10 @@ int main(void) {
 }
 
 int calculateFitness() {
-
   int fitness;
-  
+
   fitness = amountOfLectures() + roomOverlap() + lecturerOverlap() + lecturerAvailable() + courseNotSameDay() + 
-            lecturerConstraintRoomHard() + followingCourses() + lecturerConstraintSoft() + lecturerConstraintTime();
+            lecturerConstraintRoomHard() + followingCourses() + lecturerConstraintRoomSoft() + lecturerConstraintTime();
 
   return fitness;
 }
@@ -22,7 +20,6 @@ int calculateFitness() {
 /* HARD CONSTRAINTS */
 /* amountOfLectures gives a penalty score, if there is a wrong amount of each lecture in the timetable. */
 int amountOfLectures() {
-
   int i, j, lecturesTemp, score = 0;
 
 
@@ -41,7 +38,6 @@ int amountOfLectures() {
 
 /* roomOverlap gives a penalty score, if more than one lecture is planning to use the same room at the same time. */
 int roomOverlap() {
-
   int i, j, k, score = 0;
 
   for(i = 0; i < MAX_LECTURES; i++) {
@@ -52,13 +48,11 @@ int roomOverlap() {
       } 
     }
   }
-
   return score;
 }
 
 /* lecturerOverlap gives a penalty score, if more than one course needs the lecturer to educate at the same time. */
 int lecturerOverlap() {
-
   int i, j, k, score = 0;
 
   for(i = 0; i < MAX_LECTURES; i++) {
@@ -69,7 +63,6 @@ int lecturerOverlap() {
       } 
     }
   }
-
   return score;
 }
 
@@ -81,7 +74,16 @@ int lecturerAvailable() {
 
 /* courseNotSameDay gives a penalty score, if a group of students have the same course twice on the same day. */
 int courseNotSameDay() {
-  return 0;
+  int i, score = 0;
+
+  if (strcmp(lectures[i].type, "PRJK") != 0) {
+    for(i = 0; i < MAX_LECTURES; i += 2) {
+      if (strcmp(lectures[i].type, lectures[i+1].type) == 0) {
+        score += PENALTY_HARD;
+      }
+    }
+  }
+  return score;
 }
 
 /* lecturerConstraintRoom gives a penalty, every time one of the lecturer's courses arent planned to happen in the
