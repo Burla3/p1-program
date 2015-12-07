@@ -10,7 +10,7 @@
 #ifndef LECTURE
 #define LECTURE
   typedef struct Lecture {
-    char *type;
+    char type[5];
     char *room;
   } Lecture;
 #endif
