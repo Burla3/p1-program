@@ -5,7 +5,7 @@
 /* Global variables */
 json_t *rootConfig;
 
-int main(int argc, const char *argv[]) {
+int main(int argc, char *argv[]) {
   initialConfiguration();
 
   /*PopMember *population = (PopMember*) malloc(POPULATION_SIZE * sizeof(PopMember));*/
