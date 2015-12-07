@@ -1,5 +1,5 @@
-#include "../structs.h"
 #include <stdlib.h>
+#include "../structs.h"
 
 /**
  * Compare function used together with qsort to sort the population by placing PopMembers with the lowest fitnessScore

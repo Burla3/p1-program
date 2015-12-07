@@ -1,11 +1,10 @@
 #include "selection.h"
 
 int sortPopulation(const void *ep1, const void *ep2) {
-  int result;
   PopMember *popMember1 = (PopMember *)ep1,
             *popMember2 = (PopMember *)ep2;
 
-  return popMember1->fitnessScore - timetable2->fitnessScore;
+  return popMember1->fitnessScore - popMember2->fitnessScore;
 }
 
 void selection(PopMember population[], PopMember newPopulation[]) {
