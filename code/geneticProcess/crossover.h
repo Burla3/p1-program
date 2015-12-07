@@ -33,13 +33,11 @@
  *  </tr>
  * </table>
  *
- * @param[in] totalStudies the total amount of studies per population member
- * @param[in] totalLectures the total amount of lectures per timetable
  * @param[in] parent1 the first parent used for breeding
  * @param[in] parent2 the second parent used for breeding
  * @param[out] offspring the offspring that is generated through breeding
  */
-void crossoverMix(int totalStudies, int totalLectures, PopMember parent1, PopMember parent2, PopMember offspring);
+void crossoverMix(PopMember parent1, PopMember parent2, PopMember offspring);
 
 /**
  * Breeds two offsprings by picking a random crossover point for the parents and swapping the right sides with
@@ -84,12 +82,9 @@ void crossoverMix(int totalStudies, int totalLectures, PopMember parent1, PopMem
  *  </tr>
  * </table>
  *
- * @param[in] totalStudies the total amount of studies per population member
- * @param[in] totalLectures the total amount of lectures per timetable
  * @param[in] parent1 the first parent used for breeding
  * @param[in] parent2 the second parent used for breeding
  * @param[out] offspring1 the first offspring that is generated through breeding
  * @param[out] offspring2 the second offspring that is generated through breeding
  */
-void crossoverSlice(int totalStudies, int totalLectures, PopMember parent1, PopMember parent2,
-                                                         PopMember offspring1, PopMember offspring2);
+void crossoverSlice(PopMember parent1, PopMember parent2, PopMember offspring1, PopMember offspring2);
