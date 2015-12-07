@@ -22,7 +22,10 @@ void initialPopulation(PopMember *population, Study *studyArray, int numberOfStu
       for (k = 0; k < totalNumberOfLectures; k++) {
         randomCourse = getRandomCourse(array, studyArray[j].numberOfCourses);
         randomRoom = getRandomRoom(studyArray[j].studyCourses[randomCourse].numberOfRooms);
-        Lecture singleLecture = {studyArray[j].studyCourses[randomCourse].course, studyArray[j].studyCourses[randomCourse].rooms[randomRoom]};
+        Lecture singleLecture;
+        strcpy(singleLecture.type, studyArray[j].studyCourses[randomCourse].course);
+        strcpy(singleLecture.room, studyArray[j].studyCourses[randomCourse].rooms[randomRoom]);
+
         population[i].studies[j].lectures[k] = singleLecture;
       }
     }
