@@ -1,4 +1,7 @@
 #define POPULATION_SIZE 10000
+#define PENALTY_HARD 100
+#define PENALTY_SOFT 1
+#define DAYS_IN_SEMESTER 120
 
 #ifndef STUDYNAME
 #define STUDYNAME
@@ -51,3 +54,21 @@
     int totalNumberOfLectures;
   } Study;
 #endif
+
+#ifndef CALENDERDATA
+#define CALENDERDATA
+  typedef struct CalenderData {
+    double lectureTimeStart;
+    int day;
+    int month;
+  } CalenderData;
+#endif
+
+#ifndef TIMETABLEWITHDATES
+#define TIMETABLEWITHDATES
+  typedef struct TimetableWithDates {
+    Lecture lecture;
+    CalenderData calender;
+  } TimetableWithDates;
+#endif
+

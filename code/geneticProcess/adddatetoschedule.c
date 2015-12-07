@@ -1,18 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-#define PENALTY_HARD 100
-#define PENALTY_SOFT 1
-#define DAYS_IN_SEMESTER 120
-
-typedef struct CalenderData {
-  double lectureTimeStart;
-  int day;
-  int month;
-} CalenderData;
-
-int nextDay(CalenderData *calender);
-int getDaysInMonth(int month);
+#include "addDateToSchedule.h"
 
 int main(void) {
 
@@ -78,5 +64,3 @@ int getDaysInMonth(int month) {
 
   return daysInMonth;
 }
-
-
