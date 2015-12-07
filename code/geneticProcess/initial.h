@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include "../structs.h"
 
 void initialPopulation(PopMember *population, Study *studyArray, int numberOfStudies);
