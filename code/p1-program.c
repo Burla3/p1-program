@@ -8,14 +8,19 @@ json_t *rootConfig;
 int main(int argc, const char *argv[]) {
   initialConfiguration();
 
-  /*PopMember *population = (PopMember*) malloc(POPULATION_SIZE * sizeof(PopMember));*/
+  PopMember *population = (PopMember*) malloc(POPULATION_SIZE * sizeof(PopMember));
+
 
   json_t *groups = json_object_get(rootConfig, "groups");
   int numberOfStudies = json_array_size(groups);
 
   Study *studyArray = (Study*) malloc(numberOfStudies * sizeof(Study));
 
+
+
   populateStudyStructFromConfig(rootConfig, studyArray);
+
+  initialPopulation(population, studyArray, numberOfStudies);
 
   /*int i;
 
