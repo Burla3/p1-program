@@ -1,20 +1,38 @@
+#include <string.h>
 #include "p1-program.h"
+#include "structs.h"
 
-int main(int argc, char *argv[]) {
+/* Global variables */
+json_t *rootConfig;
 
-  json_t *rootConfig = NULL;
-  initialConfiguration(rootConfig);
+int main(int argc, const char *argv[]) {
+  initialConfiguration();
 
   PopMember *population = (PopMember*) malloc(POPULATION_SIZE * sizeof(PopMember));
 
-  Study *studyArray = (Study*) malloc(getNumberOfStudies(rootConfig) * sizeof(Study));
+
+  json_t *groups = json_object_get(rootConfig, "groups");
+  int numberOfStudies = json_array_size(groups);
+
+  Study *studyArray = (Study*) malloc(numberOfStudies * sizeof(Study));
+
+
 
   populateStudyStructFromConfig(rootConfig, studyArray);
+
+  initialPopulation(population, studyArray, numberOfStudies);
+
+  /*int i;
+
+  for (i = 0; i < numberOfStudies; i++)
+  {
+    printStudyStruct(studyArray[i]);
+  }*/
 
   return 0;
 }
 
-void initialConfiguration(json_t *rootConfig) {
+void initialConfiguration() {
   srand(time(NULL));
 
   rootConfig = loadJSON("json/config.json");
@@ -22,9 +40,4 @@ void initialConfiguration(json_t *rootConfig) {
   if (rootConfig == NULL) {
     perror("Error loading JSON ");
   }
-}
-
-int getNumberOfStudies(json_t *rootConfig) {
-  json_t *groups = json_object_get(rootConfig, "groups");
-  return json_array_size(groups);
 }

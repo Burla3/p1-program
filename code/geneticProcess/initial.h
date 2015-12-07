@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include "../structs.h"
 
-void initialPopulation(Course courses[], PopMember population[], int arrayLength, int totalLectures);
+void initialPopulation(PopMember *population, Study *studyArray, int numberOfStudies);
 
-int getRandomCourse(Course courses[], int arrayLength);
+int getRandomCourse(int array[], int numberOfCourses);
+
+int getRandomRoom(int numberOfRooms);
