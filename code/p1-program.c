@@ -1,6 +1,6 @@
 #include "p1-program.h"
 
-int main(int argc, const char *argv[]) {
+int main(int argc, char *argv[]) {
 
   json_t *rootConfig = NULL;
   initialConfiguration(rootConfig);

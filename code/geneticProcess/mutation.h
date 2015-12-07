@@ -6,8 +6,9 @@
  * variables will mutate.
  *
  * @param[in] mutationRate the chance for something to mutate
- * @param[in] totalLectures the total amount of lectures per timetable
- * @param[in] parent the first parent used for breeding
- * @param[out] offspring the first offspring that is generated through breeding
+ * @param[in] totalStudies the total amount of studies per PopMember
+ * @param[in] totalLectures the total amount of lectures per Timetable
+ * @param[in] parent the parent used for mutation
+ * @param[out] offspring the offspring that is generated through mutation
  */
-int mutate(const int mutationRate, const int totalLectures, const Lecture parent[], Lecture offspring[]);
+int mutate(int mutationRate, int totalStudies, int totalLectures, PopMember parent, PopMember offspring);
