@@ -11,7 +11,7 @@ void initialPopulation(PopMember *population, Study *studyArray, int numberOfStu
     for (j = 0; j < numberOfStudies; j++) {
       totalNumberOfLectures = studyArray[j].totalNumberOfLectures;
       Lecture *lectures = (Lecture*) malloc(totalNumberOfLectures * sizeof(Lecture));
-      Timetable study = {j, totalNumberOfLectures, lectures};
+      Timetable study = {"dat1-2015", totalNumberOfLectures, lectures};
       population[i].studies[j] = study;
 
       int *array = (int*) malloc(studyArray[j].numberOfCourses * sizeof(int));

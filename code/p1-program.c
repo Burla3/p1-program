@@ -26,12 +26,13 @@ int main(int argc, const char *argv[]) {
 
   initialPopulation(population, studyArray, numberOfStudies);
 
-  /* Fitness */
+  calculateFitness(population, studyArray);
 
   int i, j, h;
 
   for (i = 0; i < POPULATION_SIZE; i++)
   {
+    printf("%d\n", population[i].fitnessScore);
     for (j = 0; j < numberOfStudies; j++)
     {
       for (h = 0; h < population[i].studies[j].numberOfLectures; h++)
