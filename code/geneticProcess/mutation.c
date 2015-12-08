@@ -1,16 +1,16 @@
 #include "mutation.h"
 
-int mutate(int mutationRate, int totalStudies, int totalLectures, PopMember parent, PopMember offspring) {
-  if ((rand() % 100) + 1 <= mutationRate) {
+int mutate(int mutationRate, PopMember parent, PopMember offspring) {
+  if (getRandomValue(100) + 1 <= mutationRate) {
     offspring = parent;
 
-    int randStudy = rand() % totalStudies;
-    int randLecture = rand() % totalLectures;
+    int randStudy = getRandomValue(parent.numberOfStudies);
+    int randLecture = getRandomValue(parent.studies[randStudy].numberOfLectures);
 
-    if (rand() % 2 == 0) {
+    if (getRandomValue(2) == 0) {
       strcpy(offspring.studies[randStudy].lectures[randLecture].type, "RndT");/* Random Type */
     } else {
-      offspring.studies[randStudy].lectures[randLecture].room = "Random Room";
+      strcpy(offspring.studies[randStudy].lectures[randLecture].room, "RndR"); /* Random Room */
     }
     return 1;
   } else {

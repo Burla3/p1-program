@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
+#include "../utilities.h"
 #include "../structs.h"
 
 /**
@@ -7,9 +8,7 @@
  * variables will mutate.
  *
  * @param[in] mutationRate the chance for something to mutate
- * @param[in] totalStudies the total amount of studies per PopMember
- * @param[in] totalLectures the total amount of lectures per Timetable
  * @param[in] parent the parent used for mutation
  * @param[out] offspring the offspring that is generated through mutation
  */
-int mutate(int mutationRate, int totalStudies, int totalLectures, PopMember parent, PopMember offspring);
+int mutate(int mutationRate, PopMember parent, PopMember offspring);
