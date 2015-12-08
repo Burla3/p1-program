@@ -2,26 +2,46 @@
 
 int main(int argc, const char *argv[]) {
 
-  json_t *rootConfig = NULL;
-  initialConfiguration(rootConfig);
-
-  PopMember *population = (PopMember*) malloc(POPULATION_SIZE * sizeof(PopMember));
-
-  Study *studyArray = (Study*) malloc(getNumberOfStudies(rootConfig) * sizeof(Study));
-
-  populateStudyStructFromConfig(rootConfig, studyArray);
-
-  return 0;
-}
-
-void initialConfiguration(json_t *rootConfig) {
   srand(time(NULL));
 
-  rootConfig = loadJSON("json/config.json");
+  json_t *rootConfig = loadJSON("json/config.json");
 
   if (rootConfig == NULL) {
     perror("Error loading JSON ");
   }
+
+  int numberOfStudies = getNumberOfStudies(rootConfig);
+
+  PopMember *population = (PopMember*) malloc(POPULATION_SIZE * sizeof(PopMember));
+  Study *studyArray = (Study*) malloc(numberOfStudies * sizeof(Study));
+
+  populateStudyStructFromConfig(rootConfig, studyArray);
+
+  int k;
+
+  for (k = 0; k < numberOfStudies; k++)
+  {
+    printStudyStruct(studyArray[k]);
+  }
+
+  initialPopulation(population, studyArray, numberOfStudies);
+
+  /* Fitness */
+
+  int i, j, h;
+
+  for (i = 0; i < POPULATION_SIZE; i++)
+  {
+    for (j = 0; j < numberOfStudies; j++)
+    {
+      for (h = 0; h < population[i].studies[j].numberOfLectures; h++)
+      {
+        printf("%s\t%s\n", population[i].studies[j].lectures[h].type, population[i].studies[j].lectures[h].room);
+      }
+    }
+  }  
+
+  return 0;
 }
 
 int getNumberOfStudies(json_t *rootConfig) {

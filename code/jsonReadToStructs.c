@@ -52,7 +52,7 @@ void populateStudyStructFromConfig(json_t *rootConfig, Study *studyArray)
           availableRooms[0] = "ERROR";
           int numberOfRooms = 0;
 
-          /* root->courses[i]->id */
+          /* root->courses[i]->name */
           json_t *course_name = json_object_get(coursesValue, "name");
 
           /* Study[i]->Course[i]->course */
@@ -73,69 +73,61 @@ void populateStudyStructFromConfig(json_t *rootConfig, Study *studyArray)
             /* Increase total number of lectures for the struct to fill */
             totalNumberOfLectures++;
 
-            /* root->courses[i]->lectures[i]->rooms[] */
-            json_t *courseRooms = json_object_get(coursesLecturesValue, "rooms");
+            /* root->courses[i]->lectures[i]->roomType */
+            json_t *lectureRoom = json_object_get(coursesLecturesValue, "roomType");
 
-            int courseRoomsIndex;
-            json_t *courseRoomsValue;
+            /* root->rooms{} */
+            json_t *rooms = json_object_get(rootConfig, "rooms");
 
-            /* root->courses[i]->lectures[i]->rooms[i] */
-            json_array_foreach(courseRooms, courseRoomsIndex, courseRoomsValue) {
+            /* root->rooms{}->(eg. AUDITORIUM)[] */
+            json_t *roomsType = json_object_get(rooms, json_string_value(lectureRoom));
 
-              /* root->courses[i]->lectures[i]->rooms[i]->roomType */
-              json_t *courseRoomType = json_object_get(courseRoomsValue, "roomType");
+            int roomsRoomTypeIndex;
+            json_t *roomsRoomTypeValue;
 
-              /* root->rooms{} */
-              json_t *rooms = json_object_get(rootConfig, "rooms");
+            /* root->rooms{}->(eg. AUDITORIUM)[i] */
+            json_array_foreach(roomsType, roomsRoomTypeIndex, roomsRoomTypeValue) {
 
-              /* root->rooms{}->(eg. AUDITORIUM)[] */
-              json_t *roomsType = json_object_get(rooms, json_string_value(courseRoomType));
+              /* root->rooms{}->(eg. AUDITORIUM)[i]->capacity */
+              json_t *roomsTypeCapacity = json_object_get(roomsRoomTypeValue, "capacity");
 
-              int roomsRoomTypeIndex;
-              json_t *roomsRoomTypeValue;
+              /* There is capacity for all students in the room */
+              if (json_integer_value(roomsTypeCapacity) >= numberOfStudents) {
 
-              /* root->rooms{}->(eg. AUDITORIUM)[i] */
-              json_array_foreach(roomsType, roomsRoomTypeIndex, roomsRoomTypeValue) {
+                /* root->rooms{}->(eg. AUDITORIUM)[i]->name */
+                json_t *roomsTypeName = json_object_get(roomsRoomTypeValue, "name");
+                const char *roomsTypeNameStr = json_string_value(roomsTypeName);
 
-                /* root->rooms{}->(eg. AUDITORIUM)[i]->capacity */
-                json_t *roomsTypeCapacity = json_object_get(roomsRoomTypeValue, "capacity");
+                char *strRoomsTypeName = malloc((strlen(roomsTypeNameStr) + 1) * sizeof(char));
+                strcpy(strRoomsTypeName, roomsTypeNameStr);
 
-                /* There is capacity for all students in the room */
-                if (json_integer_value(roomsTypeCapacity) >= numberOfStudents) {
+                availableRooms[numberOfRooms] = malloc((strlen(roomsTypeNameStr) + 1) * sizeof(char));
 
-                  /* root->rooms{}->(eg. AUDITORIUM)[i]->name */
-                  json_t *roomsTypeName = json_object_get(roomsRoomTypeValue, "name");
+                int j, insert = 1;
 
-                  const char *roomsTypeNameStr = json_string_value(roomsTypeName);
-
-                  char *strRoomsTypeName = malloc((strlen(roomsTypeNameStr) + 1) * sizeof(char));
-
-                  strcpy(strRoomsTypeName, roomsTypeNameStr);
-
-                  int j;
-                  int insertRoom = 1;
-
+                if (numberOfRooms == 0) {
+                  insert = 0;
+                  strcpy(availableRooms[numberOfRooms], strRoomsTypeName);
+                  numberOfRooms++;
+                } else {
                   for (j = 0; j < numberOfRooms; j++) {
                     if (strcmp(availableRooms[j], strRoomsTypeName) == 0) {
-                      insertRoom = 0;
+                      insert = 0;
                       break;
                     }
                   }
-
-                  if (insertRoom) {
-                    if (j == 0) {
-                      availableRooms[0] = strRoomsTypeName;
-                    } else {
-                      availableRooms[numberOfRooms] = strRoomsTypeName;
-                    }
-                    numberOfRooms++;
-                  }
-                  free(strRoomsTypeName);
                 }
+
+                if (insert) {
+                  strcpy(availableRooms[numberOfRooms], strRoomsTypeName);
+                  numberOfRooms++;
+                }          
+
+                free(strRoomsTypeName);
               }
             }
           }
-          
+
           /* Study[i]->Course[i]->rooms */
           studyArray[groupsIndex].studyCourses[coursesIndex].rooms = (char**) malloc(numberOfRooms * sizeof(char*));
 
@@ -145,7 +137,7 @@ void populateStudyStructFromConfig(json_t *rootConfig, Study *studyArray)
           {
             /* Study[i]->Course[i]->rooms[i] */
             studyArray[groupsIndex].studyCourses[coursesIndex].rooms[h] = (char*) malloc((strlen(availableRooms[h]) + 1) * sizeof(char));
-            studyArray[groupsIndex].studyCourses[coursesIndex].rooms[h] = availableRooms[h];
+            strcpy(studyArray[groupsIndex].studyCourses[coursesIndex].rooms[h], availableRooms[h]);
           }
 
           /* Free char two dimentional array */

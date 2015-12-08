@@ -6,18 +6,9 @@
       "lectures": [
         {
           "id": 0,
+          "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
-          ],
-          "rooms": [
-            {
-              "roomType": "AUDITORIUM",
-              "time": 120
-            },
-            {
-              "roomType": "GROUPROOM",
-              "time": 120
-            }
           ],
           "constraints": {
             "hard": {
@@ -40,18 +31,9 @@
         },
         {
           "id": 1,
+          "roomType": "SEMINAR_ROOM",
           "lecturers": [
             "jb@aalkat-gym.dk"
-          ],
-          "rooms": [
-            {
-              "roomType": "AUDITORIUM",
-              "time": 120
-            },
-            {
-              "roomType": "GROUPROOM",
-              "time": 120
-            }
           ],
           "constraints": {
             "hard": {
@@ -80,18 +62,9 @@
       "lectures": [
         {
           "id": 2,
+          "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
-          ],
-          "rooms": [
-            {
-              "roomType": "AUDITORIUM",
-              "time": 120
-            },
-            {
-              "roomType": "GROUPROOM",
-              "time": 120
-            }
           ],
           "constraints": {
             "hard": {
@@ -114,18 +87,9 @@
         },
         {
           "id": 3,
+          "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
-          ],
-          "rooms": [
-            {
-              "roomType": "AUDITORIUM",
-              "time": 120
-            },
-            {
-              "roomType": "GROUPROOM",
-              "time": 120
-            }
           ],
           "constraints": {
             "hard": {
@@ -154,18 +118,9 @@
       "lectures": [
         {
           "id": 5,
+          "roomType": "SEMINAR_ROOM",
           "lecturers": [
             "jb@aalkat-gym.dk"
-          ],
-          "rooms": [
-            {
-              "roomType": "AUDITORIUM",
-              "time": 120
-            },
-            {
-              "roomType": "GROUPROOM",
-              "time": 120
-            }
           ],
           "constraints": {
             "hard": {
@@ -188,18 +143,9 @@
         },
         {
           "id": 5,
+          "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
-          ],
-          "rooms": [
-            {
-              "roomType": "AUDITORIUM",
-              "time": 120
-            },
-            {
-              "roomType": "GROUPROOM",
-              "time": 120
-            }
           ],
           "constraints": {
             "hard": {
@@ -228,13 +174,8 @@
       "lectures": [
         {
           "id": 6,
+          "roomType": "GROUPROOM",
           "lecturers": [
-          ],
-          "rooms": [
-            {
-              "roomType": "GROUPROOM",
-              "time": 240
-            }
           ],
           "constraints": {
             "hard": {
@@ -257,13 +198,8 @@
         },
         {
           "id": 7,
+          "roomType": "GROUPROOM",
           "lecturers": [
-          ],
-          "rooms": [
-            {
-              "roomType": "GROUPROOM",
-              "time": 240
-            }
           ],
           "constraints": {
             "hard": {
@@ -286,13 +222,8 @@
         },
         {
           "id": 8,
+          "roomType": "GROUPROOM",
           "lecturers": [
-          ],
-          "rooms": [
-            {
-              "roomType": "GROUPROOM",
-              "time": 240
-            }
           ],
           "constraints": {
             "hard": {
@@ -315,13 +246,8 @@
         },
         {
           "id": 9,
+          "roomType": "GROUPROOM",
           "lecturers": [
-          ],
-          "rooms": [
-            {
-              "roomType": "GROUPROOM",
-              "time": 240
-            }
           ],
           "constraints": {
             "hard": {
@@ -369,7 +295,7 @@
     "AUDITORIUM": [
       {
         "name": "Aud. 6",
-        "capacity": 3
+        "capacity": 10
       },
       {
         "name": "Aud. 7",

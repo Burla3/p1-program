@@ -5,8 +5,9 @@ void initialPopulation(PopMember *population, Study *studyArray, int numberOfStu
 
   for (i = 0; i < POPULATION_SIZE; i++) {
     Timetable *studies = (Timetable*) malloc(numberOfStudies * sizeof(Timetable));
-    PopMember member = {-1, studies};
+    PopMember member = {-1, numberOfStudies, studies};
     population[i] = member;
+
     for (j = 0; j < numberOfStudies; j++) {
       totalNumberOfLectures = studyArray[j].totalNumberOfLectures;
       Lecture *lectures = (Lecture*) malloc(totalNumberOfLectures * sizeof(Lecture));
@@ -15,17 +16,23 @@ void initialPopulation(PopMember *population, Study *studyArray, int numberOfStu
 
       int *array = (int*) malloc(studyArray[j].numberOfCourses * sizeof(int));
 
-      for (l = 0; l < totalNumberOfLectures; l++) {
-        array[l] = studyArray[j].studyCourses[l].numberOfRooms;
+      for (l = 0; l < studyArray[j].numberOfCourses; l++) {
+        array[l] = studyArray[j].studyCourses[l].numberOfLectures;
       }
 
       for (k = 0; k < totalNumberOfLectures; k++) {
-        randomCourse = getRandomCourse(array, studyArray[j].numberOfCourses);
-        randomRoom = getRandomRoom(studyArray[j].studyCourses[randomCourse].numberOfRooms);
         Lecture singleLecture;
-        strcpy(singleLecture.type, studyArray[j].studyCourses[randomCourse].course);
-        strcpy(singleLecture.room, studyArray[j].studyCourses[randomCourse].rooms[randomRoom]);
+        randomCourse = getRandomCourse(array, studyArray[j].numberOfCourses);
 
+        if (randomCourse != studyArray[j].numberOfCourses - 1) {
+          randomRoom = getRandomRoom(studyArray[j].studyCourses[randomCourse].numberOfRooms);
+          strcpy(singleLecture.room, studyArray[j].studyCourses[randomCourse].rooms[randomRoom]);
+        }
+        else {
+          strcpy(singleLecture.room, "GR");
+        }
+
+        strcpy(singleLecture.type, studyArray[j].studyCourses[randomCourse].course);
         population[i].studies[j].lectures[k] = singleLecture;
       }
     }
@@ -37,7 +44,7 @@ int getRandomCourse(int array[], int numberOfCourses) {
 
   while (1) {
     if (array[random] > 0) {
-      array[random]--;
+      array[random] -= 1;
       return random;
     } else {
       random = (rand() % numberOfCourses);

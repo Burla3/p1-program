@@ -7,9 +7,4 @@
 #include "geneticProcess/geneticProcess.h"
 #include "structs.h"
 
-/**
- * Function used to load the initial configurations used in the rest of the program.
- */
-void initialConfiguration(json_t *rootConfig);
-
 int getNumberOfStudies(json_t *rootConfig);

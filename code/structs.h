@@ -1,4 +1,4 @@
-#define POPULATION_SIZE 10000
+#define POPULATION_SIZE 1
 #define PENALTY_HARD 100
 #define PENALTY_SOFT 1
 #define DAYS_IN_SEMESTER 120
@@ -14,7 +14,7 @@
 #define LECTURE
   typedef struct Lecture {
     char type[5];
-    char *room;
+    char room[100];
   } Lecture;
 #endif
 
@@ -31,6 +31,7 @@
 #define POPMEMBER
   typedef struct PopMember {
     int fitnessScore;
+    int numberOfStudies;
     Timetable *studies;
   } PopMember;
 #endif
