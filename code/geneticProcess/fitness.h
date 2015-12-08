@@ -4,7 +4,7 @@
 #include "../jsonParser.h"
 #include "../structs.h"
 
-int calculateFitness();
+void calculateFitness();
 int amountOfLectures();
 int roomOverlap();
 int lecturerOverlap();
@@ -14,4 +14,3 @@ int lecturerConstraintRoomHard();
 int followingCourses();
 int lecturerConstraintRoomSoft();
 int lecturerConstraintTime();
-void createTimeTable();

@@ -55,6 +55,8 @@
     double lectureTimeStart;
     int day;
     int month;
+    char *type;
+    char *room;
   } CalenderData;
 #endif
 
