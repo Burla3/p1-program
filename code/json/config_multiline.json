@@ -269,6 +269,230 @@
           }
         }
       ]
+    },
+    {
+      "id": 4,
+      "name": "LIAL",
+      "lectures": [
+        {
+          "id": 10,
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "id": 11,
+          "roomType": "SEMINAR_ROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "PVTS",
+      "lectures": [
+        {
+          "id": 12,
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "id": 13,
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "CALC",
+      "lectures": [
+        {
+          "id": 14,
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "id": 15,
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "PROJ",
+      "lectures": [
+        {
+          "id": 16,
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "id": 17,
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        }
+      ]
     }
   ],
   "groups": [
@@ -289,17 +513,35 @@
         2,
         3
       ]
+    },
+    {
+      "name": "mat1-2015",
+      "students": [
+        "matasdf@student.aau.dk",
+        "asdf@student.aau.dk",
+        "asdf@student.aau.dk",
+        "asdf@student.aau.dk",
+        "asdf@student.aau.dk",
+        "asdf@student.aau.dk",
+        "asdf@student.aau.dk"
+      ],
+      "course_id": [
+        4,
+        5,
+        6,
+        7
+      ]
     }
   ],
   "rooms": {
     "AUDITORIUM": [
       {
         "name": "Aud. 6",
-        "capacity": 10
+        "capacity": 180
       },
       {
         "name": "Aud. 7",
-        "capacity": 10
+        "capacity": 240
       }
     ],
     "SEMINAR_ROOM": [
