@@ -3,13 +3,6 @@
 #define PENALTY_SOFT 1
 #define DAYS_IN_SEMESTER 120
 
-#ifndef STUDYNAME
-#define STUDYNAME
-  typedef enum StudyName {
-    DAT, MAT
-  } StudyName;
-#endif
-
 #ifndef LECTURE
 #define LECTURE
   typedef struct Lecture {
@@ -21,7 +14,7 @@
 #ifndef TIMETABLE
 #define TIMETABLE
   typedef struct Timetable {
-    StudyName studyName;
+    char studyName[15];
     int numberOfLectures;
     Lecture *lectures;
   } Timetable;
