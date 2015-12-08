@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "../utilities.h"
 #include "../structs.h"
 
 /**

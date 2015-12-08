@@ -5,7 +5,7 @@ void crossoverMix(PopMember parent1, PopMember parent2, PopMember offspring) {
 
   for (i = 0; i < parent1.numberOfStudies; i++) {
     for (j = 0; j < parent1.studies[i].numberOfLectures; j++) {
-      if (rand() % 2 == 0) {
+      if (getRandomValue(2) == 0) {
         offspring.studies[i].lectures[j] = parent1.studies[i].lectures[j];
       } else {
         offspring.studies[i].lectures[j] = parent2.studies[i].lectures[j];;
@@ -18,7 +18,7 @@ void crossoverSlice(PopMember parent1, PopMember parent2, PopMember offspring1, 
   int i, j, crossoverPoint;
 
   for (i = 0; i < parent1.numberOfStudies; i++) {
-    crossoverPoint = (rand() % (parent1.studies[i].numberOfLectures - 1)) + 1;
+    crossoverPoint = getRandomValue(parent1.studies[i].numberOfLectures - 1) + 1;
 
     for (j = 0; j < crossoverPoint; j++) {
       offspring1.studies[i].lectures[j] = parent1.studies[i].lectures[j];
