@@ -46,14 +46,14 @@ int roomOverlap(PopMember population[], int popCount) {
   for (i = 0; i < population[popCount].numberOfStudies; i++) {
     for (j = 0; j < population[popCount].numberOfStudies; j++) {
       for (k = 0; k < population[popCount].studies[j].numberOfLectures; k++) {        
-        if (strcmp(population[popCount].studies[i].lectures[k].room, 
-                   population[popCount].studies[j].lectures[k].room) == 0) {
+        if ((strcmp(population[popCount].studies[i].lectures[k].room, 
+                   population[popCount].studies[j].lectures[k].room) == 0) && (i != j)) {
           scoreCounter++;
         }       
       }
     }
   } 
-  score += PENALTY_HARD * (scoreCounter - 1);
+  score += PENALTY_HARD * scoreCounter;
 
   return score;
 }
@@ -69,13 +69,13 @@ int lecturerOverlap(PopMember population[], int popCount) {
         strcpy(typeJ, population[popCount].studies[i].lectures[k].type);
         strcpy(typeK, population[popCount].studies[j].lectures[k].type);
 
-        if ((strcmp(typeJ, typeK) == 0) && (strcmp(typeJ, "PROJ") != 0)) {
+        if (((strcmp(typeJ, typeK) == 0) && (strcmp(typeJ, "PROJ") != 0)) && (i != j)){
           scoreCounter++;
         }       
       }
     }
   } 
-  score += PENALTY_HARD * (scoreCounter - 1);
+  score += PENALTY_HARD * scoreCounter;
 
   return score;
 }
