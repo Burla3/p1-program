@@ -121,7 +121,7 @@ void populateStudyStructFromConfig(json_t *rootConfig, Study *studyArray)
                 if (insert) {
                   strcpy(availableRooms[numberOfRooms], strRoomsTypeName);
                   numberOfRooms++;
-                }          
+                }
 
                 free(strRoomsTypeName);
               }
@@ -132,7 +132,7 @@ void populateStudyStructFromConfig(json_t *rootConfig, Study *studyArray)
           studyArray[groupsIndex].studyCourses[coursesIndex].rooms = (char**) malloc(numberOfRooms * sizeof(char*));
 
           int h, k;
-          
+
           for (h = 0; h < numberOfRooms; h++)
           {
             /* Study[i]->Course[i]->rooms[i] */
@@ -141,11 +141,11 @@ void populateStudyStructFromConfig(json_t *rootConfig, Study *studyArray)
           }
 
           /* Free char two dimentional array */
-          for (k = 0; k < getTotalNumberOfRooms(rootConfig); k++)
+        /*  for (k = 0; k < getTotalNumberOfRooms(rootConfig); k++)
           {
-            free(availableRooms[k]);
+           free(availableRooms[k]);
           }
-          free(availableRooms);
+          free(availableRooms); */
 
           /* Study[i]->Course[i]->numberOfRooms */
           studyArray[groupsIndex].studyCourses[coursesIndex].numberOfRooms = numberOfRooms;
@@ -177,7 +177,7 @@ void printStudyStruct(Study study)
 
   for (i = 0; i < study.numberOfCourses; i++)
   {
-    printf("\tCourse name: %s\tNumber of lectures: %d\tNumber of rooms: %d\n", study.studyCourses[i].course, 
+    printf("\tCourse name: %s\tNumber of lectures: %d\tNumber of rooms: %d\n", study.studyCourses[i].course,
       study.studyCourses[i].numberOfLectures, study.studyCourses[i].numberOfRooms);
     for (j = 0; j < study.studyCourses[i].numberOfRooms; j++)
     {

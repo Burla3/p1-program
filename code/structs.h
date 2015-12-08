@@ -1,4 +1,4 @@
-#define POPULATION_SIZE 1
+#define POPULATION_SIZE 10
 #define PENALTY_HARD 100
 #define PENALTY_SOFT 1
 #define DAYS_IN_SEMESTER 120
@@ -67,4 +67,3 @@
     CalenderData calender;
   } TimetableWithDates;
 #endif
-

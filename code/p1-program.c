@@ -32,7 +32,7 @@ int main(int argc, const char *argv[]) {
 
   for (i = 0; i < POPULATION_SIZE; i++)
   {
-    printf("%d\n", population[i].fitnessScore);
+    printf("\n\n%d\n\n%d\n\n", i+1, population[i].fitnessScore);
     for (j = 0; j < numberOfStudies; j++)
     {
       for (h = 0; h < population[i].studies[j].numberOfLectures; h++)
@@ -40,7 +40,7 @@ int main(int argc, const char *argv[]) {
         printf("%s\t%s\n", population[i].studies[j].lectures[h].type, population[i].studies[j].lectures[h].room);
       }
     }
-  }  
+  }
 
   return 0;
 }
