@@ -24,7 +24,7 @@ int main(int argc, const char *argv[]) {
     printStudyStruct(studyArray[k]);
   }
 
-  initialPopulation(population, studyArray, numberOfStudies);
+  initialPopulation(population, studyArray, numberOfStudies, rootConfig);
 
   calculateFitness(population, studyArray);
 
