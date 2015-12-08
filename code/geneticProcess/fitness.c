@@ -1,84 +1,103 @@
 #include "fitness.h"
 
-int main(void) {
-  CalenderData calender[DAYS_IN_SEMESTER];
-  TimetableWithDates timetable[DAYS_IN_SEMESTER];
+void calculateFitness(PopMember population[], Study studyArray[]) {
+  int popCount;
 
-  return 0;
+  for(popCount = 0; popCount < POPULATION_SIZE; popCount++) {
+    population[popCount].fitnessScore = amountOfLectures(population, studyArray, popCount)
+      + roomOverlap(population, popCount)
+      + lecturerOverlap(population, popCount)
+      + lecturerAvailable(population, popCount)
+      + courseNotSameDay(population, popCount)
+      + lecturerConstraintRoomHard(population, popCount)
+      + followingCourses(population, popCount)
+      + lecturerConstraintRoomSoft(population, popCount) 
+      + lecturerConstraintTime(population, popCount);
+  }
 }
-
-int calculateFitness() {
-  int fitness;
-
-  fitness = amountOfLectures() + roomOverlap() + lecturerOverlap() + lecturerAvailable() + courseNotSameDay() + 
-            lecturerConstraintRoomHard() + followingCourses() + lecturerConstraintRoomSoft() + lecturerConstraintTime();
-
-  return fitness;
-}
-
 
 /* HARD CONSTRAINTS */
 /* amountOfLectures gives a penalty score, if there is a wrong amount of each lecture in the timetable. */
-int amountOfLectures() {
-  int i, j, lecturesTemp, score = 0;
+int amountOfLectures(PopMember population[], Study studyArray[], int popCount) {
+  int i, j, k, l, lecturesTemp, score = 0;
 
-
-  for(i = 0, lecturesTemp = 0; i < ARRAY_LENGTH; i++) {
-    for(j = 0; j < lecture[j].type; j++) {
-      if (strcmp(course[i].course, lecture[j].type) == 0)
-        lecturesTemp += 1;      
+  for (i = 0; i < population[popCount].numberOfStudies; i++) {
+    for (j = 0, lecturesTemp = 0; j < population[popCount].numberOfStudies; j++) {
+      if (strcmp(studyArray[j].name, population[popCount].studies[i].studyName) == 0) {
+        for (k = 0; k < population[popCount].studies[i].numberOfLectures; k++) {
+          for (l = 0; l < studyArray[j].numberOfCourses; l++) {
+            if (strcmp(studyArray[j].studyCourses[l].course, population[popCount].studies[i].lectures[k].type) == 0) {
+            lecturesTemp += 1;
+            }
+          } 
+        }     
+      }
+      if (studyArray[j].totalNumberOfLectures != lecturesTemp) 
+        score += PENALTY_HARD * abs(studyArray[j].totalNumberOfLectures - lecturesTemp);      
     }
-
-    if (course[i].lectures != lecturesTemp) 
-      score += PENALTY_HARD * abs(course[i].lectures - lecturesTemp);      
   }
-
   return score; 
 }
 
 /* roomOverlap gives a penalty score, if more than one lecture is planning to use the same room at the same time. */
-int roomOverlap() {
-  int i, j, k, score = 0;
+int roomOverlap(PopMember population[], int popCount) {
+  int i, j, k, score = 0, scoreCounter = 0;
 
-  for(i = 0; i < MAX_LECTURES; i++) {
-    for(j = 0; j < MAX_STUDIES; j++) {
-      for(k = 0; k < MAX_STUDIES; k++) {
-        if ((j != k) && (strcmp(studies[j].lectures[i].room, studies[k].lectures[i].room) == 0))
-          score += PENALTY_HARD;
-      } 
+  for (i = 0; i < population[popCount].numberOfStudies; i++) {
+    for (j = 0; j < population[popCount].numberOfStudies; j++) {
+      for (k = 0; k < population[popCount].studies[j].numberOfLectures; k++) {        
+        if (strcmp(population[popCount].studies[i].lectures[k].room, 
+                   population[popCount].studies[j].lectures[k].room) == 0) {
+          scoreCounter++;
+        }       
+      }
     }
-  }
+  } 
+  score += PENALTY_HARD * (scoreCounter - 1);
+
   return score;
 }
 
 /* lecturerOverlap gives a penalty score, if more than one course needs the lecturer to educate at the same time. */
-int lecturerOverlap() {
-  int i, j, k, score = 0;
+int lecturerOverlap(PopMember population[], int popCount) {
+  int i, j, k, score = 0, scoreCounter = 0;
+  char typeJ[5], typeK[5];
 
-  for(i = 0; i < MAX_LECTURES; i++) {
-    for(j = 0; j < MAX_STUDIES; j++) {
-      for(k = 0; k < MAX_STUDIES; k++) {
-        if ((j != k) && (strcmp("asdf", "asdf") == 0))
-          score += PENALTY_HARD;
-      } 
+  for (i = 0; i < population[popCount].numberOfStudies; i++) {
+    for (j = 0; j < population[popCount].numberOfStudies; j++) {
+      for (k = 0; k < population[popCount].studies[j].numberOfLectures; k++) {
+        strcpy(typeJ, population[popCount].studies[i].lectures[k].type);
+        strcpy(typeK, population[popCount].studies[j].lectures[k].type);
+
+        if ((strcmp(typeJ, typeK) == 0) && (strcmp(typeJ, "PROJ") != 0)) {
+          scoreCounter++;
+        }       
+      }
     }
-  }
+  } 
+  score += PENALTY_HARD * (scoreCounter - 1);
+
   return score;
 }
 
 /* lecturerAvailable gives a penalty score, if the lecturer is unavailable to educate when the lecture is placed in 
  * the timatable. */
-int lecturerAvailable() {
-  return 0;
+int lecturerAvailable(PopMember population[], int popCount) {
+  int score = 0;
+
+  return score;
 }
 
 /* courseNotSameDay gives a penalty score, if a group of students have the same course twice on the same day. */
-int courseNotSameDay() {
-  int i, score = 0;
+int courseNotSameDay(PopMember population[], int popCount) {
+  int i, j, score = 0;
 
-  if (strcmp(lectures[i].type, "PRJK") != 0) {
-    for(i = 0; i < MAX_LECTURES; i += 2) {
-      if (strcmp(lectures[i].type, lectures[i+1].type) == 0) {
+
+  for (i = 0; i < population[popCount].numberOfStudies; i++) {
+    for(j = 0; j < population[popCount].studies[i].numberOfLectures; j += 2) {
+      if ((strcmp(population[popCount].studies[i].lectures[j].type, 
+                 population[popCount].studies[i].lectures[j + 1].type) == 0) &&
+          (strcmp(population[popCount].studies[i].lectures[j].type, "PROJ") != 0)) { 
         score += PENALTY_HARD;
       }
     }
@@ -88,27 +107,31 @@ int courseNotSameDay() {
 
 /* lecturerConstraintRoom gives a penalty, every time one of the lecturer's courses arent planned to happen in the
  * same room as he says it needs to. */
-int lecturerConstraintRoomHard() {
-  return 0;
+int lecturerConstraintRoomHard(PopMember population[], int popCount) {
+  int score = 0;
+  
+  return score;
 }
 
 /* SOFT CONSTRAINTS */
 /* followingCourses gives a penalty score, if two courses dont follow eachother as academically intended. */
-int followingCourses() {
-  return 0;
+int followingCourses(PopMember population[], int popCount) {
+  int score = 0;
+  
+  return score;
 }
 
 /* lecturerConstraintSoft gives a penalty, every time one of the lecturers preference to a room is broken. */
-int lecturerConstraintRoomSoft() {
-  return 0;
+int lecturerConstraintRoomSoft(PopMember population[], int popCount) {
+  int score = 0;
+  
+  return score;
 }
 
 /* lecturerConstraintHard gives a penalty, every time one of the lecturer's courses are planned to happen when he
  * prefered it to. */
-int lecturerConstraintTime() {
-  return 0;
-}
-
-void createTimeTable() {
-
+int lecturerConstraintTime(PopMember population[], int popCount) {
+  int score = 0;
+  
+  return score;
 }

@@ -38,10 +38,9 @@ void initialPopulation(PopMember *population, Study *studyArray, int numberOfStu
         randomCourse = getRandomCourse(array, studyArray[gJ].numberOfCourses);
 
         if (randomCourse != studyArray[gJ].numberOfCourses - 1) {
-          randomRoom = getRandomRoom(studyArray[gJ].studyCourses[randomCourse].numberOfRooms);
+          randomRoom = getRandomValue(studyArray[gJ].studyCourses[randomCourse].numberOfRooms);
           strcpy(singleLecture.room, studyArray[gJ].studyCourses[randomCourse].rooms[randomRoom]);
-        }
-        else {
+        } else {
           strcpy(singleLecture.room, "GR");
         }
 
@@ -53,18 +52,14 @@ void initialPopulation(PopMember *population, Study *studyArray, int numberOfStu
 }
 
 int getRandomCourse(int array[], int numberOfCourses) {
-  int random = (rand() % numberOfCourses);
+  int random = getRandomValue(numberOfCourses);
 
   while (1) {
     if (array[random] > 0) {
       array[random] -= 1;
       return random;
     } else {
-      random = (rand() % numberOfCourses);
+      random = getRandomValue(numberOfCourses);
     }
   }
-}
-
-int getRandomRoom(int numberOfRooms) {
-  return (rand() % numberOfRooms);
 }

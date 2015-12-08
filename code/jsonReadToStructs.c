@@ -131,7 +131,7 @@ void populateStudyStructFromConfig(json_t *rootConfig, Study *studyArray)
           /* Study[i]->Course[i]->rooms */
           studyArray[groupsIndex].studyCourses[coursesIndex].rooms = (char**) malloc(numberOfRooms * sizeof(char*));
 
-          int h, k;
+          int h;
           
           for (h = 0; h < numberOfRooms; h++)
           {
@@ -140,11 +140,13 @@ void populateStudyStructFromConfig(json_t *rootConfig, Study *studyArray)
             strcpy(studyArray[groupsIndex].studyCourses[coursesIndex].rooms[h], availableRooms[h]);
           }
 
+
+          /*int k;*/
           /* Free char two dimentional array */
-          for (k = 0; k < getTotalNumberOfRooms(rootConfig); k++)
+          /*for (k = 0; k < getTotalNumberOfRooms(rootConfig); k++)
           {
             free(availableRooms[k]);
-          }
+          }*/
           free(availableRooms);
 
           /* Study[i]->Course[i]->numberOfRooms */
