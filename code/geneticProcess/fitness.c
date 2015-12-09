@@ -48,7 +48,6 @@ int amountOfLectures(PopMember population[], Study studyArray[], int popCount) {
       score += PENALTY_HARD * abs(studyArray[i].studyCourses[j].numberOfLectures - lecturesTemp);
     }
   }
-  printf("Antal lektioner %d\n", score);
   return score;
 }
 
@@ -67,7 +66,6 @@ int roomOverlap(PopMember population[], int popCount, int leastNumberOfLectures)
     }
   }
   score += PENALTY_HARD * scoreCounter;
-  printf("ANTAL ROOM OVEWR %d\n", score);
   return score;
 }
 
@@ -89,9 +87,6 @@ int lecturerOverlap(PopMember population[], int popCount, int leastNumberOfLectu
     }
   }
   score += PENALTY_HARD * scoreCounter;
-
-  printf("ANTAL LECTURE OVERLAP %d\n\n", score);
-
   return score;
 }
 
@@ -117,8 +112,6 @@ int courseNotSameDay(PopMember population[], int popCount) {
       }
     }
   }
-
-  printf("COURSES NOT IN A ROW %d\n", score);
   return score;
 }
 

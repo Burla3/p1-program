@@ -16,19 +16,15 @@ int main(int argc, const char *argv[]) {
 
   populateStudyStructFromConfig(rootConfig, studyArray);
 
-  int k;
-
-  for (k = 0; k < numberOfStudies; k++) {
-    printStudyStruct(studyArray[k]);
-  }
+  // int k;
+  //
+  //  for (k = 0; k < numberOfStudies; k++) {
+  //    printStudyStruct(studyArray[k]);
+  //  }
 
   initialPopulation(population, studyArray, numberOfStudies);
 
-  calculateFitness(population, studyArray);
-
-  int i, j;
-
-
+  int i;
 
   PopMember offspring1;
   offspring1 = population[0];
@@ -36,6 +32,7 @@ int main(int argc, const char *argv[]) {
   int currentPopulationSize, generation = 0;
 
   while (population[0].fitnessScore != 0 && generation < MAX_GENERATIONS) {
+    calculateFitness(population, studyArray);
     selection(population);
 
     currentPopulationSize = POPULATION_SIZE / 2;
@@ -48,13 +45,15 @@ int main(int argc, const char *argv[]) {
      while (currentPopulationSize < POPULATION_SIZE) {
        currentPopulationSize += crossoverMix(population, currentPopulationSize);
 
-       if (currentPopulationSize < POPULATION_SIZE - 1) {
-        // currentPopulationSize += crossoverSlice(population, currentPopulationSize);
-       }
-    }
+     if (currentPopulationSize < POPULATION_SIZE - 1) {
+       currentPopulationSize += crossoverSlice(population, currentPopulationSize);
+     }
+   }
     generation++;
   }
 
+  // int j, h;
+  //
   // printf("---------------------------------------\n");
   // printf("\nGeneration: %d\nFitness: %d\n", generation, population[0].fitnessScore);
   // for (j = 0; j < numberOfStudies; j++) {
@@ -63,6 +62,7 @@ int main(int argc, const char *argv[]) {
   //     printf("%s\t%s\n", population[0].studies[j].lectures[h].type, population[0].studies[j].lectures[h].room);
   //   }
   // }
+
   return 0;
 }
 
