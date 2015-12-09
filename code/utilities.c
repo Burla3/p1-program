@@ -11,8 +11,6 @@ void createTimetableWithDates(TimetableWithDates newTimetable[], PopMember popul
 
     CalenderData *calender = (CalenderData*) malloc(population[popCount].studies[i].numberOfLectures * sizeof(CalenderData));
 
-    printf("%d\n", population[popCount].studies[i].numberOfLectures);
-
     nextDay(calender, population[popCount].studies[i].numberOfLectures);
 
     TimetableWithDates timetable = {population[popCount].studies[i].lectures, calender};
