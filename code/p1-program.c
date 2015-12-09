@@ -49,19 +49,24 @@ int main(int argc, const char *argv[]) {
        currentPopulationSize += crossoverSlice(population, currentPopulationSize);
      }
    }
+
+
+   int j, h;
+
+   printf("---------------------------------------\n");
+   printf("\nGeneration: %d\nFitness: %d\n", generation, population[0].fitnessScore);
+   for (j = 0; j < numberOfStudies; j++) {
+     printf("\n%s\n\n", population[0].studies[j].studyName);
+     for (h = 0; h < population[0].studies[j].numberOfLectures; h++) {
+       printf("%s\t%s\n", population[0].studies[j].lectures[h].type, population[0].studies[j].lectures[h].room);
+     }
+   }
+
+   
     generation++;
   }
 
-  // int j, h;
-  //
-  // printf("---------------------------------------\n");
-  // printf("\nGeneration: %d\nFitness: %d\n", generation, population[0].fitnessScore);
-  // for (j = 0; j < numberOfStudies; j++) {
-  //   printf("\n%s\n\n", population[0].studies[j].studyName);
-  //   for (h = 0; h < population[0].studies[j].numberOfLectures; h++) {
-  //     printf("%s\t%s\n", population[0].studies[j].lectures[h].type, population[0].studies[j].lectures[h].room);
-  //   }
-  // }
+
 
   return 0;
 }

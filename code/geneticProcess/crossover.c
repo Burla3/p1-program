@@ -20,6 +20,9 @@ int crossoverMix(PopMember population[], int currentPopulationSize) {
 
   crossoverSelectionRandom(population, &parent1, &parent2);
 
+  /*New popmembers must have a negative fitnessScore*/
+  population[currentPopulationSize].fitnessScore = -1;
+
   for (i = 0; i < parent1.numberOfStudies; i++) {
     for (j = 0; j < parent1.studies[i].numberOfLectures; j++) {
       if (getRandomValue(2) == 0) {
@@ -40,8 +43,13 @@ int crossoverSlice(PopMember population[], int currentPopulationSize) {
   PopMember parent1, parent2;
   crossoverSelectionRandom(population, &parent1, &parent2);
 
+  /*New popmembers must have a negative fitnessScore*/
+  population[currentPopulationSize].fitnessScore = -1;
+  population[currentPopulationSize + 1].fitnessScore = -1;
+
   for (i = 0; i < parent1.numberOfStudies; i++) {
     crossoverPoint = getRandomValue(parent1.studies[i].numberOfLectures) + 1;
+
     for (j = 0; j < crossoverPoint; j++) {
       Lecture temlec1 = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
       Lecture temlec2 = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
