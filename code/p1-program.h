@@ -6,5 +6,6 @@
 #include "jsonReadToStructs.h"
 #include "geneticProcess/geneticProcess.h"
 #include "structs.h"
+#include "print.h"
 
 int getNumberOfStudies(json_t *rootConfig);
