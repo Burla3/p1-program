@@ -16,6 +16,7 @@ void createTimetableWithDates(TimetableWithDates newTimetable[], PopMember popul
     TimetableWithDates timetable = {population[popCount].studies[i].lectures, calender};
 
     newTimetable[i] = timetable;
+    free(calender);
   }
 }
 

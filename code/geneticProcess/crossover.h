@@ -86,3 +86,5 @@ int crossoverMix(PopMember population[], int currentPopulationSize);
  * @param[in] currentPopulationSize
  */
 int crossoverSlice(PopMember population[], int currentPopulationSize);
+
+int crossoverSwitch(PopMember population[], int currentPopulationSize);

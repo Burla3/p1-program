@@ -5,7 +5,6 @@
       "name": "LIAL",
       "lectures": [
         {
-          "id": 0,
           "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
@@ -30,8 +29,583 @@
           }
         },
         {
-          "id": 1,
-          "roomType": "SEMINAR_ROOM",
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
           ],
@@ -61,7 +635,6 @@
       "name": "PVTS",
       "lectures": [
         {
-          "id": 2,
           "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
@@ -86,7 +659,270 @@
           }
         },
         {
-          "id": 3,
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
           "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
@@ -117,8 +953,7 @@
       "name": "IMPR",
       "lectures": [
         {
-          "id": 5,
-          "roomType": "SEMINAR_ROOM",
+          "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
           ],
@@ -142,7 +977,294 @@
           }
         },
         {
-          "id": 5,
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
           "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
@@ -173,9 +1295,9 @@
       "name": "PROJ",
       "lectures": [
         {
-          "id": 6,
           "roomType": "GROUPROOM",
           "lecturers": [
+            "jb@aalkat-gym.dk"
           ],
           "constraints": {
             "hard": {
@@ -197,9 +1319,9 @@
           }
         },
         {
-          "id": 7,
           "roomType": "GROUPROOM",
           "lecturers": [
+            "jb@aalkat-gym.dk"
           ],
           "constraints": {
             "hard": {
@@ -221,9 +1343,9 @@
           }
         },
         {
-          "id": 8,
           "roomType": "GROUPROOM",
           "lecturers": [
+            "jb@aalkat-gym.dk"
           ],
           "constraints": {
             "hard": {
@@ -245,9 +1367,2337 @@
           }
         },
         {
-          "id": 9,
           "roomType": "GROUPROOM",
           "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
           ],
           "constraints": {
             "hard": {
@@ -275,7 +3725,6 @@
       "name": "LIAL",
       "lectures": [
         {
-          "id": 10,
           "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
@@ -300,8 +3749,583 @@
           }
         },
         {
-          "id": 11,
-          "roomType": "SEMINAR_ROOM",
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
           ],
@@ -331,7 +4355,6 @@
       "name": "PVTS",
       "lectures": [
         {
-          "id": 12,
           "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
@@ -356,7 +4379,270 @@
           }
         },
         {
-          "id": 13,
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
           "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
@@ -387,7 +4673,6 @@
       "name": "CALC",
       "lectures": [
         {
-          "id": 14,
           "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
@@ -412,7 +4697,294 @@
           }
         },
         {
-          "id": 15,
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "AUDITORIUM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
           "roomType": "AUDITORIUM",
           "lecturers": [
             "jb@aalkat-gym.dk"
@@ -443,7 +5015,6 @@
       "name": "PROJ",
       "lectures": [
         {
-          "id": 16,
           "roomType": "GROUPROOM",
           "lecturers": [
             "jb@aalkat-gym.dk"
@@ -468,7 +5039,2382 @@
           }
         },
         {
-          "id": 17,
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
+          "roomType": "GROUPROOM",
+          "lecturers": [
+            "jb@aalkat-gym.dk"
+          ],
+          "constraints": {
+            "hard": {
+              "on_date": "single datetime",
+              "after_date": [
+                "list of datetimes"
+              ],
+              "before_date": [
+                "list of datetimes"
+              ],
+              "after_lecture": [
+                "list of lecture ids"
+              ],
+              "before_lecture": [
+                "list of lecture ids"
+              ]
+            },
+            "soft": []
+          }
+        },
+        {
           "roomType": "GROUPROOM",
           "lecturers": [
             "jb@aalkat-gym.dk"

@@ -9,7 +9,7 @@ void calculateFitness(PopMember population[], Study studyArray[]) {
 
     TimetableWithDates *newTimetable = (TimetableWithDates*) malloc(population[popCount].numberOfStudies * sizeof(TimetableWithDates));
 
-    createTimetableWithDates(newTimetable, population, popCount);
+    //createTimetableWithDates(newTimetable, population, popCount);
 
     for (i = 0; i < population[popCount].numberOfStudies; i++) {
       if (leastNumberOfLectures > population[popCount].studies[i].numberOfLectures) {
@@ -26,6 +26,8 @@ void calculateFitness(PopMember population[], Study studyArray[]) {
       + followingCourses(population, popCount)
       + lecturerConstraintRoomSoft(population, popCount)
       + lecturerConstraintTime(population, popCount);
+
+      free(newTimetable);
   }
 }
 
@@ -58,7 +60,7 @@ int roomOverlap(PopMember population[], int popCount, int leastNumberOfLectures)
   for (i = 0; i < population[popCount].numberOfStudies; i++) {
     for (j = 0; j < population[popCount].numberOfStudies; j++) {
       for (k = 0; k < leastNumberOfLectures; k++) {
-        if ((strcmp(population[popCount].studies[i].lectures[k].room,
+        if ((strcmp(population[popCount].studies[i].lectures[k].room, "GR") != 0) && (strcmp(population[popCount].studies[i].lectures[k].room,
                    population[popCount].studies[j].lectures[k].room) == 0) && (i != j)) {
           scoreCounter++;
         }

@@ -66,3 +66,25 @@ int crossoverSlice(PopMember population[], int currentPopulationSize) {
   }
   return 2;
 }
+
+int crossoverSwitch(PopMember population[], int currentPopulationSize) {
+  int i, j, k;
+  PopMember parent1, parent2;
+
+  crossoverSelectionRandom(population, &parent1, &parent2);
+
+  population[currentPopulationSize].fitnessScore = -1;
+
+  printf("%d\n", parent1.numberOfStudies);
+
+  for (i = 0; i < parent1.numberOfStudies; i++) {
+    for (j = 0, k = parent1.studies[i].numberOfLectures; j < k; j++, k--) {
+      printf("j: %d  k: %d\n", j, k);
+      Lecture temlec1 = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
+      Lecture temlec2 = {parent2.studies[i].lectures[k].type, parent2.studies[i].lectures[k].room};
+      population[currentPopulationSize].studies[i].lectures[k] = temlec1;
+      population[currentPopulationSize].studies[i].lectures[j] = temlec2;
+    }
+  }
+  return 1;
+}

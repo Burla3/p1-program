@@ -16,58 +16,36 @@ int main(int argc, const char *argv[]) {
 
   populateStudyStructFromConfig(rootConfig, studyArray);
 
-  // int k;
-  //
-  //  for (k = 0; k < numberOfStudies; k++) {
-  //    printStudyStruct(studyArray[k]);
-  //  }
-
   initialPopulation(population, studyArray, numberOfStudies);
-
-  int i;
-
-  PopMember offspring1;
-  offspring1 = population[0];
 
   int currentPopulationSize, generation = 0;
 
   while (population[0].fitnessScore != 0 && generation < MAX_GENERATIONS) {
     calculateFitness(population, studyArray);
-    selection(population);
 
+    selection(population);
     currentPopulationSize = POPULATION_SIZE / 2;
+    printf("---------------------------------------\n");
+    printf("\nGeneration: %d\nFitness: %d\n", generation, population[0].fitnessScore);
+
     // for (i = 0; i < POPULATION_SIZE / 2; i++) {
     //   if (mutate(population[i], offspring1) == 1) {
     //     population[currentPopulationSize] = offspring1;
     //     currentPopulationSize++;
     //   }
     // }
-     while (currentPopulationSize < POPULATION_SIZE) {
-       currentPopulationSize += crossoverMix(population, currentPopulationSize);
+   while (currentPopulationSize < POPULATION_SIZE) {
+     currentPopulationSize += crossoverMix(population, currentPopulationSize);
 
-     if (currentPopulationSize < POPULATION_SIZE - 2) {
+     /* Test som ikke virker */
+     //currentPopulationSize += crossoverSwitch(population, currentPopulationSize);
+
+     if (currentPopulationSize < POPULATION_SIZE - 1) {
        currentPopulationSize += crossoverSlice(population, currentPopulationSize);
      }
    }
-
-
-   printf("---------------------------------------\n");
-   printf("\nGeneration: %d\nFitness: %d\n", generation, population[0].fitnessScore);
-
-  //  int j, h;
-   //
-  //  printf("---------------------------------------\n");
-  //  printf("\nGeneration: %d\nFitness: %d\n", generation, population[0].fitnessScore);
-  //  for (j = 0; j < numberOfStudies; j++) {
-  //    printf("\n%s\n\n", population[0].studies[j].studyName);
-  //    for (h = 0; h < population[0].studies[j].numberOfLectures; h++) {
-  //      printf("%s\t%s\n", population[0].studies[j].lectures[h].type, population[0].studies[j].lectures[h].room);
-  //    }
-  //  }
-
-    generation++;
+   generation++;
   }
-
   printf("\n\n");
 
   printTimetables(population, 0);
