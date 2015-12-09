@@ -7,6 +7,10 @@ void calculateFitness(PopMember population[], Study studyArray[]) {
     int i;
     int leastNumberOfLectures = population[popCount].studies[0].numberOfLectures;
 
+    TimetableWithDates *newTimetable = (TimetableWithDates*) malloc(population[popCount].numberOfStudies * sizeof(TimetableWithDates));
+
+    createTimetableWithDates(newTimetable, population, popCount);
+
     for (i = 0; i < population[popCount].numberOfStudies; i++) {
       if (leastNumberOfLectures > population[popCount].studies[i].numberOfLectures) {
         leastNumberOfLectures = population[popCount].studies[i].numberOfLectures;
@@ -24,6 +28,8 @@ void calculateFitness(PopMember population[], Study studyArray[]) {
       + lecturerConstraintTime(population, popCount);
   }
 }
+
+
 
 /* HARD CONSTRAINTS */
 /* amountOfLectures gives a penalty score, if there is a wrong amount of each lecture in the timetable. */

@@ -2,5 +2,5 @@
 #include <stdlib.h>
 #include "../structs.h"
 
-int nextDay(CalenderData *calender);
+void nextDay(CalenderData *calender, int numberOfLectures);
 int getDaysInMonth(int month);
