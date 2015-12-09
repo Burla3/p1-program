@@ -41,6 +41,7 @@ int main(int argc, const char *argv[]) {
 
 
   offspring1 = population[0];
+  offspring2 = population[0];
 
   int currentPopulationSize, generation = 0;
 
@@ -49,8 +50,8 @@ int main(int argc, const char *argv[]) {
 
     currentPopulationSize = POPULATION_SIZE / 2;
     for (i = 0; i < POPULATION_SIZE / 2; i++) {
-      if (mutate(population[i], offspring) == 1) {
-        population[currentPopulationSize] = offspring;
+      if (mutate(population[i], offspring1) == 1) {
+        population[currentPopulationSize] = offspring1;
         currentPopulationSize++;
       }
     }
@@ -58,6 +59,7 @@ int main(int argc, const char *argv[]) {
         currentPopulationSize += crossoverMix(population, currentPopulationSize);
         // crossoverSlice(parent1, parent2, offspring, offspring1);
         // currentPopulationSize += 2;
+
 
     }
     generation++;
