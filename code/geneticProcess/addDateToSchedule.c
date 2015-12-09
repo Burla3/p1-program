@@ -1,20 +1,10 @@
 #include "addDateToSchedule.h"
 
-int main(void) {
-
-  CalenderData calender[DAYS_IN_SEMESTER*2];
-
-  nextDay(calender);
-
-	return 0;
-}
-
-int nextDay(CalenderData *calender) {
+void nextDay(CalenderData *calender, int numberOfLectures) {
 
   int i, day = 1, month = 9, daysInMonth = 0, weekday = 3;
 
-  for(i = 0; i < DAYS_IN_SEMESTER*2; i++, weekday++) {
-    printf("%d ", weekday);
+  for(i = 0; i < numberOfLectures; weekday++) {
     if (daysInMonth == 0)
       daysInMonth = getDaysInMonth(month);
     if (day > daysInMonth) {
@@ -33,8 +23,8 @@ int nextDay(CalenderData *calender) {
         calender[i].lectureTimeStart = 12.30;
         day++; 
       }
-    printf("%5.2lf, %2d, %2d\n", calender[i].lectureTimeStart, calender[i].day, calender[i].month);
-  }
+      i++;
+    }
 
     if (weekday % 12 == 0) {
       day++;
@@ -44,8 +34,6 @@ int nextDay(CalenderData *calender) {
       day++;
       weekday = 0;
     }
-
-
   }
 }
 

@@ -57,15 +57,13 @@
     double lectureTimeStart;
     int day;
     int month;
-    char *type;
-    char *room;
   } CalenderData;
 #endif
 
 #ifndef TIMETABLEWITHDATES
 #define TIMETABLEWITHDATES
   typedef struct TimetableWithDates {
-    Lecture lecture;
-    CalenderData calender;
+    Lecture *lecture;
+    CalenderData *calender;
   } TimetableWithDates;
 #endif
