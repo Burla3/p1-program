@@ -40,7 +40,7 @@ void nextDay(CalenderData *calender, int numberOfLectures) {
         calender[i].lectureTimeStart = 8.15;
       else {
         calender[i].lectureTimeStart = 12.30;
-        day++; 
+        day++;
       }
       i++;
     }
