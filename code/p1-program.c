@@ -39,9 +39,7 @@ int main(int argc, const char *argv[]) {
     }
   }
 
-  PopMember parent1, parent2, offspring, offspring1;
 
-  offspring = population[0];
   offspring1 = population[0];
 
   int currentPopulationSize, generation = 0;
@@ -57,13 +55,9 @@ int main(int argc, const char *argv[]) {
       }
     }
      while (currentPopulationSize < POPULATION_SIZE) {
-        crossoverSelectionRandom(population, currentPopulationSize, parent1, parent2);
-
-        crossoverMix(parent1, parent2, offspring);
-        //population[currentPopulationSize] = offspring;
-        currentPopulationSize++;
-        crossoverSlice(parent1, parent2, offspring, offspring1);
-        currentPopulationSize += 2;
+        currentPopulationSize += crossoverMix(population, currentPopulationSize);
+        // crossoverSlice(parent1, parent2, offspring, offspring1);
+        // currentPopulationSize += 2;
 
     }
     generation++;
