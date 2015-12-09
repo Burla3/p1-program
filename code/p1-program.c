@@ -62,11 +62,11 @@ int main(int argc, const char *argv[]) {
      }
    }
 
-   
+
     generation++;
   }
 
-
+  printTimetables(population, 0);
 
   return 0;
 }
