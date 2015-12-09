@@ -29,7 +29,7 @@ int hasCourseId(json_t *array, int id);
 void printStudyStruct(Study study);
 
 /**
- * Get the total number of rooms to choose from. 
+ * Get the total number of rooms to choose from.
  * All "AUDITORIUM"'s, "SEMINAR_ROOM"'s & "GROUPROOM"'s.
  *
  * @param[in] rootConfig Root of the JSON config object.

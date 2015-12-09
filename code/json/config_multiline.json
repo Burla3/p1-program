@@ -444,7 +444,7 @@
       "lectures": [
         {
           "id": 16,
-          "roomType": "AUDITORIUM",
+          "roomType": "GROUPROOM",
           "lecturers": [
             "jb@aalkat-gym.dk"
           ],
@@ -469,7 +469,7 @@
         },
         {
           "id": 17,
-          "roomType": "AUDITORIUM",
+          "roomType": "GROUPROOM",
           "lecturers": [
             "jb@aalkat-gym.dk"
           ],

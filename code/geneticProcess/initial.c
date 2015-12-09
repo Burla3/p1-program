@@ -1,62 +1,60 @@
 #include "initial.h"
 
-void initialPopulation(PopMember *population, Study *studyArray, int numberOfStudies, json_t *rootConfig) {
-  int i, k, l, randomCourse, randomRoom, totalNumberOfLectures;
+void initialPopulation(PopMember population[], Study studyArray[], int numberOfStudies) {
+  int i, j, k, l, randomCourse, randomRoom, totalNumberOfLectures;
+  char *roomName, *courseName;
 
   for (i = 0; i < POPULATION_SIZE; i++) {
     Timetable *studies = (Timetable*) malloc(numberOfStudies * sizeof(Timetable));
     PopMember member = {-1, numberOfStudies, studies};
     population[i] = member;
-
-    /* root->groups[] */
-    json_t *groups = json_object_get(rootConfig, "groups");
-
-    int gJ;
-    json_t *groupsValue;
-
-    /* root->groups[i] */
-    json_array_foreach(groups, gJ, groupsValue) {
-      totalNumberOfLectures = studyArray[gJ].totalNumberOfLectures;
+    for (j = 0; j < numberOfStudies; j++) {
+      totalNumberOfLectures = studyArray[j].totalNumberOfLectures;
       Lecture *lectures = (Lecture*) malloc(totalNumberOfLectures * sizeof(Lecture));
 
-      /* root->groups[i]->name */
-      json_t *nameValue = json_object_get(groupsValue, "name");
+      char *name = (char*) malloc(5 * sizeof(char));
+      Timetable study = {name, totalNumberOfLectures, lectures};
 
-      Timetable study = {"", totalNumberOfLectures, lectures};
-      strcpy(study.studyName, json_string_value(nameValue));
-       
-      population[i].studies[gJ] = study;
+      study.studyName = studyArray[j].name;
 
-      int *array = (int*) malloc(studyArray[gJ].numberOfCourses * sizeof(int));
+      population[i].studies[j] = study;
 
-      for (l = 0; l < studyArray[gJ].numberOfCourses; l++) {
-        array[l] = studyArray[gJ].studyCourses[l].numberOfLectures;
+      int *numberOfLectures = (int*) malloc(studyArray[j].numberOfCourses * sizeof(int));
+
+      for (l = 0; l < studyArray[j].numberOfCourses; l++) {
+        numberOfLectures[l] = studyArray[j].studyCourses[l].numberOfLectures;
       }
 
       for (k = 0; k < totalNumberOfLectures; k++) {
-        Lecture singleLecture;
-        randomCourse = getRandomCourse(array, studyArray[gJ].numberOfCourses);
 
-        if (randomCourse != studyArray[gJ].numberOfCourses - 1) {
-          randomRoom = getRandomValue(studyArray[gJ].studyCourses[randomCourse].numberOfRooms);
-          strcpy(singleLecture.room, studyArray[gJ].studyCourses[randomCourse].rooms[randomRoom]);
-        } else {
-          strcpy(singleLecture.room, "GR");
+        courseName = (char*) malloc(5 * sizeof(char));
+        roomName = (char*) malloc(10 * sizeof(char));
+
+        randomCourse = getRandomCourse(numberOfLectures, studyArray[j].numberOfCourses);
+
+        if (randomCourse != studyArray[j].numberOfCourses - 1) {
+          randomRoom = getRandomValue(studyArray[j].studyCourses[randomCourse].numberOfRooms);
+          strcpy(roomName, studyArray[j].studyCourses[randomCourse].rooms[randomRoom]);
+        }
+        else {
+          strcpy(roomName, "GR");
         }
 
-        strcpy(singleLecture.type, studyArray[gJ].studyCourses[randomCourse].course);
-        population[gJ].studies[gJ].lectures[k] = singleLecture;
-      }     
+        strcpy(courseName, studyArray[j].studyCourses[randomCourse].course);
+        Lecture singleLecture = {courseName, roomName};
+
+        population[i].studies[j].lectures[k] = singleLecture;
+      }
     }
   }
 }
 
-int getRandomCourse(int array[], int numberOfCourses) {
+int getRandomCourse(int numberOfLectures[], int numberOfCourses) {
   int random = getRandomValue(numberOfCourses);
 
   while (1) {
-    if (array[random] > 0) {
-      array[random] -= 1;
+    if (numberOfLectures[random] > 0) {
+      numberOfLectures[random] -= 1;
       return random;
     } else {
       random = getRandomValue(numberOfCourses);

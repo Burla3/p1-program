@@ -1,20 +1,22 @@
-#define POPULATION_SIZE 10
+#define POPULATION_SIZE 2
 #define PENALTY_HARD 100
 #define PENALTY_SOFT 1
 #define DAYS_IN_SEMESTER 120
+#define MUTATION_RATE 3
+#define MAX_GENERATIONS 20
 
 #ifndef LECTURE
 #define LECTURE
   typedef struct Lecture {
-    char type[5];
-    char room[100];
+    char *type;
+    char *room;
   } Lecture;
 #endif
 
 #ifndef TIMETABLE
 #define TIMETABLE
   typedef struct Timetable {
-    char studyName[15];
+    char *studyName;
     int numberOfLectures;
     Lecture *lectures;
   } Timetable;
@@ -32,7 +34,7 @@
 #ifndef COURSE
 #define COURSE
   typedef struct Course {
-    char course[5];
+    char *course;
     int numberOfLectures;
     char **rooms;
     int numberOfRooms;
@@ -42,7 +44,7 @@
 #ifndef STUDY
 #define STUDY
   typedef struct Study {
-    char name[15];
+    char *name;
     Course *studyCourses;
     int numberOfCourses;
     int totalNumberOfLectures;

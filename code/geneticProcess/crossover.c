@@ -1,7 +1,9 @@
 #include "crossover.h"
 
 void crossoverMix(PopMember parent1, PopMember parent2, PopMember offspring) {
-  int i, j;
+/*  int i, j;
+
+
 
   for (i = 0; i < parent1.numberOfStudies; i++) {
     for (j = 0; j < parent1.studies[i].numberOfLectures; j++) {
@@ -12,10 +14,11 @@ void crossoverMix(PopMember parent1, PopMember parent2, PopMember offspring) {
       }
     }
   }
+  */
 }
 
 void crossoverSlice(PopMember parent1, PopMember parent2, PopMember offspring1, PopMember offspring2) {
-  int i, j, crossoverPoint;
+/*  int i, j, crossoverPoint;
 
   for (i = 0; i < parent1.numberOfStudies; i++) {
     crossoverPoint = getRandomValue(parent1.studies[i].numberOfLectures - 1) + 1;
@@ -30,4 +33,5 @@ void crossoverSlice(PopMember parent1, PopMember parent2, PopMember offspring1, 
       offspring2.studies[i].lectures[j] = parent1.studies[i].lectures[j];
     }
   }
+  */
 }

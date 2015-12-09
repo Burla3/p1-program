@@ -3,13 +3,13 @@ PROG = prog
 MAIN = p1-program.c
 CFLAGS = -Wall
 GENDIR = geneticProcess
-INCLUDEFILES = jsonParser.c jsonReadToStructs.c $(GENDIR)/initial.c $(GENDIR)/fitness.c $(GENDIR)/selection.c $(GENDIR)/crossover.c $(GENDIR)/mutation.c utilities.c
+INCLUDEFILES = jsonParser.c jsonReadToStructs.c $(GENDIR)/initial.c $(GENDIR)/fitness.c $(GENDIR)/selection.c $(GENDIR)/crossover.c $(GENDIR)/mutation.c $(GENDIR)/crossoverSelection.c utilities.c
 TENSION = .exe
 
 UNAME := $(shell uname)
 
 ifeq ($(UNAME),Linux)
-    TENSION = 
+    TENSION =
 endif
 
 # Name: Jansson
@@ -24,7 +24,7 @@ run: comp
 	./$(PROG)$(TENSION)
 
 comp: cleanexe
-	$(CC) -o $(PROG) $(MAIN) $(INCLUDEFILES) -L$(LIBDIR) -I$(INCLUDEDIR) -l$(LIB) $(CFLAGS)
+	$(CC) -g -o $(PROG) $(MAIN) $(INCLUDEFILES) -L$(LIBDIR) -I$(INCLUDEDIR) -l$(LIB) $(CFLAGS)
 
 cleanexe:
 	$(RM) $(PROG)

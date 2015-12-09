@@ -13,4 +13,4 @@ int sortPopulation(const void *ep1, const void *ep2);
  * @param[in] population[] the population that is to be sorted and copied
  * @param[out] newPopulation[] the population that will be copied into and become the new population
  */
-void selection(PopMember population[], PopMember newPopulation[]);
+void selection(PopMember population[]);

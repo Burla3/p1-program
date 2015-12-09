@@ -11,4 +11,4 @@
  * @param[in] parent the parent used for mutation
  * @param[out] offspring the offspring that is generated through mutation
  */
-int mutate(int mutationRate, PopMember parent, PopMember offspring);
+int mutate(PopMember parent, PopMember offspring);

@@ -7,7 +7,7 @@ int sortPopulation(const void *ep1, const void *ep2) {
   return popMember1->fitnessScore - popMember2->fitnessScore;
 }
 
-void selection(PopMember population[], PopMember newPopulation[]) {
+void selection(PopMember population[]) {
   int i;
 
   PopMember tempPopulation[POPULATION_SIZE];
@@ -18,7 +18,7 @@ void selection(PopMember population[], PopMember newPopulation[]) {
 
   qsort(tempPopulation, POPULATION_SIZE, sizeof(PopMember), sortPopulation);
 
-  for (i = 0; i < POPULATION_SIZE / 2; i++) {
-    newPopulation[i] = tempPopulation[i];
+  for (i = 0; i < POPULATION_SIZE; i++) {
+    population[i] = tempPopulation[i];
   }
 }
