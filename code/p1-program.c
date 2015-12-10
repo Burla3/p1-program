@@ -32,9 +32,10 @@ int main(int argc, const char *argv[]) {
 
   populateStudyStructFromConfig(rootConfig, studyArray);
 
+/*
   int i;
 
-  /*for (i = 0; i < numberOfStudies; i++)
+  for (i = 0; i < numberOfStudies; i++)
   {
     printf("\n\n");
     printStudyStruct(studyArray[i]);
@@ -53,7 +54,6 @@ int main(int argc, const char *argv[]) {
 
   printTimetables(population, 0);
 
-
   return 0;
 }
 
@@ -65,8 +65,6 @@ int getNumberOfStudies(json_t *rootConfig) {
 void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfStudies) {
   initialPopulation(population, studyArray, numberOfStudies);
 
-  printf("Done init\n");
-
   int currentPopulationSize, generation = 0;
 
   do {
@@ -74,7 +72,6 @@ void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfS
 
     selection(population);
     currentPopulationSize = POPULATION_SIZE / 2;
-
 
     int i;
 
@@ -85,11 +82,11 @@ void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfS
     while (currentPopulationSize < POPULATION_SIZE) {
       currentPopulationSize += crossoverMix(population, currentPopulationSize);
 
-      /* Test som ikke virker */
-      //currentPopulationSize += crossoverSwitch(population, currentPopulationSize);
-
       if (currentPopulationSize < POPULATION_SIZE - 1) {
-        //currentPopulationSize += crossoverSlice(population, currentPopulationSize);
+        currentPopulationSize += crossoverSlice(population, currentPopulationSize);
+      }
+      if (currentPopulationSize < POPULATION_SIZE - 1) {
+        currentPopulationSize += crossoverSwitch(population, currentPopulationSize);
       }
    }
    generation++;

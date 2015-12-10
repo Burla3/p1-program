@@ -68,23 +68,30 @@ int crossoverSlice(PopMember population[], int currentPopulationSize) {
 }
 
 int crossoverSwitch(PopMember population[], int currentPopulationSize) {
-  int i, j, k;
-  PopMember parent1, parent2;
+  int i, j, k, crossoverPoint;
 
+  PopMember parent1, parent2;
   crossoverSelectionRandom(population, &parent1, &parent2);
 
+  /*New popmembers must have a negative fitnessScore*/
   population[currentPopulationSize].fitnessScore = -1;
-
-  printf("%d\n", parent1.numberOfStudies);
+  population[currentPopulationSize + 1].fitnessScore = -1;
 
   for (i = 0; i < parent1.numberOfStudies; i++) {
-    for (j = 0, k = parent1.studies[i].numberOfLectures; j < k; j++, k--) {
-      printf("j: %d  k: %d\n", j, k);
+    crossoverPoint = getRandomValue(parent1.studies[i].numberOfLectures) + 1;
+
+    for (j = 0, k = parent1.studies[i].numberOfLectures - 1; j < crossoverPoint; j++, k--) {
       Lecture temlec1 = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
-      Lecture temlec2 = {parent2.studies[i].lectures[k].type, parent2.studies[i].lectures[k].room};
+      Lecture temlec2 = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
       population[currentPopulationSize].studies[i].lectures[k] = temlec1;
-      population[currentPopulationSize].studies[i].lectures[j] = temlec2;
+      population[currentPopulationSize + 1].studies[i].lectures[k] = temlec2;
+    }
+    for (j = crossoverPoint, k = parent1.studies[i].numberOfLectures - crossoverPoint - 1; j < parent1.studies[i].numberOfLectures; j++, k--) {
+      Lecture temlec1 = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
+      Lecture temlec2 = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
+      population[currentPopulationSize].studies[i].lectures[k] = temlec2;
+      population[currentPopulationSize + 1].studies[i].lectures[k] = temlec1;
     }
   }
-  return 1;
+  return 2;
 }

@@ -19,7 +19,6 @@ void calculateFitness(PopMember population[], Study studyArray[]) {
 
     if (population[popCount].fitnessScore == -1) {
       population[popCount].fitnessScore = amountOfLectures(population, studyArray, popCount)
-      //  + roomOverlap(population, popCount, leastNumberOfLectures)
         + lecturerOverlap(population, popCount, leastNumberOfLectures)
         + lecturerAvailable(population, popCount)
         + courseNotSameDay(population, popCount)
@@ -28,12 +27,9 @@ void calculateFitness(PopMember population[], Study studyArray[]) {
         + lecturerConstraintRoomSoft(population, popCount)
         + lecturerConstraintTime(population, popCount);
     }
-
     free(newTimetable);
   }
 }
-
-
 
 /* HARD CONSTRAINTS */
 /* amountOfLectures gives a penalty score, if there is a wrong amount of each lecture in the timetable. */
@@ -47,26 +43,11 @@ int amountOfLectures(PopMember population[], Study studyArray[], int popCount) {
         lecturesTemp += 1;
         }
       }
-    }
-    if (studyArray[i].totalNumberOfLectures != lecturesTemp) {
-      score += PENALTY_HARD * abs(studyArray[i].studyCourses[j].numberOfLectures - lecturesTemp);
-    }
-  }
-  return score;
-}
-
-/* roomOverlap gives a penalty score, if more than one lecture is planning to use the same room at the same time. */
-int roomOverlap(PopMember population[], int popCount, int leastNumberOfLectures) {
-  int i, j, k, score = 0, scoreCounter = 0;
-
-  for (i = 0; i < population[popCount].numberOfStudies; i++) {
-    for (j = 0; j < population[popCount].numberOfStudies; j++) {
-      for (k = 0; k < leastNumberOfLectures; k++) {
-
+      if (studyArray[i].totalNumberOfLectures != lecturesTemp) {
+        score += PENALTY_HARD * abs(studyArray[i].studyCourses[j].numberOfLectures - lecturesTemp);
       }
     }
   }
-  score += PENALTY_HARD * scoreCounter;
   return score;
 }
 
@@ -81,7 +62,7 @@ int lecturerOverlap(PopMember population[], int popCount, int leastNumberOfLectu
         strcpy(typeJ, population[popCount].studies[i].lectures[k].type);
         strcpy(typeK, population[popCount].studies[j].lectures[k].type);
 
-        if (((strcmp(typeJ, typeK) == 0) && (strcmp(typeJ, "PROJEKT") != 0)) && (i != j)){
+        if ((((strcmp(typeJ, typeK) == 0) && (strcmp(typeJ, "PROJEKT") != 0)) && (strcmp(typeJ, "PV") != 0)) && (i != j)) {
           scoreCounter++;
         }
         if ((strcmp(population[popCount].studies[i].lectures[k].room, "Grupperum") != 0) &&
