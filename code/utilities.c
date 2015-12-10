@@ -26,7 +26,7 @@ void createTimetableWithDates(TimetableWithDates newTimetable[], PopMember popul
 
 void nextDay(CalenderData *calender, int numberOfLectures) {
 
-  int i, day = 1, month = 9, daysInMonth = 0, weekday = 3;
+  int i, day = 1, month = 9, daysInMonth = 0, weekday = 1;
 
   for(i = 0; i < numberOfLectures; weekday++) {
     if (daysInMonth == 0)

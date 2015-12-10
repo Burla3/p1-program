@@ -20,7 +20,7 @@ int main(int argc, const char *argv[]) {
 
   int currentPopulationSize, generation = 0;
 
-  while (population[0].fitnessScore != 0 && generation < MAX_GENERATIONS) {
+  do {
     calculateFitness(population, studyArray);
 
     selection(population);
@@ -45,7 +45,7 @@ int main(int argc, const char *argv[]) {
       }
    }
    generation++;
-  }
+ } while (population[0].fitnessScore != 0 && generation < MAX_GENERATIONS);
   printf("\n\n");
 
   printTimetables(population, 0);
