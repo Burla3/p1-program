@@ -12,7 +12,7 @@ int mutate(PopMember *population, int currentPopulationSize, Study *studyArray) 
     int randCourse = getRandomValue(studyArray[randStudy].numberOfCourses);
 
     if (getRandomValue(2) == 0) {
-      strcpy(offspring.studies[randStudy].lectures[randLecture].type, 
+      strcpy(offspring.studies[randStudy].lectures[randLecture].type,
         studyArray[randStudy].studyCourses[randCourse].course);
 
       int courseIndex = getCourseIndex(studyArray, offspring, randStudy, randLecture);
@@ -37,7 +37,7 @@ int getCourseIndex(Study *studyArray, PopMember offspring, int randStudy, int ra
 
   for (i = 0; i < studyArray[randStudy].numberOfCourses; i++)
   {
-    if (strcmp(offspring.studies[randStudy].lectures[randLecture].type, 
+    if (strcmp(offspring.studies[randStudy].lectures[randLecture].type,
       studyArray[randStudy].studyCourses[i].course) == 0) {
       break;
     }
@@ -55,7 +55,7 @@ void setRandomRoom(Study *studyArray, PopMember *offspring, int randStudy, int r
     int numberOfRooms = studyArray[randStudy].studyCourses[courseIndex].numberOfRooms;
     int randRoom = getRandomValue(numberOfRooms);
 
-    strcpy(offspring->studies[randStudy].lectures[randLecture].room, 
+    strcpy(offspring->studies[randStudy].lectures[randLecture].room,
       studyArray[randStudy].studyCourses[courseIndex].rooms[randRoom]);
   }
 }

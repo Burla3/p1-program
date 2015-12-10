@@ -29,6 +29,8 @@ int main(int argc, const char *argv[]) {
     printf("---------------------------------------\n");
     printf("\nGeneration: %d\nFitness: %d\n", generation, population[0].fitnessScore);
 
+    int i;
+
     for (i = 0; i < POPULATION_SIZE / 2; i++) {
       currentPopulationSize += mutate(population, currentPopulationSize, studyArray);
     }

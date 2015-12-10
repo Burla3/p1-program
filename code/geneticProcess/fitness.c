@@ -17,17 +17,19 @@ void calculateFitness(PopMember population[], Study studyArray[]) {
       }
     }
 
-    population[popCount].fitnessScore = amountOfLectures(population, studyArray, popCount)
-      + roomOverlap(population, popCount, leastNumberOfLectures)
-      + lecturerOverlap(population, popCount, leastNumberOfLectures)
-      + lecturerAvailable(population, popCount)
-      + courseNotSameDay(population, popCount)
-      + lecturerConstraintRoomHard(population, popCount)
-      + followingCourses(population, popCount)
-      + lecturerConstraintRoomSoft(population, popCount)
-      + lecturerConstraintTime(population, popCount);
+    if (population[popCount].fitnessScore == -1) {
+      population[popCount].fitnessScore = amountOfLectures(population, studyArray, popCount)
+        + roomOverlap(population, popCount, leastNumberOfLectures)
+        + lecturerOverlap(population, popCount, leastNumberOfLectures)
+        + lecturerAvailable(population, popCount)
+        + courseNotSameDay(population, popCount)
+        + lecturerConstraintRoomHard(population, popCount)
+        + followingCourses(population, popCount)
+        + lecturerConstraintRoomSoft(population, popCount)
+        + lecturerConstraintTime(population, popCount);
+    }
 
-      free(newTimetable);
+    free(newTimetable);
   }
 }
 
@@ -60,7 +62,7 @@ int roomOverlap(PopMember population[], int popCount, int leastNumberOfLectures)
   for (i = 0; i < population[popCount].numberOfStudies; i++) {
     for (j = 0; j < population[popCount].numberOfStudies; j++) {
       for (k = 0; k < leastNumberOfLectures; k++) {
-        if ((strcmp(population[popCount].studies[i].lectures[k].room, "GR") != 0) && (strcmp(population[popCount].studies[i].lectures[k].room,
+        if ((strcmp(population[popCount].studies[i].lectures[k].room, "Grupperum") != 0) && (strcmp(population[popCount].studies[i].lectures[k].room,
                    population[popCount].studies[j].lectures[k].room) == 0) && (i != j)) {
           scoreCounter++;
         }
