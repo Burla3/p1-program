@@ -21,11 +21,7 @@ void calculateFitness(PopMember population[], Study studyArray[]) {
       population[popCount].fitnessScore = amountOfLectures(population, studyArray, popCount)
         + lecturerOverlap(population, popCount, leastNumberOfLectures)
         + lecturerAvailable(population, popCount)
-        + courseNotSameDay(population, popCount)
-        + lecturerConstraintRoomHard(population, popCount)
-        + followingCourses(population, popCount)
-        + lecturerConstraintRoomSoft(population, popCount)
-        + lecturerConstraintTime(population, popCount);
+        + courseNotSameDay(population, popCount);
     }
     free(newTimetable);
   }
@@ -99,36 +95,5 @@ int courseNotSameDay(PopMember population[], int popCount) {
       }
     }
   }
-  return score;
-}
-
-/* lecturerConstraintRoom gives a penalty, every time one of the lecturer's courses arent planned to happen in the
- * same room as he says it needs to. */
-int lecturerConstraintRoomHard(PopMember population[], int popCount) {
-  int score = 0;
-
-  return score;
-}
-
-/* SOFT CONSTRAINTS */
-/* followingCourses gives a penalty score, if two courses dont follow eachother as academically intended. */
-int followingCourses(PopMember population[], int popCount) {
-  int score = 0;
-
-  return score;
-}
-
-/* lecturerConstraintSoft gives a penalty, every time one of the lecturers preference to a room is broken. */
-int lecturerConstraintRoomSoft(PopMember population[], int popCount) {
-  int score = 0;
-
-  return score;
-}
-
-/* lecturerConstraintHard gives a penalty, every time one of the lecturer's courses are planned to happen when he
- * prefered it to. */
-int lecturerConstraintTime(PopMember population[], int popCount) {
-  int score = 0;
-
   return score;
 }
