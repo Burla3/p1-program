@@ -16,64 +16,38 @@ int main(int argc, const char *argv[]) {
 
   populateStudyStructFromConfig(rootConfig, studyArray);
 
-  int k;
-
-  for (k = 0; k < numberOfStudies; k++) {
-    printStudyStruct(studyArray[k]);
-  }
-
   initialPopulation(population, studyArray, numberOfStudies);
-
-  calculateFitness(population, studyArray);
-
-  int i, j, h;
-
-  for (i = 0; i < POPULATION_SIZE; i++) {
-    printf("---------------------------------------\n");
-    printf("\nMember: %d\nFitness: %d\n", i+1, population[i].fitnessScore);
-    for (j = 0; j < numberOfStudies; j++) {
-      printf("\n%s\n\n", population[i].studies[j].studyName);
-      for (h = 0; h < population[i].studies[j].numberOfLectures; h++) {
-        printf("%s\t%s\n", population[i].studies[j].lectures[h].type, population[i].studies[j].lectures[h].room);
-      }
-    }
-  }
-
-  PopMember parent1, parent2, offspring, offspring1;
-
-  offspring = population[0];
-  offspring1 = population[0];
 
   int currentPopulationSize, generation = 0;
 
   while (population[0].fitnessScore != 0 && generation < MAX_GENERATIONS) {
-    selection(population);
+    calculateFitness(population, studyArray);
 
+    selection(population);
     currentPopulationSize = POPULATION_SIZE / 2;
+
+    printf("---------------------------------------\n");
+    printf("\nGeneration: %d\nFitness: %d\n", generation, population[0].fitnessScore);
+
     for (i = 0; i < POPULATION_SIZE / 2; i++) {
       currentPopulationSize += mutate(population, currentPopulationSize, studyArray);
     }
-     while (currentPopulationSize < POPULATION_SIZE) {
-        crossoverSelectionRandom(population, currentPopulationSize, parent1, parent2);
+    while (currentPopulationSize < POPULATION_SIZE) {
+      currentPopulationSize += crossoverMix(population, currentPopulationSize);
 
-        crossoverMix(parent1, parent2, offspring);
-        //population[currentPopulationSize] = offspring;
-        currentPopulationSize++;
-        crossoverSlice(parent1, parent2, offspring, offspring1);
-        currentPopulationSize += 2;
+      /* Test som ikke virker */
+      //currentPopulationSize += crossoverSwitch(population, currentPopulationSize);
 
-    }
-    generation++;
+      if (currentPopulationSize < POPULATION_SIZE - 1) {
+        currentPopulationSize += crossoverSlice(population, currentPopulationSize);
+      }
+   }
+   generation++;
   }
+  printf("\n\n");
 
-  printf("---------------------------------------\n");
-  printf("\nGeneration: %d\nFitness: %d\n", generation, population[0].fitnessScore);
-  for (j = 0; j < numberOfStudies; j++) {
-    printf("\n%s\n\n", population[0].studies[j].studyName);
-    for (h = 0; h < population[0].studies[j].numberOfLectures; h++) {
-      printf("%s\t%s\n", population[0].studies[j].lectures[h].type, population[0].studies[j].lectures[h].room);
-    }
-  }
+  printTimetables(population, 0);
+
   return 0;
 }
 

@@ -12,6 +12,8 @@ void initialPopulation(PopMember population[], Study studyArray[], int numberOfS
       totalNumberOfLectures = studyArray[j].totalNumberOfLectures;
       Lecture *lectures = (Lecture*) malloc(totalNumberOfLectures * sizeof(Lecture));
 
+
+
       char *name = (char*) malloc(5 * sizeof(char));
       Timetable study = {name, totalNumberOfLectures, lectures};
 
@@ -21,18 +23,19 @@ void initialPopulation(PopMember population[], Study studyArray[], int numberOfS
 
       int *numberOfLectures = (int*) malloc(studyArray[j].numberOfCourses * sizeof(int));
 
+
+
       for (l = 0; l < studyArray[j].numberOfCourses; l++) {
         numberOfLectures[l] = studyArray[j].studyCourses[l].numberOfLectures;
       }
 
       for (k = 0; k < totalNumberOfLectures; k++) {
-
         courseName = (char*) malloc(5 * sizeof(char));
         roomName = (char*) malloc(10 * sizeof(char));
 
         randomCourse = getRandomCourse(numberOfLectures, studyArray[j].numberOfCourses);
 
-        if (randomCourse != studyArray[j].numberOfCourses - 1) {
+        if (strcmp(studyArray[j].studyCourses[randomCourse].course, "PROJ") != 0) {
           randomRoom = getRandomValue(studyArray[j].studyCourses[randomCourse].numberOfRooms);
           strcpy(roomName, studyArray[j].studyCourses[randomCourse].rooms[randomRoom]);
         }
@@ -41,6 +44,7 @@ void initialPopulation(PopMember population[], Study studyArray[], int numberOfS
         }
 
         strcpy(courseName, studyArray[j].studyCourses[randomCourse].course);
+
         Lecture singleLecture = {courseName, roomName};
 
         population[i].studies[j].lectures[k] = singleLecture;
@@ -51,6 +55,10 @@ void initialPopulation(PopMember population[], Study studyArray[], int numberOfS
 
 int getRandomCourse(int numberOfLectures[], int numberOfCourses) {
   int random = getRandomValue(numberOfCourses);
+  int i;
+
+  for (i = 0; i < numberOfCourses; i++) {
+  }
 
   while (1) {
     if (numberOfLectures[random] > 0) {

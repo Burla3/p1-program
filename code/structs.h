@@ -1,9 +1,8 @@
-#define POPULATION_SIZE 2
+#define POPULATION_SIZE 100
 #define PENALTY_HARD 100
 #define PENALTY_SOFT 1
-#define DAYS_IN_SEMESTER 120
-#define MUTATION_RATE 3
-#define MAX_GENERATIONS 20
+#define MUTATION_RATE 1
+#define MAX_GENERATIONS 200
 
 #ifndef LECTURE
 #define LECTURE
@@ -57,15 +56,13 @@
     double lectureTimeStart;
     int day;
     int month;
-    char *type;
-    char *room;
   } CalenderData;
 #endif
 
 #ifndef TIMETABLEWITHDATES
 #define TIMETABLEWITHDATES
   typedef struct TimetableWithDates {
-    Lecture lecture;
-    CalenderData calender;
+    Lecture *lecture;
+    CalenderData *calender;
   } TimetableWithDates;
 #endif

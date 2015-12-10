@@ -1,37 +1,90 @@
 #include "crossover.h"
+#include "crossoverSelection.h"
 
-void crossoverMix(PopMember parent1, PopMember parent2, PopMember offspring) {
-/*  int i, j;
+void printParent(PopMember parent) {
+  int j,h;
 
+  for (j = 0; j < parent.numberOfStudies; j++) {
+    printf("\n%s\n\n", parent.studies[j].studyName);
+    for (h = 0; h < parent.studies[j].numberOfLectures; h++) {
+      printf("%s\t%s\n", parent.studies[j].lectures[h].type, parent.studies[j].lectures[h].room);
+    }
+  }
+    printf("---------------------------------------\n");
+}
 
+int crossoverMix(PopMember population[], int currentPopulationSize) {
+  int i, j;
+
+  PopMember parent1, parent2;
+
+  crossoverSelectionRandom(population, &parent1, &parent2);
+
+  /*New popmembers must have a negative fitnessScore*/
+  population[currentPopulationSize].fitnessScore = -1;
 
   for (i = 0; i < parent1.numberOfStudies; i++) {
     for (j = 0; j < parent1.studies[i].numberOfLectures; j++) {
       if (getRandomValue(2) == 0) {
-        offspring.studies[i].lectures[j] = parent1.studies[i].lectures[j];
+        Lecture temlec = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
+        population[currentPopulationSize].studies[i].lectures[j] = temlec;
       } else {
-        offspring.studies[i].lectures[j] = parent2.studies[i].lectures[j];;
+        Lecture temlec = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
+        population[currentPopulationSize].studies[i].lectures[j] = temlec;
       }
     }
   }
-  */
+  return 1;
 }
 
-void crossoverSlice(PopMember parent1, PopMember parent2, PopMember offspring1, PopMember offspring2) {
-/*  int i, j, crossoverPoint;
+int crossoverSlice(PopMember population[], int currentPopulationSize) {
+  int i, j, crossoverPoint;
+
+  PopMember parent1, parent2;
+  crossoverSelectionRandom(population, &parent1, &parent2);
+
+  /*New popmembers must have a negative fitnessScore*/
+  population[currentPopulationSize].fitnessScore = -1;
+  population[currentPopulationSize + 1].fitnessScore = -1;
 
   for (i = 0; i < parent1.numberOfStudies; i++) {
-    crossoverPoint = getRandomValue(parent1.studies[i].numberOfLectures - 1) + 1;
+    crossoverPoint = getRandomValue(parent1.studies[i].numberOfLectures) + 1;
 
     for (j = 0; j < crossoverPoint; j++) {
-      offspring1.studies[i].lectures[j] = parent1.studies[i].lectures[j];
-      offspring2.studies[i].lectures[j] = parent2.studies[i].lectures[j];
+      Lecture temlec1 = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
+      Lecture temlec2 = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
+      population[currentPopulationSize].studies[i].lectures[j] = temlec1;
+      population[currentPopulationSize + 1].studies[i].lectures[j] = temlec2;
     }
 
     for (j = crossoverPoint; j < parent1.studies[i].numberOfLectures; j++) {
-      offspring1.studies[i].lectures[j] = parent2.studies[i].lectures[j];
-      offspring2.studies[i].lectures[j] = parent1.studies[i].lectures[j];
+      Lecture temlec1 = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
+      Lecture temlec2 = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
+      population[currentPopulationSize].studies[i].lectures[j] = temlec2;
+      population[currentPopulationSize + 1].studies[i].lectures[j] = temlec1;
     }
   }
-  */
+  return 2;
+}
+
+int crossoverSwitch(PopMember population[], int currentPopulationSize) {
+  int i, j, k;
+  PopMember parent1, parent2;
+
+  crossoverSelectionRandom(population, &parent1, &parent2);
+
+  population[currentPopulationSize].fitnessScore = -1;
+
+  printf("%d\n", parent1.numberOfStudies);
+
+  for (i = 0; i < parent1.numberOfStudies; i++) {
+    for (j = 0, k = parent1.studies[i].numberOfLectures; j < k; j++, k--) {
+      printf("j: %d  k: %d\n", j, k);
+      Lecture temlec1 = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
+      Lecture temlec2 = {parent2.studies[i].lectures[k].type, parent2.studies[i].lectures[k].room};
+      population[currentPopulationSize].studies[i].lectures[k] = temlec1;
+      population[currentPopulationSize].studies[i].lectures[j] = temlec2;
+    }
+  }
+  return 1;
 }

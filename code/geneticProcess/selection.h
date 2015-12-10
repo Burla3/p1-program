@@ -10,7 +10,8 @@ int sortPopulation(const void *ep1, const void *ep2);
 /**
  * Sorts the population and copies the best half into the new population.
  *
- * @param[in] population[] the population that is to be sorted and copied
- * @param[out] newPopulation[] the population that will be copied into and become the new population
+ * @param[out] population[] the population that will be sorted and selected from
+ *
+ * @return returns an integer that marks how much of the population is selected for further processing
  */
-void selection(PopMember population[]);
+int selection(PopMember population[]);

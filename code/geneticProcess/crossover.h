@@ -34,11 +34,10 @@
  *  </tr>
  * </table>
  *
- * @param[in] parent1 the first parent used for breeding
- * @param[in] parent2 the second parent used for breeding
- * @param[out] offspring the offspring that is generated through breeding
+ * @param[out] population gets new offspring added.
+ * @param[in] currentPopulationSize size of the population in number of popmembers
  */
-void crossoverMix(PopMember parent1, PopMember parent2, PopMember offspring);
+int crossoverMix(PopMember population[], int currentPopulationSize);
 
 /**
  * Breeds two offsprings by picking a random crossover point for the parents and swapping the right sides with
@@ -83,9 +82,9 @@ void crossoverMix(PopMember parent1, PopMember parent2, PopMember offspring);
  *  </tr>
  * </table>
  *
- * @param[in] parent1 the first parent used for breeding
- * @param[in] parent2 the second parent used for breeding
- * @param[out] offspring1 the first offspring that is generated through breeding
- * @param[out] offspring2 the second offspring that is generated through breeding
+ * @param[out] population is an output array of PopMember's
+ * @param[in] currentPopulationSize
  */
-void crossoverSlice(PopMember parent1, PopMember parent2, PopMember offspring1, PopMember offspring2);
+int crossoverSlice(PopMember population[], int currentPopulationSize);
+
+int crossoverSwitch(PopMember population[], int currentPopulationSize);
