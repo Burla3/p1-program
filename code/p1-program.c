@@ -79,12 +79,12 @@ void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfS
     while (currentPopulationSize < POPULATION_SIZE) {
       currentPopulationSize += crossoverMix(population, currentPopulationSize);
 
-      /* Test som ikke virker */
-      //currentPopulationSize += crossoverSwitch(population, currentPopulationSize);
-
       if (currentPopulationSize < POPULATION_SIZE - 1) {
-        //currentPopulationSize += crossoverSlice(population, currentPopulationSize);
-      } 
+        currentPopulationSize += crossoverSlice(population, currentPopulationSize);
+      }
+      if (currentPopulationSize < POPULATION_SIZE - 1) {
+        currentPopulationSize += crossoverSwitch(population, currentPopulationSize);
+      }
     }
     timeStamp = printTimeDifferenceMillis(timeStamp, "crossover");
     generation++;

@@ -4,3 +4,5 @@
 #include "utilities.h"
 
 void printTimetables(PopMember population[], int popCount);
+
+void printToConsol(PopMember population[], TimetableWithDates newTimetable[], int popCount);
