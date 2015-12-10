@@ -9,7 +9,7 @@ void calculateFitness(PopMember population[], Study studyArray[]) {
 
     TimetableWithDates *newTimetable = (TimetableWithDates*) malloc(population[popCount].numberOfStudies * sizeof(TimetableWithDates));
 
-    //createTimetableWithDates(newTimetable, population, popCount);
+    createTimetableWithDates(newTimetable, population, popCount);
 
     for (i = 0; i < population[popCount].numberOfStudies; i++) {
       if (leastNumberOfLectures > population[popCount].studies[i].numberOfLectures) {
