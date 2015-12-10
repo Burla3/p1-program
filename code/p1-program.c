@@ -51,10 +51,7 @@ int main(int argc, const char *argv[]) {
 
     currentPopulationSize = POPULATION_SIZE / 2;
     for (i = 0; i < POPULATION_SIZE / 2; i++) {
-      if (mutate(population[i], offspring) == 1) {
-        population[currentPopulationSize] = offspring;
-        currentPopulationSize++;
-      }
+      currentPopulationSize += mutate(population, currentPopulationSize, studyArray);
     }
      while (currentPopulationSize < POPULATION_SIZE) {
         crossoverSelectionRandom(population, currentPopulationSize, parent1, parent2);
