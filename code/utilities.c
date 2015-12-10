@@ -77,15 +77,16 @@ int getDaysInMonth(int month) {
   return daysInMonth;
 }
 
-float timeDifferenceMillis(struct timeval t0, struct timeval t1)
-{
-    return (t1.tv_sec - t0.tv_sec) * 1000.0f + (t1.tv_usec - t0.tv_usec) / 1000.0f;
+int64_t currentTimestamp() {
+    struct timeval te; 
+    gettimeofday(&te, NULL); // get current time
+    int64_t milliseconds = te.tv_sec * 1000LL + te.tv_usec / 1000; // caculate milliseconds
+    // printf("milliseconds: %"PRId64"\n", milliseconds);
+    return milliseconds;
 }
 
-void printTimeDifferenceMillis(struct timeval *tStart, char *strToPrint) {
-  struct timeval tStop;
-  gettimeofday(&tStop, NULL);
-  float elapsed = timeDifferenceMillis(*tStart, tStop);
-  printf("%s in %f milliseconds.\n", strToPrint, elapsed);
-  gettimeofday(tStart, 0);
+int64_t printTimeDifferenceMillis(int64_t startTime, char *strToPrint) {
+  int64_t endTime = currentTimestamp();
+  printf("%s in %"PRId64" milliseconds.\n", strToPrint, (endTime - startTime));
+  return endTime;
 }

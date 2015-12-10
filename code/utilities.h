@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <sys/time.h>
-#include "structs.h"
+#include <inttypes.h>
 #include <stdio.h>
+#include "structs.h"
 
 /**
  * Returns a random value from 0 to (upper - 1).
@@ -12,5 +13,5 @@ int getRandomValue(int upper);
 void createTimetableWithDates(TimetableWithDates newTimetable[], PopMember population[], int popCount);
 void nextDay(CalenderData *calender, int numberOfLectures);
 int getDaysInMonth(int month);
-float timeDifferenceMillis(struct timeval t0, struct timeval t1);
-void printTimeDifferenceMillis(struct timeval *tStart, char *strToPrint);
+int64_t currentTimestamp();
+int64_t printTimeDifferenceMillis(int64_t startTime, char *strToPrint);
