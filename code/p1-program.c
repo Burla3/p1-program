@@ -3,10 +3,13 @@
 int main(int argc, const char *argv[]) {
   srand(time(NULL));
 
-  json_t *rootConfig = loadJSON("json/config.json");
+  json_t *rootConfig;
+  json_error_t error;
 
-  if (rootConfig == NULL) {
-    perror("Error loading JSON ");
+  rootConfig = json_load_file("json/config.json", 0, &error);
+
+  if(error.line != -1) {
+    printf("json_load_file returned an invalid line number\n");
   }
 
   int numberOfStudies = getNumberOfStudies(rootConfig);
