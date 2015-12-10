@@ -8,3 +8,5 @@
 #include "print.h"
 
 int getNumberOfStudies(json_t *rootConfig);
+
+void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfStudies);
