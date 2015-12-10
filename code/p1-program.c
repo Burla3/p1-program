@@ -3,10 +3,8 @@
 int main(int argc, const char *argv[]) {
   srand(time(NULL));
 
-  /*struct timeval tStart, tStop;
-  float elapsed;
-
-  gettimeofday(&tStart, NULL);*/
+  int64_t timeStamp = currentTimestamp();
+  int64_t timeStampForEnd = currentTimestamp();
 
   json_t *rootConfig;
   json_error_t error;
@@ -17,42 +15,28 @@ int main(int argc, const char *argv[]) {
     printf("json_load_file returned an invalid line number\n");
   }
 
-  /*gettimeofday(&tStop, NULL);
-  elapsed = timeDifferenceMillis(tStart, tStop);
-  printf("%s in %f milliseconds.\n", "asdf", elapsed);
-  gettimeofday(&tStart, 0);*/
-
-  //printTimeDifferenceMillis(&tStart, "Config file read by Jansson");
+  timeStamp = printTimeDifferenceMillis(timeStamp, "json_load_file");
 
   int numberOfStudies = getNumberOfStudies(rootConfig);
-
 
   PopMember *population = (PopMember*) malloc(POPULATION_SIZE * sizeof(PopMember));
   Study *studyArray = (Study*) malloc(numberOfStudies * sizeof(Study));
 
   populateStudyStructFromConfig(rootConfig, studyArray);
 
-  int i;
-
-  /*for (i = 0; i < numberOfStudies; i++)
-  {
-    printf("\n\n");
-    printStudyStruct(studyArray[i]);
-  }*/
-
-  /*gettimeofday(&tStop, NULL);
-  elapsed = timeDifferenceMillis(tStart, tStop);
-  printf("%s in %f milliseconds.\n", "asdf", elapsed);*/
-  //gettimeofday(&tStart, NULL);
-
-  //printTimeDifferenceMillis(&tStart, "populateStudyStructFromConfig");
+  timeStamp = printTimeDifferenceMillis(timeStamp, "populateStudyStructFromConfig");
 
   runGeneticAlgorithm(population, studyArray, numberOfStudies);
+
+  timeStamp = printTimeDifferenceMillis(timeStamp, "runGeneticAlgorithm");
 
   printf("\n\n");
 
   printTimetables(population, 0);
 
+  timeStamp = printTimeDifferenceMillis(timeStamp, "printTimetables");
+
+  timeStampForEnd = printTimeDifferenceMillis(timeStampForEnd, "Whole program");
 
   return 0;
 }
@@ -63,24 +47,34 @@ int getNumberOfStudies(json_t *rootConfig) {
 }
 
 void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfStudies) {
+  int64_t timeStamp = currentTimestamp();
+
   initialPopulation(population, studyArray, numberOfStudies);
 
-  printf("Done init\n");
+  timeStamp = printTimeDifferenceMillis(timeStamp, "initialPopulation");
+
+  printf("Done init\n\n");
 
   int currentPopulationSize, generation = 0;
 
   do {
+    printf("----------- Generation %05d -----------\n", generation + 1);
+
     calculateFitness(population, studyArray);
+
+    timeStamp = printTimeDifferenceMillis(timeStamp, "calculateFitness");
 
     selection(population);
     currentPopulationSize = POPULATION_SIZE / 2;
 
+    timeStamp = printTimeDifferenceMillis(timeStamp, "selection");
 
     int i;
 
     for (i = 0; i < POPULATION_SIZE / 2; i++) {
       currentPopulationSize += mutate(population, currentPopulationSize, studyArray);
     }
+    timeStamp = printTimeDifferenceMillis(timeStamp, "mutate");
 
     while (currentPopulationSize < POPULATION_SIZE) {
       currentPopulationSize += crossoverMix(population, currentPopulationSize);
@@ -90,11 +84,12 @@ void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfS
 
       if (currentPopulationSize < POPULATION_SIZE - 1) {
         //currentPopulationSize += crossoverSlice(population, currentPopulationSize);
-      }
-   }
-   generation++;
+      } 
+    }
+    timeStamp = printTimeDifferenceMillis(timeStamp, "crossover");
+    generation++;
 
-   printf("---------------------------------------\n");
-   printf("\nGeneration: %d\nFitness: %d\n", generation, population[0].fitnessScore);
- } while (population[0].fitnessScore != 0 && generation < MAX_GENERATIONS);
+    printf("----------------------------------------\n");
+    printf("Generation: %d\nFitness: %d\n\n", generation, population[0].fitnessScore);
+  } while (population[0].fitnessScore != 0 && generation < MAX_GENERATIONS);
 }
