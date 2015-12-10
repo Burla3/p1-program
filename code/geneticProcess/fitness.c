@@ -19,7 +19,7 @@ void calculateFitness(PopMember population[], Study studyArray[]) {
 
     if (population[popCount].fitnessScore == -1) {
       population[popCount].fitnessScore = amountOfLectures(population, studyArray, popCount)
-        + roomOverlap(population, popCount, leastNumberOfLectures)
+      //  + roomOverlap(population, popCount, leastNumberOfLectures)
         + lecturerOverlap(population, popCount, leastNumberOfLectures)
         + lecturerAvailable(population, popCount)
         + courseNotSameDay(population, popCount)
@@ -62,10 +62,7 @@ int roomOverlap(PopMember population[], int popCount, int leastNumberOfLectures)
   for (i = 0; i < population[popCount].numberOfStudies; i++) {
     for (j = 0; j < population[popCount].numberOfStudies; j++) {
       for (k = 0; k < leastNumberOfLectures; k++) {
-        if ((strcmp(population[popCount].studies[i].lectures[k].room, "Grupperum") != 0) && (strcmp(population[popCount].studies[i].lectures[k].room,
-                   population[popCount].studies[j].lectures[k].room) == 0) && (i != j)) {
-          scoreCounter++;
-        }
+
       }
     }
   }
@@ -79,12 +76,17 @@ int lecturerOverlap(PopMember population[], int popCount, int leastNumberOfLectu
   char typeJ[5], typeK[5];
 
   for (i = 0; i < population[popCount].numberOfStudies; i++) {
-    for (j = 0; j < population[popCount].numberOfStudies; j++) {
+    for (j = i; j < population[popCount].numberOfStudies; j++) {
       for (k = 0; k < leastNumberOfLectures; k++) {
         strcpy(typeJ, population[popCount].studies[i].lectures[k].type);
         strcpy(typeK, population[popCount].studies[j].lectures[k].type);
 
         if (((strcmp(typeJ, typeK) == 0) && (strcmp(typeJ, "PROJEKT") != 0)) && (i != j)){
+          scoreCounter++;
+        }
+        if ((strcmp(population[popCount].studies[i].lectures[k].room, "Grupperum") != 0) &&
+                                  (strcmp(population[popCount].studies[i].lectures[k].room,
+                      population[popCount].studies[j].lectures[k].room) == 0) && (i != j)) {
           scoreCounter++;
         }
       }

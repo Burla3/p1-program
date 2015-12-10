@@ -2,7 +2,7 @@
 #define PENALTY_HARD 100
 #define PENALTY_SOFT 1
 #define MUTATION_RATE 1
-#define MAX_GENERATIONS 200
+#define MAX_GENERATIONS 1000
 
 #ifndef LECTURE
 #define LECTURE

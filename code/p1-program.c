@@ -53,7 +53,7 @@ int main(int argc, const char *argv[]) {
 
   printTimetables(population, 0);
 
-  
+
   return 0;
 }
 
@@ -75,8 +75,6 @@ void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfS
     selection(population);
     currentPopulationSize = POPULATION_SIZE / 2;
 
-    printf("---------------------------------------\n");
-    printf("\nGeneration: %d\nFitness: %d\n", generation, population[0].fitnessScore);
 
     int i;
 
@@ -91,9 +89,12 @@ void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfS
       //currentPopulationSize += crossoverSwitch(population, currentPopulationSize);
 
       if (currentPopulationSize < POPULATION_SIZE - 1) {
-        currentPopulationSize += crossoverSlice(population, currentPopulationSize);
+        //currentPopulationSize += crossoverSlice(population, currentPopulationSize);
       }
    }
    generation++;
+
+   printf("---------------------------------------\n");
+   printf("\nGeneration: %d\nFitness: %d\n", generation, population[0].fitnessScore);
  } while (population[0].fitnessScore != 0 && generation < MAX_GENERATIONS);
 }
