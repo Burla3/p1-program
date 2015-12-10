@@ -3,6 +3,11 @@
 int main(int argc, const char *argv[]) {
   srand(time(NULL));
 
+  /*struct timeval tStart, tStop;
+  float elapsed;
+
+  gettimeofday(&tStart, NULL);*/
+
   json_t *rootConfig;
   json_error_t error;
 
@@ -12,12 +17,28 @@ int main(int argc, const char *argv[]) {
     printf("json_load_file returned an invalid line number\n");
   }
 
+  /*gettimeofday(&tStop, NULL);
+  elapsed = timeDifferenceMillis(tStart, tStop);
+  printf("%s in %f milliseconds.\n", "asdf", elapsed);
+  gettimeofday(&tStart, 0);*/
+
+  //printTimeDifferenceMillis(&tStart, "Config file read by Jansson");
+
+
   int numberOfStudies = getNumberOfStudies(rootConfig);
+
 
   PopMember *population = (PopMember*) malloc(POPULATION_SIZE * sizeof(PopMember));
   Study *studyArray = (Study*) malloc(numberOfStudies * sizeof(Study));
 
   populateStudyStructFromConfig(rootConfig, studyArray);
+
+  /*gettimeofday(&tStop, NULL);
+  elapsed = timeDifferenceMillis(tStart, tStop);
+  printf("%s in %f milliseconds.\n", "asdf", elapsed);*/
+  //gettimeofday(&tStart, NULL);
+
+  //printTimeDifferenceMillis(&tStart, "populateStudyStructFromConfig");
 
   runGeneticAlgorithm(population, studyArray, numberOfStudies);
 
@@ -25,6 +46,7 @@ int main(int argc, const char *argv[]) {
 
   printTimetables(population, 0);
 
+  
   return 0;
 }
 
