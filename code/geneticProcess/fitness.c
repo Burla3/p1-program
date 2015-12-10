@@ -44,7 +44,7 @@ int amountOfLectures(PopMember population[], Study studyArray[], int popCount) {
       }
     }
   }
-  return score;
+  return score * 100;
 }
 
 /* lecturerOverlap gives a penalty score, if more than one course needs the lecturer to educate at the same time. */

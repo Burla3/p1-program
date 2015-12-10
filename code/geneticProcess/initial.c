@@ -1,7 +1,7 @@
 #include "initial.h"
 
 void initialPopulation(PopMember population[], Study studyArray[], int numberOfStudies) {
-  int i, j, k, l, randomCourse, randomRoom, totalNumberOfLectures;
+  int i, j, k, l, m, randomCourse, randomRoom, totalNumberOfLectures;
   char *roomName, *courseName;
 
   for (i = 0; i < POPULATION_SIZE; i++) {
@@ -19,17 +19,19 @@ void initialPopulation(PopMember population[], Study studyArray[], int numberOfS
 
       population[i].studies[j] = study;
 
-      int *numberOfLectures = (int*) malloc(studyArray[j].numberOfCourses * sizeof(int));
+      int *randomCourseArray = (int*) malloc(studyArray[j].totalNumberOfLectures * sizeof(int));
 
-      for (l = 0; l < studyArray[j].numberOfCourses; l++) {
-        numberOfLectures[l] = studyArray[j].studyCourses[l].numberOfLectures;
+      for (l = 0, m = 0; l < studyArray[j].numberOfCourses; l++) {
+        for (k = 0; k < studyArray[j].studyCourses[l].numberOfLectures; k++, m++) {
+          randomCourseArray[m] = l;
+        }
       }
 
       for (k = 0; k < totalNumberOfLectures; k++) {
         courseName = (char*) malloc(10 * sizeof(char));
         roomName = (char*) malloc(10 * sizeof(char));
 
-        randomCourse = getRandomCourse(numberOfLectures, studyArray[j].numberOfCourses);
+        randomCourse = getRandomCourse(randomCourseArray, studyArray[j].totalNumberOfLectures);
 
         if (strcmp(studyArray[j].studyCourses[randomCourse].course, "PROJEKT") != 0) {
           randomRoom = getRandomValue(studyArray[j].studyCourses[randomCourse].numberOfRooms);
@@ -49,19 +51,17 @@ void initialPopulation(PopMember population[], Study studyArray[], int numberOfS
   }
 }
 
-int getRandomCourse(int numberOfLectures[], int numberOfCourses) {
-  int random = getRandomValue(numberOfCourses);
-  int i;
-
-  for (i = 0; i < numberOfCourses; i++) {
-  }
+int getRandomCourse(int randomCourseArray[], int totalNumberOfLectures) {
+  int random = getRandomValue(totalNumberOfLectures);
+  int temp;
 
   while (1) {
-    if (numberOfLectures[random] > 0) {
-      numberOfLectures[random] -= 1;
-      return random;
+    if (randomCourseArray[random] != -1) {
+      temp = randomCourseArray[random];
+      randomCourseArray[random] = -1;
+      return temp;
     } else {
-      random = getRandomValue(numberOfCourses);
+      random = getRandomValue(totalNumberOfLectures);
     }
   }
 }

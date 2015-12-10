@@ -6,4 +6,4 @@
 
 void initialPopulation(PopMember population[], Study studyArray[], int numberOfStudies);
 
-int getRandomCourse(int numberOfLectures[], int numberOfCourses);
+int getRandomCourse(int randomCourseArray[], int totalNumberOfLectures);
