@@ -3,7 +3,7 @@ PROG = prog
 MAIN = p1-program.c
 CFLAGS = -Wall
 GENDIR = geneticProcess
-INCLUDEFILES = jsonParser.c jsonReadToStructs.c $(GENDIR)/initial.c $(GENDIR)/fitness.c $(GENDIR)/selection.c $(GENDIR)/crossover.c $(GENDIR)/mutation.c $(GENDIR)/crossoverSelection.c utilities.c print.c
+INCLUDEFILES = jsonReadToStructs.c $(GENDIR)/initial.c $(GENDIR)/fitness.c $(GENDIR)/selection.c $(GENDIR)/crossover.c $(GENDIR)/mutation.c $(GENDIR)/crossoverSelection.c utilities.c print.c
 TENSION = .exe
 
 UNAME := $(shell uname)

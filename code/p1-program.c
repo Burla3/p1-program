@@ -3,10 +3,13 @@
 int main(int argc, const char *argv[]) {
   srand(time(NULL));
 
-  json_t *rootConfig = loadJSON("json/config.json");
+  json_t *rootConfig;
+  json_error_t error;
 
-  if (rootConfig == NULL) {
-    perror("Error loading JSON ");
+  rootConfig = json_load_file("json/config.json", 0, &error);
+
+  if(error.line != -1) {
+    printf("json_load_file returned an invalid line number\n");
   }
 
   int numberOfStudies = getNumberOfStudies(rootConfig);
@@ -16,6 +19,21 @@ int main(int argc, const char *argv[]) {
 
   populateStudyStructFromConfig(rootConfig, studyArray);
 
+  runGeneticAlgorithm(population, studyArray, numberOfStudies);
+
+  printf("\n\n");
+
+  printTimetables(population, 0);
+
+  return 0;
+}
+
+int getNumberOfStudies(json_t *rootConfig) {
+  json_t *groups = json_object_get(rootConfig, "groups");
+  return json_array_size(groups);
+}
+
+void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfStudies) {
   initialPopulation(population, studyArray, numberOfStudies);
 
   int currentPopulationSize, generation = 0;
@@ -34,6 +52,7 @@ int main(int argc, const char *argv[]) {
     for (i = 0; i < POPULATION_SIZE / 2; i++) {
       currentPopulationSize += mutate(population, currentPopulationSize, studyArray);
     }
+
     while (currentPopulationSize < POPULATION_SIZE) {
       currentPopulationSize += crossoverMix(population, currentPopulationSize);
 
@@ -46,14 +65,4 @@ int main(int argc, const char *argv[]) {
    }
    generation++;
  } while (population[0].fitnessScore != 0 && generation < MAX_GENERATIONS);
-  printf("\n\n");
-
-  printTimetables(population, 0);
-
-  return 0;
-}
-
-int getNumberOfStudies(json_t *rootConfig) {
-  json_t *groups = json_object_get(rootConfig, "groups");
-  return json_array_size(groups);
 }

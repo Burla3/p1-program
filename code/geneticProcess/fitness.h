@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include "../utilities.h"
-#include "../jsonParser.h"
 #include "../structs.h"
 
 void calculateFitness(PopMember population[], Study studyArray[]);
