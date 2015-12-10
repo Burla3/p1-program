@@ -37,7 +37,7 @@ void initialPopulation(PopMember population[], Study studyArray[], int numberOfS
           strcpy(roomName, studyArray[j].studyCourses[randomCourse].rooms[randomRoom]);
         }
         else {
-          strcpy(roomName, "GR");
+          strcpy(roomName, "Grupperum");
         }
 
         strcpy(courseName, studyArray[j].studyCourses[randomCourse].course);
