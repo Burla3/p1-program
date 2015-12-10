@@ -24,7 +24,7 @@ run: comp
 	./$(PROG)$(TENSION)
 
 comp: cleanexe
-	$(CC) -g -o $(PROG) $(MAIN) $(INCLUDEFILES) -L$(LIBDIR) -I$(INCLUDEDIR) -l$(LIB) $(CFLAGS)
+	$(CC) -o $(PROG) $(MAIN) $(INCLUDEFILES) -L$(LIBDIR) -I$(INCLUDEDIR) -l$(LIB) $(CFLAGS)
 
 cleanexe:
 	$(RM) $(PROG)

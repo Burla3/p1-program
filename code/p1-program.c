@@ -11,7 +11,7 @@ int main(int argc, const char *argv[]) {
   json_t *rootConfig;
   json_error_t error;
 
-  rootConfig = json_load_file("json/config.json", 0, &error);
+  rootConfig = json_load_file("json/data.json", 0, &error);
 
   if(error.line != -1) {
     printf("json_load_file returned an invalid line number\n");
@@ -24,7 +24,6 @@ int main(int argc, const char *argv[]) {
 
   //printTimeDifferenceMillis(&tStart, "Config file read by Jansson");
 
-
   int numberOfStudies = getNumberOfStudies(rootConfig);
 
 
@@ -32,6 +31,14 @@ int main(int argc, const char *argv[]) {
   Study *studyArray = (Study*) malloc(numberOfStudies * sizeof(Study));
 
   populateStudyStructFromConfig(rootConfig, studyArray);
+
+  int i;
+
+  /*for (i = 0; i < numberOfStudies; i++)
+  {
+    printf("\n\n");
+    printStudyStruct(studyArray[i]);
+  }*/
 
   /*gettimeofday(&tStop, NULL);
   elapsed = timeDifferenceMillis(tStart, tStop);
@@ -57,6 +64,8 @@ int getNumberOfStudies(json_t *rootConfig) {
 
 void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfStudies) {
   initialPopulation(population, studyArray, numberOfStudies);
+
+  printf("Done init\n");
 
   int currentPopulationSize, generation = 0;
 

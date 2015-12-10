@@ -84,7 +84,7 @@ int lecturerOverlap(PopMember population[], int popCount, int leastNumberOfLectu
         strcpy(typeJ, population[popCount].studies[i].lectures[k].type);
         strcpy(typeK, population[popCount].studies[j].lectures[k].type);
 
-        if (((strcmp(typeJ, typeK) == 0) && (strcmp(typeJ, "PROJ") != 0)) && (i != j)){
+        if (((strcmp(typeJ, typeK) == 0) && (strcmp(typeJ, "PROJEKT") != 0)) && (i != j)){
           scoreCounter++;
         }
       }
@@ -111,7 +111,7 @@ int courseNotSameDay(PopMember population[], int popCount) {
     for(j = 0; j < population[popCount].studies[i].numberOfLectures; j += 2) {
       if ((strcmp(population[popCount].studies[i].lectures[j].type,
                  population[popCount].studies[i].lectures[j + 1].type) == 0) &&
-          (strcmp(population[popCount].studies[i].lectures[j].type, "PROJ") != 0)) {
+          (strcmp(population[popCount].studies[i].lectures[j].type, "PROJEKT") != 0)) {
         score += PENALTY_HARD;
       }
     }

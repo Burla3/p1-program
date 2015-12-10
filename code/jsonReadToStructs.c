@@ -120,7 +120,7 @@ void populateStudyStructFromConfig(json_t *rootConfig, Study *studyArray)
             }
           }
           const char *tempNameCourse = json_string_value(course_name);
-          char *nameCourse = (char*) malloc(5 * sizeof(char));
+          char *nameCourse = (char*) malloc(10 * sizeof(char));
           strcpy(nameCourse, tempNameCourse);
 
           Course newCourse = {nameCourse, json_array_size(coursesLectures), availableRooms, numberOfRooms};

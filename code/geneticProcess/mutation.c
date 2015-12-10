@@ -47,7 +47,7 @@ int getCourseIndex(Study *studyArray, PopMember offspring, int randStudy, int ra
 
 void setRandomRoom(Study *studyArray, PopMember *offspring, int randStudy, int randLecture, int courseIndex) {
 
-  if (strcmp(offspring->studies[randStudy].lectures[randLecture].type, "PROJ") == 0) {
+  if (strcmp(offspring->studies[randStudy].lectures[randLecture].type, "PROJEKT") == 0) {
     strcpy(offspring->studies[randStudy].lectures[randLecture].room, "Grupperum");
 
   } else {
