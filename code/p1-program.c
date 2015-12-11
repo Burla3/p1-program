@@ -26,7 +26,7 @@ int main(int argc, const char *argv[]) {
 
   timeStamp = printTimeDifferenceMillis(timeStamp, "populateStudyStructFromConfig");
 
-  runGeneticAlgorithm(population, studyArray, numberOfStudies);
+  runGeneticAlgorithm(population, studyArray, numberOfStudies, timeStampForEnd);
 
   timeStamp = printTimeDifferenceMillis(timeStamp, "runGeneticAlgorithm");
 
@@ -36,7 +36,7 @@ int main(int argc, const char *argv[]) {
 
   timeStamp = printTimeDifferenceMillis(timeStamp, "printTimetables");
 
-  timeStampForEnd = printTimeDifferenceMillis(timeStampForEnd, "Whole program");
+  timeStampForEnd = printTimeDifferenceSeconds(timeStampForEnd, "Whole program");
 
   return 0;
 }
@@ -46,7 +46,7 @@ int getNumberOfStudies(json_t *rootConfig) {
   return json_array_size(groups);
 }
 
-void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfStudies) {
+void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfStudies, int64_t timeStampForEnd) {
   int64_t timeStamp = currentTimestamp();
 
   initialPopulation(population, studyArray, numberOfStudies);
@@ -87,7 +87,7 @@ void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfS
       }
     }
     timeStamp = printTimeDifferenceMillis(timeStamp, "crossover");
-    printTimeDifferenceMillis(timeStamp, "Total runtime");
+    printTimeDifferenceSeconds(timeStampForEnd, "Total runtime");
     generation++;
 
     printf("----------------------------------------\n");

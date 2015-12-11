@@ -15,3 +15,4 @@ void nextDay(CalenderData *calender, int numberOfLectures);
 int getDaysInMonth(int month);
 int64_t currentTimestamp();
 int64_t printTimeDifferenceMillis(int64_t startTime, char *strToPrint);
+int64_t printTimeDifferenceSeconds(int64_t startTime, char *strToPrint);

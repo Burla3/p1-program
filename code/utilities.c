@@ -90,3 +90,9 @@ int64_t printTimeDifferenceMillis(int64_t startTime, char *strToPrint) {
   printf("%s in %"PRId64" milliseconds.\n", strToPrint, (endTime - startTime));
   return endTime;
 }
+
+int64_t printTimeDifferenceSeconds(int64_t startTime, char *strToPrint) {
+  int64_t endTime = currentTimestamp();
+  printf("%s in %"PRId64" seconds.\n", strToPrint, (endTime - startTime) / 1000);
+  return endTime;
+}
