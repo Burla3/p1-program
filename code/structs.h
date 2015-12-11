@@ -3,6 +3,7 @@
 #define PENALTY_SOFT 1
 #define MUTATION_RATE 1
 #define MAX_GENERATIONS 1000
+#define SELECTION_PERCENTAGE 50
 
 #ifndef LECTURE
 #define LECTURE
