@@ -64,7 +64,7 @@ void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfS
 
     timeStamp = printTimeDifferenceMillis(timeStamp, "calculateFitness");
 
-    currentPopulationSize = selection(SELECTION_PERCENTAGE, population);
+    currentPopulationSize = selection(population);
 
     timeStamp = printTimeDifferenceMillis(timeStamp, "selection");
 
