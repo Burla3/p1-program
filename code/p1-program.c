@@ -55,35 +55,51 @@ void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfS
 
   printf("Done init\n\n");
 
-  int currentPopulationSize, generation = 0;
+  int currentPopulationSize, populationSizeAfterSelection;
+  int generation = 0;
+
+  int sameFitness = 0;
+  int mutateMulti = 0;
 
   do {
     printf("----------- Generation %05d -----------\n", generation + 1);
+
+    sameFitness = population[0].fitnessScore;
 
     calculateFitness(population, studyArray);
 
     timeStamp = printTimeDifferenceMillis(timeStamp, "calculateFitness");
 
-    currentPopulationSize = selection(population);
+    populationSizeAfterSelection = selection(population);
+    currentPopulationSize = populationSizeAfterSelection;
 
     timeStamp = printTimeDifferenceMillis(timeStamp, "selection");
 
+    if (population[0].fitnessScore == sameFitness) {
+      mutateMulti++;
+    } else {
+      mutateMulti = 0;
+    }
+
     int i;
 
-    for (i = 0; i < POPULATION_SIZE / 2; i++) {
-      currentPopulationSize += mutate(population, currentPopulationSize, studyArray);
+    for (i = 0; i < populationSizeAfterSelection; i++) {
+      currentPopulationSize += mutate(population, populationSizeAfterSelection, 
+                                      currentPopulationSize, studyArray, mutateMulti);
     }
+    printf("Mutation rate is: %d\n", mutateMulti * MUTATION_RATE);
     timeStamp = printTimeDifferenceMillis(timeStamp, "mutate");
 
     while (currentPopulationSize < POPULATION_SIZE) {
-      currentPopulationSize += crossoverMix(population, currentPopulationSize);
+      currentPopulationSize += crossoverMix(population, currentPopulationSize, populationSizeAfterSelection);
 
       if (currentPopulationSize < POPULATION_SIZE - 1) {
-        currentPopulationSize += crossoverSlice(population, currentPopulationSize);
+        currentPopulationSize += crossoverSlice(population, currentPopulationSize, populationSizeAfterSelection);
       }
       if (currentPopulationSize < POPULATION_SIZE - 1) {
-        currentPopulationSize += crossoverSwitch(population, currentPopulationSize);
+        currentPopulationSize += crossoverSwitch(population, currentPopulationSize, populationSizeAfterSelection);
       }
+      /*printf("%d %d\n", populationSizeAfterSelection, currentPopulationSize);*/
     }
     timeStamp = printTimeDifferenceMillis(timeStamp, "crossover");
     printTimeDifferenceSeconds(timeStampForEnd, "Total runtime");

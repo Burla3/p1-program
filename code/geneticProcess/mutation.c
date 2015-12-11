@@ -1,10 +1,11 @@
 #include "mutation.h"
 
-int mutate(PopMember *population, int currentPopulationSize, Study *studyArray) {
+int mutate(PopMember *population, int populationSizeAfterSelection, 
+            int currentPopulationSize, Study *studyArray, int mutateMulti) {
 
-  if (getRandomValue(100) + 1 <= MUTATION_RATE) {
+  if (getRandomValue(100) + 1 <= (MUTATION_RATE * mutateMulti)) {
 
-    PopMember parent = population[getRandomValue(currentPopulationSize)];
+    PopMember parent = population[getRandomValue(populationSizeAfterSelection)];
     PopMember offspring = parent;
 
     int randStudy = getRandomValue(offspring.numberOfStudies);
@@ -24,6 +25,7 @@ int mutate(PopMember *population, int currentPopulationSize, Study *studyArray) 
 
       setRandomRoom(studyArray, &offspring, randStudy, randLecture, courseIndex);
     }
+    population[currentPopulationSize] = offspring;
     return 1;
   } else {
     return 0;

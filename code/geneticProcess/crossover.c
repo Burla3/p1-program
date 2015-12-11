@@ -13,12 +13,12 @@ void printParent(PopMember parent) {
     printf("---------------------------------------\n");
 }
 
-int crossoverMix(PopMember population[], int currentPopulationSize) {
+int crossoverMix(PopMember population[], int currentPopulationSize, int populationSizeAfterSelection) {
   int i, j;
 
   PopMember parent1, parent2;
 
-  crossoverSelectionRandom(population, &parent1, &parent2);
+  crossoverSelectionRandom(population, &parent1, &parent2, populationSizeAfterSelection);
 
   /*New popmembers must have a negative fitnessScore*/
   population[currentPopulationSize].fitnessScore = -1;
@@ -34,14 +34,15 @@ int crossoverMix(PopMember population[], int currentPopulationSize) {
       }
     }
   }
+
   return 1;
 }
 
-int crossoverSlice(PopMember population[], int currentPopulationSize) {
+int crossoverSlice(PopMember population[], int currentPopulationSize, int populationSizeAfterSelection) {
   int i, j, crossoverPoint;
 
   PopMember parent1, parent2;
-  crossoverSelectionRandom(population, &parent1, &parent2);
+  crossoverSelectionRandom(population, &parent1, &parent2, populationSizeAfterSelection);
 
   /*New popmembers must have a negative fitnessScore*/
   population[currentPopulationSize].fitnessScore = -1;
@@ -67,11 +68,11 @@ int crossoverSlice(PopMember population[], int currentPopulationSize) {
   return 2;
 }
 
-int crossoverSwitch(PopMember population[], int currentPopulationSize) {
+int crossoverSwitch(PopMember population[], int currentPopulationSize, int populationSizeAfterSelection) {
   int i, j, k, crossoverPoint;
 
   PopMember parent1, parent2;
-  crossoverSelectionRandom(population, &parent1, &parent2);
+  crossoverSelectionRandom(population, &parent1, &parent2, populationSizeAfterSelection);
 
   /*New popmembers must have a negative fitnessScore*/
   population[currentPopulationSize].fitnessScore = -1;

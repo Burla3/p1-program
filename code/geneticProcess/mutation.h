@@ -13,7 +13,8 @@
  * @param[in] parent the parent used for mutation
  * @param[out] offspring the offspring that is generated through mutation
  */
-int mutate(PopMember *population, int currentPopulationSize, Study *studyArray);
+int mutate(PopMember *population, int populationSizeAfterSelection, 
+            int currentPopulationSize, Study *studyArray, int mutateMulti);
 
 int getCourseIndex(Study *studyArray, PopMember offspring, int randStudy, int randLecture);
 

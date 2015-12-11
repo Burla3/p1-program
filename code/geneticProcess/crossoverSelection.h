@@ -10,4 +10,4 @@
  * @param[out] parent1 the first parent that is selected from the population
  * @param[out] parent2 the second parent that is selected from the population
  */
-void crossoverSelectionRandom(PopMember population[], PopMember *parent1, PopMember *parent2);
+void crossoverSelectionRandom(PopMember population[], PopMember *parent1, PopMember *parent2, int populationSizeAfterSelection);

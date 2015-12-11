@@ -37,7 +37,7 @@
  * @param[out] population gets new offspring added.
  * @param[in] currentPopulationSize size of the population in number of popmembers
  */
-int crossoverMix(PopMember population[], int currentPopulationSize);
+int crossoverMix(PopMember population[], int currentPopulationSize, int populationSizeAfterSelection);
 
 /**
  * Breeds two offsprings by picking a random crossover point for the parents and swapping the right sides with
@@ -85,6 +85,6 @@ int crossoverMix(PopMember population[], int currentPopulationSize);
  * @param[out] population is an output array of PopMember's
  * @param[in] currentPopulationSize
  */
-int crossoverSlice(PopMember population[], int currentPopulationSize);
+int crossoverSlice(PopMember population[], int currentPopulationSize, int populationSizeAfterSelection);
 
-int crossoverSwitch(PopMember population[], int currentPopulationSize);
+int crossoverSwitch(PopMember population[], int currentPopulationSize, int populationSizeAfterSelection);
