@@ -7,8 +7,8 @@ int sortPopulation(const void *ep1, const void *ep2) {
   return popMember1->fitnessScore - popMember2->fitnessScore;
 }
 
-int selection(PopMember population[]) {
+int selection(int selectionPercentage, PopMember population[]) {
   qsort(population, POPULATION_SIZE, sizeof(PopMember), sortPopulation);
 
-  return POPULATION_SIZE / 2;
+  return ((double)selectionPercentage / 100) * POPULATION_SIZE;
 }
