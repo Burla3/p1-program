@@ -29,12 +29,11 @@ void calculateFitness(PopMember population[], Study studyArray[]) {
 /* HARD CONSTRAINTS */
 /* amountOfLectures gives a penalty score, if there is a wrong amount of each lecture in the timetable. */
 int amountOfLectures(PopMember population[], Study studyArray[], int popCount, int i) {
-  int j, l;
+  int j, l, lecturesTemp;
   int score = 0;
-  int lecturesTemp = 0;
 
   for (j = 0; j < studyArray[i].numberOfCourses; j++) {
-    for (l = 0; l < population[popCount].studies[i].numberOfLectures; l++) {
+    for (l = 0, lecturesTemp = 0; l < population[popCount].studies[i].numberOfLectures; l++) {
       if (strcmp(studyArray[i].studyCourses[j].course, population[popCount].studies[i].lectures[l].type) == 0) {
         lecturesTemp += 1;
       }
