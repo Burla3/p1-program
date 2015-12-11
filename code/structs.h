@@ -26,9 +26,6 @@
 #define POPMEMBER
   typedef struct PopMember {
     int fitnessScore;
-    int amountScore;
-    int overlapScore;
-    int notsamedayScore;
     int numberOfStudies;
     Timetable *studies;
   } PopMember;
