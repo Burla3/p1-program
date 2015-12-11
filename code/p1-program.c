@@ -87,6 +87,7 @@ void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfS
       }
     }
     timeStamp = printTimeDifferenceMillis(timeStamp, "crossover");
+    printTimeDifferenceMillis(timeStamp, "Total runtime");
     generation++;
 
     printf("----------------------------------------\n");
