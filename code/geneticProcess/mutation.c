@@ -1,12 +1,14 @@
 #include "mutation.h"
 
-int mutate(PopMember *population, int populationSizeAfterSelection, 
+int mutate(PopMember *population, int populationSizeAfterSelection,
             int currentPopulationSize, Study *studyArray, int mutateMulti) {
 
   if (getRandomValue(100) + 1 <= (MUTATION_RATE * mutateMulti)) {
 
     PopMember parent = population[getRandomValue(populationSizeAfterSelection)];
     PopMember offspring = parent;
+
+    offspring.fitnessScore = -1;
 
     int randStudy = getRandomValue(offspring.numberOfStudies);
     int randLecture = getRandomValue(offspring.studies[randStudy].numberOfLectures);
