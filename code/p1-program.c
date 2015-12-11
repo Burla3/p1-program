@@ -9,7 +9,7 @@ int main(int argc, const char *argv[]) {
   json_t *rootConfig;
   json_error_t error;
 
-  rootConfig = json_load_file("json/data.json", 0, &error);
+  rootConfig = json_load_file("json/dataMoreRoom.json", 0, &error);
 
   if(error.line != -1) {
     printf("json_load_file returned an invalid line number\n");
@@ -68,20 +68,6 @@ void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfS
 
     calculateFitness(population, studyArray);
 
-    printf("Generation: %d\nFitness: %d\n\n", generation, population[0].fitnessScore);
-    printf("BEST!!\n");
-    printf("Amount :%d\nOverlap: %d\nNotsameday: %d\n", population[0].amountScore, population[0].overlapScore, population[0].notsamedayScore);
-    printf("----------------------------------------\n");
-    printf("WORST!!\n");
-    printf("Fitness: %d\n", population[POPULATION_SIZE / 2].fitnessScore);
-    printf("Amount :%d\nOverlap: %d\nNotsameday: %d\n", population[POPULATION_SIZE / 2 - 1].amountScore, population[POPULATION_SIZE / 2 - 1].overlapScore, population[POPULATION_SIZE / 2 - 1].notsamedayScore);
-    printf("----------------------------------------\n");
-    printf("EVEN WORSE!!\n");
-    printf("Fitness: %d\n", population[POPULATION_SIZE - 1].fitnessScore);
-    printf("Amount :%d\nOverlap: %d\nNotsameday: %d\n", population[POPULATION_SIZE - 1].amountScore, population[POPULATION_SIZE - 1].overlapScore, population[POPULATION_SIZE - 1].notsamedayScore);
-
-    printf("----------------------------------------\n\n");
-
     timeStamp = printTimeDifferenceMillis(timeStamp, "calculateFitness");
 
     populationSizeAfterSelection = selection(SELECTION_PERCENTAGE, population);
@@ -89,11 +75,25 @@ void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfS
 
     timeStamp = printTimeDifferenceMillis(timeStamp, "selection");
 
-    if (population[0].fitnessScore == sameFitness && mutateMulti < 20) {
+    printf("----------------------------------------\n\n");
+    printf("Generation: %d\nFitness: %d\n\n", generation, population[0].fitnessScore);
+    printf("BEST!!\n");
+    printf("Amount :%d\nOverlap: %d\nNotsameday: %d\n", population[0].amountScore, population[0].overlapScore, population[0].notsamedayScore);
+    printf("----------------------------------------\n");
+    printf("WORST!!\n");
+    printf("Fitness: %d\n", population[POPULATION_SIZE / 2 - 1].fitnessScore);
+    printf("Amount :%d\nOverlap: %d\nNotsameday: %d\n", population[POPULATION_SIZE / 2 - 1].amountScore, population[POPULATION_SIZE / 2 - 1].overlapScore, population[POPULATION_SIZE / 2 - 1].notsamedayScore);
+    printf("----------------------------------------\n");
+    printf("EVEN WORSE!!\n");
+    printf("Fitness: %d\n", population[POPULATION_SIZE - 1].fitnessScore);
+    printf("Amount :%d\nOverlap: %d\nNotsameday: %d\n", population[POPULATION_SIZE - 1].amountScore, population[POPULATION_SIZE - 1].overlapScore, population[POPULATION_SIZE - 1].notsamedayScore);
+    printf("----------------------------------------\n\n");
+
+    /*if (population[0].fitnessScore == sameFitness && mutateMulti < 20) {
       mutateMulti++;
     } else {
       mutateMulti = 0;
-    }
+    } */
 
     int i;
 

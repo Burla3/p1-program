@@ -99,6 +99,7 @@ int lecturerOverlapCheck(Lecture study1lecture, Lecture study2lecture) {
   }*/
 
   if ((strcmp(study1lecture.room, "Grupperum") != 0) && (strcmp(study1lecture.room, study2lecture.room) == 0)) {
+    //printf("Room Overlap %s\t", study1lecture.room);
     score += PENALTY_HARD;
   }
 
