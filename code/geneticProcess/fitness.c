@@ -11,14 +11,24 @@ void calculateFitness(PopMember population[], Study studyArray[]) {
     createTimetableWithDates(newTimetable, population, popCount);
 
     if (population[popCount].fitnessScore == -1) {
-      int score = 0;
+      int score = 0, temp1, temp2, temp3;
+      population[popCount].amountScore = 0;
+      population[popCount].overlapScore = 0;
+      population[popCount].notsamedayScore = 0;
 
-      for (i = 0; i < population[popCount].numberOfStudies; i++)
-      {
-        score += amountOfLectures(population, studyArray, popCount, i);
-        score += lecturerOverlap(population, popCount, i);
+
+
+      for (i = 0; i < population[popCount].numberOfStudies; i++) {
+        temp1 = amountOfLectures(population, studyArray, popCount, i);
+        population[popCount].amountScore += temp1;                              ;
+        score += temp1;
+        temp2 = lecturerOverlap(population, popCount, i);
+        population[popCount].overlapScore += temp2;
+        score += temp2;
         /* lecturerAvailable */
-        score += courseNotSameDay(population, popCount, i);
+        temp3 = courseNotSameDay(population, popCount, i);
+        population[popCount].notsamedayScore += temp3;
+        score += temp3;
       }
       population[popCount].fitnessScore = score;
     }
@@ -29,21 +39,28 @@ void calculateFitness(PopMember population[], Study studyArray[]) {
 /* HARD CONSTRAINTS */
 /* amountOfLectures gives a penalty score, if there is a wrong amount of each lecture in the timetable. */
 int amountOfLectures(PopMember population[], Study studyArray[], int popCount, int i) {
-  int j, l, lecturesTemp;
+  int j, l;
   int score = 0;
+  int lecturesTemp;
+  int projectTemp;
 
   for (j = 0; j < studyArray[i].numberOfCourses; j++) {
-    for (l = 0, lecturesTemp = 0; l < population[popCount].studies[i].numberOfLectures; l++) {
-      if (strcmp(studyArray[i].studyCourses[j].course, population[popCount].studies[i].lectures[l].type) == 0) {
+    for (l = 0, lecturesTemp = 0, projectTemp = 0; l < population[popCount].studies[i].numberOfLectures; l++) {
+      if ((strcmp(studyArray[i].studyCourses[j].course, "PROJEKT") == 0) && (strcmp("PROJEKT", population[popCount].studies[i].lectures[l].type) == 0)) {
+         projectTemp += 1;
+        }
+      else if (strcmp(studyArray[i].studyCourses[j].course, population[popCount].studies[i].lectures[l].type) == 0) {
         lecturesTemp += 1;
       }
     }
-    if (studyArray[i].totalNumberOfLectures != lecturesTemp) {
+    if (projectTemp > 0) {
+      score += PENALTY_HARD * abs(studyArray[i].studyCourses[j].numberOfLectures - projectTemp);
+    } else if (lecturesTemp > 0) {
       score += PENALTY_HARD * abs(studyArray[i].studyCourses[j].numberOfLectures - lecturesTemp);
     }
   }
   return score;
-} 
+}
 
 /* lecturerOverlap gives a penalty score, if more than one course needs the lecturer to educate at the same time. */
 int lecturerOverlap(PopMember population[], int popCount, int i) {
@@ -54,7 +71,7 @@ int lecturerOverlap(PopMember population[], int popCount, int i) {
     leastNumberOfLectures = getLeastNumberOfLectures(population[popCount].studies[i], population[popCount].studies[j]);
 
     for (k = 0; k < leastNumberOfLectures; k++) {
-      score += lecturerOverlapCheck(population[popCount].studies[i].lectures[k], 
+      score += lecturerOverlapCheck(population[popCount].studies[i].lectures[k],
                                     population[popCount].studies[j].lectures[k]);
     }
   }
@@ -69,14 +86,14 @@ int getLeastNumberOfLectures(Timetable study1, Timetable study2) {
   } else {
     leastNumberOfLectures = study2.numberOfLectures;
   }
-  return leastNumberOfLectures;  
+  return leastNumberOfLectures;
 }
 
 int lecturerOverlapCheck(Lecture study1lecture, Lecture study2lecture) {
   int score = 0;
 
-  /*if ((strcmp(study1lecture.type, study2lecture.type) == 0) && 
-      (strcmp(study1lecture.type, "PROJEKT") != 0) && 
+  /*if ((strcmp(study1lecture.type, study2lecture.type) == 0) &&
+      (strcmp(study1lecture.type, "PROJEKT") != 0) &&
       (strcmp(study1lecture.type, "PV") != 0)) {
     score += PENALTY_HARD;
   }*/
@@ -108,6 +125,5 @@ int courseNotSameDay(PopMember population[], int popCount, int i) {
       score += PENALTY_HARD;
     }
   }
-  
   return score;
 }

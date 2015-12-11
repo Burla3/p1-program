@@ -85,11 +85,24 @@ void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfS
         currentPopulationSize += crossoverSwitch(population, currentPopulationSize);
       }
     }
+
     timeStamp = printTimeDifferenceMillis(timeStamp, "crossover");
     printTimeDifferenceSeconds(timeStampForEnd, "Total runtime");
     generation++;
 
     printf("----------------------------------------\n");
     printf("Generation: %d\nFitness: %d\n\n", generation, population[0].fitnessScore);
+    printf("BEST!!\n");
+    printf("Amount :%d\nOverlap: %d\nNotsameday: %d\n", population[0].amountScore, population[0].overlapScore, population[0].notsamedayScore);
+    printf("----------------------------------------\n");
+    printf("WORST!!\n");
+    printf("Fitness: %d\n", population[POPULATION_SIZE / 2].fitnessScore);
+    printf("Amount :%d\nOverlap: %d\nNotsameday: %d\n", population[POPULATION_SIZE / 2].amountScore, population[POPULATION_SIZE / 2].overlapScore, population[POPULATION_SIZE / 2].notsamedayScore);
+    printf("----------------------------------------\n");
+    printf("EVEN WORSE!!\n");
+    printf("Fitness: %d\n", population[POPULATION_SIZE / 2].fitnessScore);
+    printf("Amount :%d\nOverlap: %d\nNotsameday: %d\n", population[POPULATION_SIZE / 2 + 5].amountScore, population[POPULATION_SIZE / 2 + 5].overlapScore, population[POPULATION_SIZE / 2 + 5].notsamedayScore);
+
+
   } while (population[0].fitnessScore != 0 && generation < MAX_GENERATIONS);
 }
