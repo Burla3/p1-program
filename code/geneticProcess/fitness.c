@@ -16,11 +16,9 @@ void calculateFitness(PopMember population[], Study studyArray[]) {
       population[popCount].overlapScore = 0;
       population[popCount].notsamedayScore = 0;
 
-
-
       for (i = 0; i < population[popCount].numberOfStudies; i++) {
         temp1 = amountOfLectures(population, studyArray, popCount, i);
-        population[popCount].amountScore += temp1;                              ;
+        population[popCount].amountScore += temp1;
         score += temp1;
         temp2 = lecturerOverlap(population, popCount, i);
         population[popCount].overlapScore += temp2;
