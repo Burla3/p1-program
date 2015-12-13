@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include "../utilities.h"
 #include "../structs.h"
+#include "crossoverSelection.h"
 
 /**
  * Breeds one offspring by randomly picking lectures from the first or second parent and putting them into the

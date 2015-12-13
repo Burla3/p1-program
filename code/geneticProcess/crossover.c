@@ -1,5 +1,4 @@
 #include "crossover.h"
-#include "crossoverSelection.h"
 
 void printParent(PopMember parent) {
   int j,h;
