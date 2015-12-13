@@ -117,7 +117,7 @@ void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfS
     printf("----------------------------------------\n");
     printf("EVEN WORSE!!\n");
     printf("Fitness: %d\n", population[POPULATION_SIZE / 2].fitnessScore);
-    printf("Amount :%d\nOverlap: %d\nNotsameday: %d\n", population[POPULATION_SIZE / 2 + 5].amountScore, population[POPULATION_SIZE / 2 + 5].overlapScore, population[POPULATION_SIZE / 2 + 5].notsamedayScore);
+    printf("Amount :%d\nOverlap: %d\nNotsameday: %d\n\n\n", population[POPULATION_SIZE / 2 + 5].amountScore, population[POPULATION_SIZE / 2 + 5].overlapScore, population[POPULATION_SIZE / 2 + 5].notsamedayScore);
 
 
   } while (population[0].fitnessScore != 0 && generation < MAX_GENERATIONS);
