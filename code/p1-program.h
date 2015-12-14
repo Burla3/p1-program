@@ -12,3 +12,5 @@
 int getNumberOfStudies(json_t *rootConfig);
 
 void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfStudies, int64_t timeStampForEnd);
+
+void mutateRoom(PopMember *population, Study *studyArray);

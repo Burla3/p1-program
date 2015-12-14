@@ -13,9 +13,11 @@
  * @param[in] parent the parent used for mutation
  * @param[out] offspring the offspring that is generated through mutation
  */
-int mutate(PopMember *population, int populationSizeAfterSelection, 
-            int currentPopulationSize, Study *studyArray, int mutateMulti);
+int mutate(PopMember *population, int populationSizeAfterSelection,
+            int currentPopulationSize, Study *studyArray);
 
 int getCourseIndex(Study *studyArray, PopMember offspring, int randStudy, int randLecture);
 
 void setRandomRoom(Study *studyArray, PopMember *offspring, int randStudy, int randLecture, int courseIndex);
+
+int mutateRoom1(PopMember *population, Study *studyArray, int currentPopulationSize);

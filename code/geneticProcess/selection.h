@@ -14,4 +14,4 @@ int sortPopulation(const void *ep1, const void *ep2);
  *
  * @return returns an integer that marks how much of the population is selected for further processing
  */
-int selection(int selectionPercentage, PopMember population[]);
+int selection(PopMember population[]);

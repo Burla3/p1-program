@@ -6,33 +6,28 @@ void calculateFitness(PopMember population[], Study studyArray[]) {
   for(popCount = 0; popCount < POPULATION_SIZE; popCount++) {
     int i;
 
-    TimetableWithDates *newTimetable = (TimetableWithDates*) malloc(population[popCount].numberOfStudies * sizeof(TimetableWithDates));
-
-    createTimetableWithDates(newTimetable, population, popCount);
-
     if (population[popCount].fitnessScore == -1) {
+
       int score = 0, temp1, temp2, temp3;
       population[popCount].amountScore = 0;
-      population[popCount].overlapScore = 0;
       population[popCount].notsamedayScore = 0;
-
 
 
       for (i = 0; i < population[popCount].numberOfStudies; i++) {
         temp1 = amountOfLectures(population, studyArray, popCount, i);
         population[popCount].amountScore += temp1;                              ;
         score += temp1;
-        temp2 = lecturerOverlap(population, popCount, i);
-        population[popCount].overlapScore += temp2;
-        score += temp2;
-        /* lecturerAvailable */
         temp3 = courseNotSameDay(population, popCount, i);
         population[popCount].notsamedayScore += temp3;
         score += temp3;
       }
+
+      temp2 = roomOverlap(population, popCount);
+      population[popCount].overlapScore = temp2;
+      score += temp2;
+
       population[popCount].fitnessScore = score;
     }
-    free(newTimetable);
   }
 }
 
@@ -42,75 +37,40 @@ int amountOfLectures(PopMember population[], Study studyArray[], int popCount, i
   int j, l;
   int score = 0;
   int lecturesTemp;
-  int projectTemp;
 
   for (j = 0; j < studyArray[i].numberOfCourses; j++) {
-    for (l = 0, lecturesTemp = 0, projectTemp = 0; l < population[popCount].studies[i].numberOfLectures; l++) {
-      if ((strcmp(studyArray[i].studyCourses[j].course, "PROJEKT") == 0) && (strcmp("PROJEKT", population[popCount].studies[i].lectures[l].type) == 0)) {
-         projectTemp += 1;
-        }
-      else if (strcmp(studyArray[i].studyCourses[j].course, population[popCount].studies[i].lectures[l].type) == 0) {
+    for (l = 0, lecturesTemp = 0; l < population[popCount].studies[i].numberOfLectures; l++) {
+      if (strcmp(studyArray[i].studyCourses[j].course, population[popCount].studies[i].lectures[l].type) == 0) {
         lecturesTemp += 1;
       }
     }
-    if (projectTemp > 0) {
-      score += PENALTY_HARD * abs(studyArray[i].studyCourses[j].numberOfLectures - projectTemp);
-    } else if (lecturesTemp > 0) {
+    if (lecturesTemp > 0) {
       score += PENALTY_HARD * abs(studyArray[i].studyCourses[j].numberOfLectures - lecturesTemp);
     }
   }
   return score;
 }
 
-/* lecturerOverlap gives a penalty score, if more than one course needs the lecturer to educate at the same time. */
-int lecturerOverlap(PopMember population[], int popCount, int i) {
-  int leastNumberOfLectures, j, k;
-  int score = 0;
+/* roomOverlap gives a penalty score, if more than one course needs the same room. */
+int roomOverlap(PopMember population[], int popCount) {
+  int i, j, k;
+  int score = 0, temp = 0;
 
-  for (j = i + 1; j < population[popCount].numberOfStudies; j++) {
-    leastNumberOfLectures = getLeastNumberOfLectures(population[popCount].studies[i], population[popCount].studies[j]);
-
-    for (k = 0; k < leastNumberOfLectures; k++) {
-      score += lecturerOverlapCheck(population[popCount].studies[i].lectures[k],
-                                    population[popCount].studies[j].lectures[k]);
+  for (k = 0; k < population[popCount].studies[0].numberOfLectures ; k++) {
+    for (i = 0; i < population[popCount].numberOfStudies; i++) {
+      if (i + 1 < population[popCount].numberOfStudies) {
+        for (j = i + 1; j < population[popCount].numberOfStudies; j++) {
+          if (population[popCount].studies[i].numberOfLectures > k && population[popCount].studies[j].numberOfLectures > k) {
+            if ((strcmp(population[popCount].studies[i].lectures[k].room, "Grupperum") != 0) && (strcmp(population[popCount].studies[i].lectures[k].room, population[popCount].studies[j].lectures[k].room) == 0)) {
+              score += PENALTY_HARD;
+            }
+          }
+        }
+      }
     }
+    population[popCount].fitnessPerDay[k] = score - temp;
+    temp = score;
   }
-  return score;
-}
-
-int getLeastNumberOfLectures(Timetable study1, Timetable study2) {
-  int leastNumberOfLectures;
-
-  if (study1.numberOfLectures < study2.numberOfLectures) {
-    leastNumberOfLectures = study1.numberOfLectures;
-  } else {
-    leastNumberOfLectures = study2.numberOfLectures;
-  }
-  return leastNumberOfLectures;
-}
-
-int lecturerOverlapCheck(Lecture study1lecture, Lecture study2lecture) {
-  int score = 0;
-
-  /*if ((strcmp(study1lecture.type, study2lecture.type) == 0) &&
-      (strcmp(study1lecture.type, "PROJEKT") != 0) &&
-      (strcmp(study1lecture.type, "PV") != 0)) {
-    score += PENALTY_HARD;
-  }*/
-
-  if ((strcmp(study1lecture.room, "Grupperum") != 0) && (strcmp(study1lecture.room, study2lecture.room) == 0)) {
-    //printf("Room Overlap %s\t", study1lecture.room);
-    score += PENALTY_HARD;
-  }
-
-  return score;
-}
-
-/* lecturerAvailable gives a penalty score, if the lecturer is unavailable to educate when the lecture is placed in
- * the timatable. */
-int lecturerAvailable(PopMember population[], int popCount) {
-  int score = 0;
-
   return score;
 }
 

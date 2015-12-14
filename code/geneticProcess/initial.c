@@ -6,7 +6,8 @@ void initialPopulation(PopMember population[], Study studyArray[], int numberOfS
 
   for (i = 0; i < POPULATION_SIZE; i++) {
     Timetable *studies = (Timetable*) malloc(numberOfStudies * sizeof(Timetable));
-    PopMember member = {-1, -1, -1, -1, numberOfStudies, studies};
+    int *fitnessPerDay = (int*) malloc(studyArray[0].totalNumberOfLectures * sizeof(int));
+    PopMember member = {i, -1, fitnessPerDay, -1, -1, -1, numberOfStudies, studies};
     population[i] = member;
     for (j = 0; j < numberOfStudies; j++) {
       totalNumberOfLectures = studyArray[j].totalNumberOfLectures;
