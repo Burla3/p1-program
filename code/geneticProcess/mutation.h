@@ -14,8 +14,8 @@
  * @param[in] mutateMulti A multiplier for the mutation rate. Used when the fitness don't change from earlier generation.
  * @returns The number of PopMembers that have been mutated.
  */
-int mutate(PopMember *population, int populationSizeAfterSelection, 
-            int currentPopulationSize, Study *studyArray, int mutateMulti);
+int mutate(PopMember *population, int populationSizeAfterSelection,
+            int currentPopulationSize, Study *studyArray);
 
 /**
  * Gets the course index for a study found from the random study & lecture parameter. 
@@ -38,3 +38,5 @@ int getCourseIndex(Study *studyArray, PopMember offspring, int randStudy, int ra
  * @param[in] courseIndex The index used to set the random room.
  */
 void setRandomRoom(Study *studyArray, PopMember *offspring, int randStudy, int randLecture, int courseIndex);
+
+int mutateRoom1(PopMember *population, Study *studyArray, int currentPopulationSize);

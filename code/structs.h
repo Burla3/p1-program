@@ -1,8 +1,8 @@
-#define POPULATION_SIZE 1000
+#define POPULATION_SIZE 2000
 #define PENALTY_HARD 100
 #define PENALTY_SOFT 1
-#define MUTATION_RATE 1
-#define MAX_GENERATIONS 1000
+#define MUTATION_RATE 4
+#define MAX_GENERATIONS 500
 #define SELECTION_PERCENTAGE 50
 
 #ifndef LECTURE
@@ -25,7 +25,9 @@
 #ifndef POPMEMBER
 #define POPMEMBER
   typedef struct PopMember {
+    int id;
     int fitnessScore;
+    int *fitnessPerDay;
     int amountScore;
     int overlapScore;
     int notsamedayScore;

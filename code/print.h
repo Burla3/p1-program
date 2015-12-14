@@ -5,4 +5,6 @@
 
 void printTimetables(PopMember population[], int popCount);
 
+void printWall(PopMember population[], TimetableWithDates newTimetable[], int popCount);
+
 void printToConsol(PopMember population[], TimetableWithDates newTimetable[], int popCount);

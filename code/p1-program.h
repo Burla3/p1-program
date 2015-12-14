@@ -28,3 +28,5 @@ int getNumberOfStudies(json_t *rootConfig);
  * @param[in] timeStampForEnd A timestamp to compare total runtime with after each generation.
  */
 void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfStudies, int64_t timeStampForEnd);
+
+void mutateRoom(PopMember *population, Study *studyArray);
