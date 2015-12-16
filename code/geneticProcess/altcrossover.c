@@ -58,19 +58,23 @@ int crossoverSlice(PopMember population[], int currentPopulationSize, int popula
 
   for (j = 0; j < crossoverPoint; j++) {
     for (i = 0; i < parent1.numberOfStudies; i++) {
-      Lecture temlec1 = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
-      Lecture temlec2 = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
-      population[currentPopulationSize].studies[i].lectures[j] = temlec1;
-      population[currentPopulationSize + 1].studies[i].lectures[j] = temlec2;
+      if (parent1.studies[i].numberOfLectures > j && parent2.studies[i].numberOfLectures > j) {
+        Lecture temlec1 = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
+        Lecture temlec2 = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
+        population[currentPopulationSize].studies[i].lectures[j] = temlec1;
+        population[currentPopulationSize + 1].studies[i].lectures[j] = temlec2;
+      }
     }
-  }
+
 
   for (j = crossoverPoint; j < parent1.studies[0].numberOfLectures; j++) {
     for (i = 0; i < parent1.numberOfStudies; i++) {
-      Lecture temlec1 = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
-      Lecture temlec2 = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
-      population[currentPopulationSize].studies[i].lectures[j] = temlec2;
-      population[currentPopulationSize + 1].studies[i].lectures[j] = temlec1;
+      if (parent1.studies[i].numberOfLectures > j && parent2.studies[i].numberOfLectures > j) {
+        Lecture temlec1 = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
+        Lecture temlec2 = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
+        population[currentPopulationSize].studies[i].lectures[j] = temlec2;
+        population[currentPopulationSize + 1].studies[i].lectures[j] = temlec1;
+      }
     }
   }
 
@@ -91,18 +95,22 @@ int crossoverSwitch(PopMember population[], int currentPopulationSize, int popul
 
   for (j = 0, k = parent1.studies[0].numberOfLectures - 1; j < crossoverPoint; j++, k--) {
     for (i = 0; i < parent1.numberOfStudies; i++) {
-      Lecture temlec1 = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
-      Lecture temlec2 = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
-      population[currentPopulationSize].studies[i].lectures[k] = temlec1;
-      population[currentPopulationSize + 1].studies[i].lectures[k] = temlec2;
+      if (parent1.studies[i].numberOfLectures > j && parent2.studies[i].numberOfLectures > j) {
+        Lecture temlec1 = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
+        Lecture temlec2 = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
+        population[currentPopulationSize].studies[i].lectures[k] = temlec1;
+        population[currentPopulationSize + 1].studies[i].lectures[k] = temlec2;
+      }
     }
   }
   for (j = crossoverPoint, k = parent1.studies[0].numberOfLectures - crossoverPoint - 1; j < parent1.studies[0].numberOfLectures; j++, k--) {
     for (i = 0; i < parent1.numberOfStudies; i++) {
-      Lecture temlec1 = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
-      Lecture temlec2 = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
-      population[currentPopulationSize].studies[i].lectures[k] = temlec2;
-      population[currentPopulationSize + 1].studies[i].lectures[k] = temlec1;
+      if (parent1.studies[i].numberOfLectures > j && parent2.studies[i].numberOfLectures > j) {
+        Lecture temlec1 = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
+        Lecture temlec2 = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
+        population[currentPopulationSize].studies[i].lectures[k] = temlec2;
+        population[currentPopulationSize + 1].studies[i].lectures[k] = temlec1;
+      }
     }
   }
 

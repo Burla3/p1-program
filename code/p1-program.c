@@ -9,7 +9,7 @@ int main(int argc, const char *argv[]) {
   json_t *rootConfig;
   json_error_t error;
 
-  rootConfig = json_load_file("json/data.json", 0, &error);
+  rootConfig = json_load_file("json/halfDataV2.json", 0, &error);
 
   if(error.line != -1) {
     printf("json_load_file returned an invalid line number\n");
