@@ -7,7 +7,7 @@ void printTimetables(PopMember population[], int popCount) {
 
     //printWall(population, newTimetable, popCount);
 
-    //printToConsol(population, newTimetable, popCount);
+    printToConsol(population, newTimetable, popCount);
 
   printf("\n");
 }

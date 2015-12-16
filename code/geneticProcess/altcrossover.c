@@ -26,13 +26,17 @@ int crossoverMix(PopMember population[], int currentPopulationSize, int populati
   for (j = 0; j < parent1.studies[0].numberOfLectures; j++) {
     if (getRandomValue(2) == 0) {
       for (i = 0; i < parent1.numberOfStudies; i++) {
-        Lecture temlec = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
-        population[currentPopulationSize].studies[i].lectures[j] = temlec;
+        if (parent1.studies[i].numberOfLectures > j) {
+          Lecture temlec = {parent1.studies[i].lectures[j].type, parent1.studies[i].lectures[j].room};
+          population[currentPopulationSize].studies[i].lectures[j] = temlec;
+        }
       }
     } else {
       for (i = 0; i < parent1.numberOfStudies; i++) {
-        Lecture temlec = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
-        population[currentPopulationSize].studies[i].lectures[j] = temlec;
+        if (parent1.studies[i].numberOfLectures > j) {
+          Lecture temlec = {parent2.studies[i].lectures[j].type, parent2.studies[i].lectures[j].room};
+          population[currentPopulationSize].studies[i].lectures[j] = temlec;
+        }
       }
     }
   }

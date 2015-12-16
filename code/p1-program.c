@@ -9,7 +9,7 @@ int main(int argc, const char *argv[]) {
   json_t *rootConfig;
   json_error_t error;
 
-  rootConfig = json_load_file("json/twoStudiesData.json", 0, &error);
+  rootConfig = json_load_file("json/data.json", 0, &error);
 
   if(error.line != -1) {
     printf("json_load_file returned an invalid line number\n");
@@ -31,14 +31,6 @@ int main(int argc, const char *argv[]) {
   timeStamp = printTimeDifferenceMillis(timeStamp, "runGeneticAlgorithm");
 
   printf("\n\n");
-
-  int i, j;
-
-  for (i = 0; i < population[POPULATION_SIZE - 1].numberOfStudies; i++) {
-    for (j = 0; j < population[POPULATION_SIZE - 1].studies[i].numberOfLectures; j++) {
-      //printf("%s\t%s\t\n", population[POPULATION_SIZE - 1].studies[i].lectures[j].type, population[POPULATION_SIZE - 1].studies[i].lectures[j].room);
-    }
-  }
 
   printTimetables(population, 0);
 
@@ -113,21 +105,21 @@ void runGeneticAlgorithm(PopMember *population, Study *studyArray, int numberOfS
     // BUGGED!
     //currentPopulationSize += mutateRoom1(population, studyArray, currentPopulationSize);
 
-    for (i = 0; i < populationSizeAfterSelection; i++) {
-      currentPopulationSize += mutate(population, populationSizeAfterSelection,
-                                      currentPopulationSize, studyArray);
-    }
+    // for (i = 0; i < populationSizeAfterSelection; i++) {
+    //   currentPopulationSize += mutate(population, populationSizeAfterSelection,
+    //                                   currentPopulationSize, studyArray);
+    // }
     timeStamp = printTimeDifferenceMillis(timeStamp, "mutate");
 
     while (currentPopulationSize < POPULATION_SIZE) {
       currentPopulationSize += crossoverMix(population, currentPopulationSize, populationSizeAfterSelection);
 
-      if (currentPopulationSize < POPULATION_SIZE - 1) {
-        currentPopulationSize += crossoverSlice(population, currentPopulationSize, populationSizeAfterSelection);
-      }
-      if (currentPopulationSize < POPULATION_SIZE - 1) {
-        currentPopulationSize += crossoverSwitch(population, currentPopulationSize, populationSizeAfterSelection);
-      }
+      // if (currentPopulationSize < POPULATION_SIZE - 1) {
+      //   currentPopulationSize += crossoverSlice(population, currentPopulationSize, populationSizeAfterSelection);
+      // }
+      // if (currentPopulationSize < POPULATION_SIZE - 1) {
+      //   currentPopulationSize += crossoverSwitch(population, currentPopulationSize, populationSizeAfterSelection);
+      // }
     }
 
     timeStamp = printTimeDifferenceMillis(timeStamp, "crossover");

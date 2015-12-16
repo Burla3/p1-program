@@ -13,7 +13,7 @@ void initialPopulation(PopMember population[], Study studyArray[], int numberOfS
       totalNumberOfLectures = studyArray[j].totalNumberOfLectures;
       Lecture *lectures = (Lecture*) malloc(totalNumberOfLectures * sizeof(Lecture));
 
-      char *name = (char*) malloc(5 * sizeof(char));
+      char *name = (char*) malloc(10 * sizeof(char));
       Timetable study = {name, totalNumberOfLectures, lectures};
 
       study.studyName = studyArray[j].name;
