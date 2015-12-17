@@ -65,6 +65,8 @@ int crossoverSlice(PopMember population[], int currentPopulationSize, int popula
         population[currentPopulationSize + 1].studies[i].lectures[j] = temlec2;
       }
     }
+  }
+
 
 
   for (j = crossoverPoint; j < parent1.studies[0].numberOfLectures; j++) {
